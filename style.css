@@ -3,24 +3,56 @@ body{
  
 
 }
-.navbarr{
+.navbar-default{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 5pc;
-    background-color: rgb(235, 235, 235) ;
+   color: white;
+    
 
+}
+.navbar-default.scrolled {
+  background-color: rgb(235, 235, 235)  ;
+  color: black;
+  transition: background-color 0.3s ease;
+
+}
+
+.logo.scrolled{
+  color: #184F6E;
+  background-image: url("/Assets/logo_color.svg");
 }
 .logo{
     display: flex;
     flex-direction: row;
-    padding: 1.3em 0px 0px 2em;
-    
+    padding: 1.2em 0px 0px 3.5em;
+    background-image: url("/Assets/logo_white.svg");
+  background-position: 2pc;
+    background-size: 2.5pc 2.5pc;
+    background-repeat: no-repeat;
     
 }
+
 /* style bagian teks logo*/
 .logo_text{
     display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    letter-spacing: 0.18em;
+   
+    padding: 0 0 0 1.8pc;
+}
+.logo_footer{
+  display: flex;
+  flex-direction: row;
+  padding: 1.2em 0px 0px 2em;
+}
+.logo_text_footer{
+  display: flex;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -45,8 +77,8 @@ body{
 }
 /* Style The Dropdown Button */
 .dropbtn {
-    background-color: rgb(235, 235, 235)  ;
-    color: black;
+   
+    
     padding: 12px;
     font-size: 16px;
     border: none;
@@ -151,7 +183,4 @@ body{
 }
 .footer{
   background-color: wheat;
-}
-.section-heading{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
