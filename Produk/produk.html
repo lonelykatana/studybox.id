@@ -7,6 +7,7 @@
     <title>StudyBox</title>
     <link rel="icon" href="/Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="produk.css"/>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,33 +17,165 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--<div class="navbarr">
-        
-       <div class="menuu">
-        <div class="dropdown">
-            <button class="dropbtn">Course</button>
-            <div class="dropdown-content">
-              <a href="">UI/UX</a>
-              <a href="">App Developer</a>
-            </div>
-          </div>
-          <span class="teks_menu" >Masuk</span>
-          <span class="teks_menu" >Daftar</span>
-        </div>
-    </div>
-    </div>-->
-    <div class="navbarr" id="myTopnav">
+    
+      <nav class="navbar navbar-expand-lg  bg-light navbar-light fixed-top" style=" box-shadow: 2px 3px 8px #888888;">
         <div class="logo">
-            <img src="/Assets/logo_color.svg" style="width:2.5pc;height: 2.5pc;">
-            <span class="logo_text">STUDYBOX</span>
-        </div>
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+          <img src="/Assets/logo_color.svg" style="width:2.5em;height: 2.5em;">
+          <span class="logo_text">STUDYBOX</span>
       </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav menuu mr-auto ">
+            <li class="nav-item active teks_menu">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item teks_menu">
+              <a class="nav-link" href="#">Daftar</a>
+            </li>
+            <li class="nav-item teks_menu">
+              <a class="nav-link" href="#">Masuk</a>
+            </li>
+            <li class="nav-item dropdown teks_menu">
+              <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+              Course
+              </a>
+              <div class="dropdown-menu" style="width: 200px;">
+                <a class="dropdown-item" href="#">UI/UX</a>
+                <a class="dropdown-item" href="#">Web Developer</a>
+             
+        
+              </div>
+            </li>
+           
+        </div>
+      </nav>
+
+      <!-- product section-->
+ 
+ <section id="product" class="product" style="margin-top:7%;">
+
+  <div class="container" data-aos="fade-up " style="margin-left:10%;">
+    <div class="row gx-0" >
+
+      <div  class="col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <img src="/Assets/product2.jpg" class="img-fluid" alt="" style="width: 20vw; height: 15vw;  box-shadow: 2px 5px 10px #888888;">  
+        <div class="product-content">
+     
+          <h2>UI/UX</h2>
+          <p class="product-description">
+            Pada kelas ini kita membahas bagaimana cara mendesain aplikasi maupun website dan akan diajarkan dengan cara yang mudah dimengerti dan pada akhir kelas akan diberikan project yang bisa digunakan untuk portofolio 
+          </p>
+          <div class="text-left text-lg-start">
+            <div class="snipcart-item block">
+              <div class="snipcart-thumb agileinfo_single_right_snipcart">
+                  <h5 class="m-sing">Rp 80.000
+                      <span>Rp 0</span></h4>
+              </div>
+              <button class="btn_product"style="margin-top:7%" >Daftar Kelas</button> 
+            
+            
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+    
+  </div>
+  <!-- FAQs -->
+  <div class="faqs">
+    <div class="panel_title">Materi</div>
+    <div class="accordions">
+            
+      <div class="elements_accordions">
+
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center active"><div>Pengenalan HTML</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><div>CSS dan Bootstrap</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><div>Javascript pada HTML</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><div>Database dan Relasinya</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><div>Pengenalan PHP</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><div>Pembuatan CRUD menggunakan PHP</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><div>Github dan fungsinya</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><div>Hosting Website</div></div>
+          <div class="accordion_panel">
+            <p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</section><!-- End About Section -->
+<!-- Benefit-->
+<section class="page-section bg-light" id="mentor">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase align-items-center" >Mentor</h2><br>
+         <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
+      </div>
+      <div class="row text-center">
+          <div class="col-md-5" style="margin-left: 6vw;">
+             
+              <h4 class="my-2">Mentor1</h4>
+              <img src ="/Assets/content1.jpeg" style="width: 10vw; height: 10vw; border-radius: 25px;">
+              <p class="text-muted">Peserta dapat menelusuri suatu bidang secara perlahan dan bertahap dalam bimbingan terstruktur</p>
+          </div>
+          <div class="col-md-5">
+            
+              <h4 class="my-2">Mentor2</h4>
+              <img src ="/Assets/content1.jpeg" style="width: 10vw; height: 10vw; border-radius: 25px;">
+              <p class="text-muted">Dengan biaya yang relatif murah, peserta mendapatkan materi yang dimulai dari tingkat dasar hingga memahami fundamental dunia digital</p>
+          </div>
+          
+      </div>
+  </div>
+</section>
+<script src="/js/product.js"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
 </body>
 </html>

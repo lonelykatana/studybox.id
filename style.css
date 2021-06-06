@@ -21,10 +21,11 @@ body{
 
 
 }
-.navbar-default.scrolled {
+.navbar-default.scrolled  {
   background-color: white  ;
   color: black;
   transition: background-color 0.3s ease;
+  box-shadow: 2px 5px 10px #888888;
 
 }
 
@@ -151,9 +152,8 @@ background-position: 2pc;
     padding: 0px 0px 0px 8pc;
     font-family: 'Poppins', sans-serif;
   }
-  .content2{
-    display: flex;
-    flex-direction: row;
+ p.product-description{
+  width: 20vw;
   }
   div.caption2{
     text-align:center ;
@@ -172,8 +172,11 @@ background-position: 2pc;
   font-size: 1.5rem;
 }
 #product,#benefit{
-  padding: 3% 0px 5% 0px;
+  padding: 3% 0px 10% 0px;
   
+}
+#mentor{
+   padding: 3% 0px 5% 0px; ;
 }
 .text-muted{
   padding-top: 15px;
@@ -186,6 +189,13 @@ background-position: 2pc;
   display: flex;
   flex-direction: column;
   padding-left:35%;
+}
+.product-content{
+  padding-left: 10%;
+  width: 20vw;
+}
+p.product-description{
+  width: 30vw;
 }
 .btn_product {
   width:13em;
