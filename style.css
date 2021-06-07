@@ -15,7 +15,7 @@ body{
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 5pc;
+  height: 10%;
  color: black;  
  background-color: rgb(235, 235, 235)  ;
 
@@ -65,7 +65,7 @@ background-position: 2pc;
     font-size: 1.8rem;
     line-height: 1.5em;
     letter-spacing: 0.18em;
-   
+    margin-top:-20px;
     padding: 0 0 0 1.8pc;
 }
 .logo_footer{
@@ -92,7 +92,7 @@ background-position: 2pc;
 }
   /*login text */
   .teks_menu {
-    padding-top:1.5em;
+    padding-top:0.3em;
     padding-left: 1em;
 }
 /* Style The Dropdown Button */
@@ -110,7 +110,7 @@ background-position: 2pc;
     
     display: inline-block;
     
-    padding-top: 0.8em;
+    padding-top: 0.3em;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -174,9 +174,13 @@ background-position: 2pc;
 #product,#benefit{
   padding: 3% 0px 10% 0px;
   
+  
+}
+.price-product{
+  margin-top: 2vw;
 }
 #mentor{
-   padding: 3% 0px 5% 0px; ;
+   padding: 3% 0px 5% 0px; 
 }
 .text-muted{
   padding-top: 15px;
@@ -210,8 +214,9 @@ p.product-description{
   margin: 4% 2px 0px ;
   cursor: pointer;
 }
-.footer{
-  background-color: wheat;
+footer{
+  background-color: white;
+  margin-top: 5%;.v
 }
 .btn{
   border-radius:6px !important;
@@ -226,3 +231,8 @@ button.btn-success:hover,
 button.btn-success:focus {
   background-color: #0d8d89  !important;
 }
+
+.visi-misi-teks{
+  padding:1.3vw 0px 1vw 0px;
+}
+

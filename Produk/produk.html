@@ -7,7 +7,7 @@
     <title>StudyBox</title>
     <link rel="icon" href="/Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="produk.css"/>
-
+    <link rel="stylesheet" href="/style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,42 +17,55 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-      <nav class="navbar navbar-expand-lg  bg-light navbar-light fixed-top" style=" box-shadow: 2px 3px 8px #888888;">
-        <div class="logo">
-          <img src="/Assets/logo_color.svg" style="width:2.5em;height: 2.5em;">
-          <span class="logo_text">STUDYBOX</span>
-      </div>
+   <nav class="navbar navbar-default2 navbar-expand-lg  bg-light navbar-light fixed-top" style=" box-shadow: 2px 3px 8px #888888;">
+    <div class="logo2">
+      <a class=" nav-item" href="index.html">
+      <span class="logo_text">STUDY BOX</span></a>
+    </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav menuu mr-auto ">
-            <li class="nav-item active teks_menu">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="#">Daftar</a>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="#">Masuk</a>
-            </li>
             <li class="nav-item dropdown teks_menu">
               <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
               Course
               </a>
               <div class="dropdown-menu" style="width: 200px;">
-                <a class="dropdown-item" href="#">UI/UX</a>
-                <a class="dropdown-item" href="#">Web Developer</a>
-             
-        
+                
+                <a class="dropdown-item nav-item" href="Produk/produk.html">UI/UX</a>
+                <a class="dropdown-item" href="Produk/produk.html">Web Developer</a>
               </div>
             </li>
+            <li class="nav-item teks_menu">
+              <a class="nav-link" href="daftar.html">Daftar</a>
+            </li>
+            <li class="nav-item teks_menu">
+              <a class="nav-link" href="masuk.html">Masuk</a>
+            </li>
+            
            
         </div>
       </nav>
-
+      
+      <!-- <nav class="navbar-default2 fixed-top">
+        <div class="logo2">
+            <span class="logo_text">STUDY BOX</span>
+        </div>
+       <div class="menuu">
+        <div class="dropdown">
+            <div class="dropbtn">Course</div>
+            <div class="dropdown-content">
+              <a href="">UI/UX</a>
+              <a href="">App Developer</a>
+            </div>
+          </div>
+          <span class="teks_menu" >Masuk</span>
+          <span class="teks_menu" >Daftar</span>
+        </div>
+    
+    </nav> -->
       <!-- product section-->
  
  <section id="product" class="product" style="margin-top:7%;">
@@ -69,7 +82,7 @@
             Pada kelas ini kita membahas bagaimana cara mendesain aplikasi maupun website dan akan diajarkan dengan cara yang mudah dimengerti dan pada akhir kelas akan diberikan project yang bisa digunakan untuk portofolio 
           </p>
           <div class="text-left text-lg-start">
-            <div class="snipcart-item block">
+            <div class="price-product snipcart-item block">
               <div class="snipcart-thumb agileinfo_single_right_snipcart">
                   <h5 class="m-sing">Rp 80.000
                       <span>Rp 0</span></h4>
@@ -87,7 +100,7 @@
   </div>
   <!-- FAQs -->
   <div class="faqs">
-    <div class="panel_title">Materi</div>
+    <div class="panel_title"><h4>Kurikulum</h4></div>
     <div class="accordions">
             
       <div class="elements_accordions">
@@ -159,22 +172,58 @@
          <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
       </div>
       <div class="row text-center">
-          <div class="col-md-5" style="margin-left: 6vw;">
+          <div class="col-md-6" >
              
-              <h4 class="my-2">Mentor1</h4>
-              <img src ="/Assets/content1.jpeg" style="width: 10vw; height: 10vw; border-radius: 25px;">
-              <p class="text-muted">Peserta dapat menelusuri suatu bidang secara perlahan dan bertahap dalam bimbingan terstruktur</p>
+              <h4 class="my-2">UI/UX</h4>
+              <img src ="/Assets/mentor1.jpg" style="width: 10vw; height: 10vw; border-radius:100px;object-fit: cover;padding-top: 2%;">
+              <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
+              <p class="text-muted">Matamu to the moon
+              </p>
           </div>
           <div class="col-md-5">
             
-              <h4 class="my-2">Mentor2</h4>
-              <img src ="/Assets/content1.jpeg" style="width: 10vw; height: 10vw; border-radius: 25px;">
-              <p class="text-muted">Dengan biaya yang relatif murah, peserta mendapatkan materi yang dimulai dari tingkat dasar hingga memahami fundamental dunia digital</p>
+              <h4 class="my-2">Web Developer</h4>
+              <img src ="/Assets/mentor2.jpg" style="width: 10vw; height: 10vw; border-radius: 100px;object-fit: cover;padding-top: 2%;">
+              <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
+              <p class="text-muted">He killed Three men in a bar with a f*cking pencil</p>
           </div>
           
       </div>
   </div>
 </section>
+  <!-- Footer -->
+  <footer class="bg-light "style=" box-shadow: 2px 3px 8px #888888;">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 ">
+          <div class="logo_footer" >
+            <img src="Assets/logo_color.svg" alt="" width="40" class="mb-3">
+            <span class="logo_text_footer">STUDYBOX</span>
+          </div>
+          
+          
+          <p class="font-italic text-muted" style="margin-left:2vw">Bootcamp berkualitas ,Harga Ekonomis!</p>
+     
+        </div>
+        <div class="col-lg-2 " style="margin-left:2vw">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="margin-left:-0.2vw"><a href="#" class="text-muted">About Us</a></h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
+            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
+            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
+            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <p class="text-muted mb-0 py-2">© 2021 STUDYBOX All rights reserved.</p>
+    </div>
+
+    <!-- Copyrights -->
+   
+  </footer>
+  <!-- End -->
 <script src="/js/product.js"></script>
 <script src="/js/jquery-3.2.1.min.js"></script>
 </body>
