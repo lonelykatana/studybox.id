@@ -1,3 +1,33 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['log'])){
+	
+} else {
+	header('location:index.php');
+};
+
+include 'dbconnect.php';
+
+
+	if(isset($_POST['login']))
+	{
+	$email = mysqli_real_escape_string($conn,$_POST['email']);
+	$pass = mysqli_real_escape_string($conn,$_POST['password']);
+	$queryuser = mysqli_query($conn,"SELECT * FROM login WHERE email='$email'");
+	$cariuser = mysqli_fetch_assoc($queryuser);
+		
+		if( password_verify($pass, $cariuser['password']) ) {
+			$_SESSION['id_user'] = $cariuser['id_user'];
+			$_SESSION['role'] = $cariuser['role'];
+			header('location:index.html');
+		} else {
+			echo 'Username atau password salah';
+			header("location:masuk.php");
+		}		
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -68,7 +98,7 @@
                       <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Masuk Ke Study Box</h1>
                       </div>                  
-                
+                <form method="post">
                         <div class="form-group">
                           <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email">
                           
@@ -79,7 +109,7 @@
                         </div>
                         <hr>
       
-                        <button type="submit" class="btn btn-success form-control">Masuk</button>
+                        <button type="submit" name="login" class="btn btn-success form-control">Masuk</button>
                       </form>
                       <hr>
       

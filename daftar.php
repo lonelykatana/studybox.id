@@ -1,3 +1,34 @@
+<?php
+session_start();
+if(!isset($_SESSION['log'])){
+	
+} else {
+	header('location:index.html');
+};
+include 'dbconnect.php';
+
+if(isset($_POST['adduser']))
+	{
+		$nama = $_POST['nama'];
+		$username = $_POST['username'];
+		$email = $_POST['email'];
+		$password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+		$tambahuser = mysqli_query($conn,"insert into login (nama, username, email, password) 
+		values('$nama','$username','$email','$password')");
+		if ($tambahuser){
+		echo " <div class='alert alert-success'>
+			Berhasil mendaftar, silakan masuk.
+		  </div>
+		<meta http-equiv='refresh' content='1; url= index.html'/>  ";
+		} else { echo "<div class='alert alert-warning'>
+			Gagal mendaftar, silakan coba lagi.
+		  </div>
+		 <meta http-equiv='refresh' content='1; url= daftar.php'/> ";
+		}
+		
+	};
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -61,7 +92,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Mulai Dengan Gratis</h1>
                   </div>
-                  
+                    <form method="post">
                     <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama" name="nama">
                     </div>
@@ -69,21 +100,17 @@
                       <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Username" name="username">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="nama">
+                        <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email">
                       </div>
-                    <div class="form-group row">
-                      <div class="col-sm-6 mb-3 mb-sm-0">
-                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password_1">
+                    <div class="form-group">
+                      
+                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
                         
-                      </div>
-                      <div class="col-sm-6">
-                        <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Ulangi Password" name="password_2">
-
-                      </div>
+                      
                     </div>
-      
+                   
                     <hr>
-      <button type="submit" class="btn btn-success form-control">Daftar</button>
+      <button type="submit" name="adduser" class="btn btn-success form-control">Daftar</button>
                   </form>
                   <hr>
                   <div class="text-center">
@@ -148,8 +175,32 @@
   	<script type="text/javascript">
       $(window).scroll(function(){
         $('.logo').toggleClass('scrolled', $(this).scrollTop() > 550);
-      });   
+      }); 
+
+      $(document).ready(function() {
+			
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 4000,
+				easingType: 'linear' 
+				};
+			
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
     </script>
     
 </body>
+<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#demo1').skdslider({'delay':5000, 'animationSpeed': 2000,'showNextPrev':true,'showPlayButton':true,'autoSlide':true,'animationType':'fading'});
+						
+			jQuery('#responsive').change(function(){
+			  $('#responsive_wrapper').width(jQuery(this).val());
+			});
+			
+		});
+</script>
 </html>
