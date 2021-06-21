@@ -71,7 +71,6 @@ background-position: 2pc;
 .logo_footer{
   display: flex;
   flex-direction: row;
-  padding: 1.2em 0px 0px 2em;
 }
 .logo_text_footer{
   display: flex;
@@ -88,12 +87,24 @@ background-position: 2pc;
  
     position: relative;
     left:60%;
+    margin-top: 0.5%;
 
 }
   /*login text */
   .teks_menu {
-    padding-top:0.3em;
-    padding-left: 1em;
+    
+    padding: 12px; 
+}
+.teks_menu:hover  {
+  background-color:rgba(216, 216, 216, 0.438);  
+}
+.teks_menu a,.teks_menu a:hover{
+    color: #0aada8;
+
+}
+
+a{
+  text-decoration: none !important;
 }
 /* Style The Dropdown Button */
 .dropbtn {
@@ -186,7 +197,7 @@ background-position: 2pc;
   padding-top: 15px;
 }
 .product-title2{
-  padding-left:20%;
+ 
 }
 
 .product_section{
