@@ -8,27 +8,23 @@ if(!isset($_SESSION['log'])){
 };
 
 include 'dbconnect.php';
-
-
-	if(isset($_POST['login']))
+	if(isset($_POST['updatepass']))
 	{
-	$email = mysqli_real_escape_string($conn,$_POST['email']);
-	$pass = mysqli_real_escape_string($conn,$_POST['password']);
-	$queryuser = mysqli_query($conn,"SELECT * FROM login WHERE email='$email'");
-	$cariuser = mysqli_fetch_assoc($queryuser);
-		
-		if( password_verify($pass, $cariuser['password']) ) {
-			$_SESSION['id_user'] = $cariuser['id_user'];
-			$_SESSION['role'] = $cariuser['role'];
-      $_SESSION['name'] = $cariuser['nama'];
-      $_SESSION['log'] = "Logged";
-			header('location:index.php');
-		} else {
-			echo 'Username atau password salah';
-			header("location:masuk.php");
-		}		
-	}
-
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+    $tambahuser = mysqli_query($conn,"UPDATE login SET password='$password' where email = '$_POST[email]'");
+	
+    if($tambahuser){
+        
+        echo " <script'>
+			Berhasil mengubah password, silakan masuk.
+		  </script>
+		<meta http-equiv='refresh' content='1; url= masuk.php'/>  ";
+    }else { echo "<div class='alert alert-warning'>
+        Gagal mendaftar, silakan coba lagi.
+      </div>
+     <meta http-equiv='refresh' content='1; url= forgot_pass.php'/> ";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,19 +96,19 @@ include 'dbconnect.php';
                       <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Masuk Ke Study Box</h1>
                       </div>                  
-                <form method="post">
+                <form method="post" action="forgot_pass.php">
                         <div class="form-group">
                           <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email">
                           
                         </div>
                         <div class="form-group">
                           <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
-                          <a class="small" href="forgot_pass.php" style="padding-left: 2%;">Lupa Password </a>
+                          <a class="small" style="padding-left: 2%;">Lupa Password </a>
                         </div>
                        
                         <hr>
       
-                        <button type="submit" name="login" class="btn btn-success form-control">Masuk</button>
+                        <button type="submit" name="updatepass" class="btn btn-success form-control">Masuk</button>
                         
                       </form>
                       <hr>

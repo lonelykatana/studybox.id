@@ -87,13 +87,13 @@ background-position: 2pc;
 .menuu{
  
     position: relative;
-    left:60%;
+    left:50%;
 
 }
   /*login text */
   .teks_menu {
-    padding-top:0.3em;
-    padding-left: 1em;
+   margin-top: -2.2pc;
+    padding-left: 1.8em;
 }
 /* Style The Dropdown Button */
 .dropbtn {
@@ -232,7 +232,7 @@ button.btn-success:focus {
   background-color: #0d8d89  !important;
 }
 
-.visi-misi-teks{
+.visi-misi{
   padding:1.3vw 0px 1vw 0px;
 }
 

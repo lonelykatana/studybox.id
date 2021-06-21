@@ -2,8 +2,7 @@
 <?php 
 	session_start();
 	include '../dbconnect.php';
-		
-	if(isset($_POST['adduser']))
+			if(isset($_POST['adduser']))
 	{
 		$username = $_POST['uname'];
 		$password = password_hash($_POST['upass'], PASSWORD_DEFAULT); 
@@ -21,6 +20,7 @@
 		}
 		
 	};
+	
 	?>
 
 <!doctype html>
@@ -77,24 +77,15 @@
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                        <ul class="metismenu" id="menu">
-							<li><a href="index.php"><span>Home</span></a></li>
-							<li><a href="../"><span>Kembali ke Toko</span></a></li>
+                    <ul class="metismenu" id="menu">
+							<li class="active"><a href="index.php"><span>Home</span></a></li>
+							<li><a href="../"><span>Kembali ke Study Box</span></a></li>
 							<li>
-                                <a href="manageorder.php"><i class="ti-dashboard"></i><span>Kelola Pesanan</span></a>
+                                <a href="kelas.php"><i class="ti-dashboard"></i><span>Kelola Kelas</span></a>
                             </li>
-							<li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout"></i><span>Kelola Toko
-                                    </span></a>
-                                <ul class="collapse">
-                                    <li><a href="kategori.php">Kategori</a></li>
-                                    <li><a href="produk.php">Produk</a></li>
-									<li><a href="pembayaran.php">Metode Pembayaran</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="gallery.php"><span>Kelola Gallery</span></a></li>
-							<li><a href="customer.php"><span>Kelola Pelanggan</span></a></li>
-							<li class="active"><a href="user.php"><span>Kelola Staff</span></a></li>
+							
+							<li><a href="user.php"><span>Kelola user</span></a></li>
+							<li><a href="peserta.php"><span>Kelola pendaftar kelas</span></a></li>
                             <li>
                                 <a href="../logout.php"><span>Logout</span></a>
                                 
@@ -124,7 +115,7 @@
                         <ul class="notification-area pull-right">
                             <li><h3><div class="date">
 								<script type='text/javascript'>
-						<!--
+						
 						var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 						var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
 						var date = new Date();
@@ -154,19 +145,19 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-									<h2>Daftar Staff</h2>
+									<h2>Daftar User</h2>
 									</div>
                                     <div class="data-tables datatable-dark">
 										 <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
 											<tr>
 												<th>No.</th>
 												<th>Nama</th>
+												<th>username</th>
 												<th>Email</th>
-												<th>Telepon</th>
-												<th>Alamat</th>
+                                                <th>role</th>
 											</tr></thead><tbody>
 											<?php 
-											$brgs=mysqli_query($conn,"SELECT * from login where role='Admin' order by userid ASC");
+											$brgs=mysqli_query($conn,"SELECT * from login ");
 											$no=1;
 											while($p=mysqli_fetch_array($brgs)){
 
@@ -174,10 +165,10 @@
 												
 												<tr>
 													<td><?php echo $no++ ?></td>
-													<td><?php echo $p['namalengkap'] ?></td>
+													<td><?php echo $p['nama'] ?></td>
+													<td><?php echo $p['username'] ?></td>
 													<td><?php echo $p['email'] ?></td>
-													<td><?php echo $p['notelp'] ?></td>
-													<td><?php echo $p['alamat'] ?></td>
+                                                    <td><?php echo $p['role'] ?></td>
 													
 												</tr>		
 												

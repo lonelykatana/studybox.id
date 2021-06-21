@@ -30,10 +30,7 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <!-- preloader area start -->
+   
     <div id="preloader">
         <div class="loader"></div>
     </div>
@@ -47,22 +44,13 @@
                     <nav>
                         <ul class="metismenu" id="menu">
 							<li class="active"><a href="index.php"><span>Home</span></a></li>
-							<li><a href="../"><span>Kembali ke Toko</span></a></li>
+							<li><a href="../"><span>Kembali ke Study Box</span></a></li>
 							<li>
-                                <a href="manageorder.php"><i class="ti-dashboard"></i><span>Kelola Pesanan</span></a>
+                                <a href="kelas.php"><i class="ti-dashboard"></i><span>Kelola Kelas</span></a>
                             </li>
-							<li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout"></i><span>Kelola Toko
-                                    </span></a>
-                                <ul class="collapse">
-                                    <li><a href="kategori.php">Kategori</a></li>
-                                    <li><a href="produk.php">Produk</a></li>
-									<li><a href="pembayaran.php">Metode Pembayaran</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="gallery.php"><span>Kelola Gallery</span></a></li>
-							<li><a href="customer.php"><span>Kelola Pelanggan</span></a></li>
-							<li><a href="user.php"><span>Kelola Staff</span></a></li>
+							
+							<li><a href="user.php"><span>Kelola user</span></a></li>
+							<li><a href="peserta.php"><span>Kelola pendaftar kelas</span></a></li>
                             <li>
                                 <a href="../logout.php"><span>Logout</span></a>
                                 
@@ -149,7 +137,7 @@
                                         <h4 class="header-title mb-0">Pelanggan</h4>
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-                                        <h1><?php echo $itungcust3 ?></h1>
+                                       
                                     </div>
 									</div>
                             </div>
@@ -163,7 +151,7 @@
                                         <h4 class="header-title mb-0">Pesanan</h4>
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-                                        <h1><?php echo $itungorder3 ?></h1>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +164,7 @@
                                         <h4 class="header-title mb-0">Konfirmasi Pembayaran</h4>
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
-                                        <h1><?php echo $itungtrans3 ?></h1>
+                                     
                                     </div>
 									<!--
 									<button type="button" class="<?php 
