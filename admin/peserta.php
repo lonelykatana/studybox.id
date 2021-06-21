@@ -2,68 +2,25 @@
 <?php 
 	session_start();
 	include '../dbconnect.php';
-		
-	if(isset($_POST['addcategory']))
+			if(isset($_POST['adduser']))
 	{
-		$judulpost = $_POST['judulpost'];
+		$username = $_POST['uname'];
+		$password = password_hash($_POST['upass'], PASSWORD_DEFAULT); 
 			  
-		$tambahkat = mysqli_query($conn,"insert into gallery (judulpost) values ('$judulpost')");
-		if ($tambahkat){
-		echo "
-		<meta http-equiv='refresh' content='1; url= gallery.php'/>  ";
-		} else { echo "
-		 <meta http-equiv='refresh' content='1; url= gallery.php'/> ";
+		$tambahuser = mysqli_query($conn,"insert into login values('','$username','$password')");
+		if ($tambahuser){
+		echo " <div class='alert alert-success'>
+			Berhasil menambahkan staff baru.
+		  </div>
+		<meta http-equiv='refresh' content='1; url= user.php'/>  ";
+		} else { echo "<div class='alert alert-warning'>
+			Gagal menambahkan staff baru.
+		  </div>
+		 <meta http-equiv='refresh' content='1; url= user.php'/> ";
 		}
 		
 	};
-    if(isset($_POST["addpost"])) {
-		$judulpost=$_POST['judulpost'];
-		$deskripsi=$_POST['deskripsi'];
-		
-		$nama_file = $_FILES['uploadgambar']['name'];
-		$ext = pathinfo($nama_file, PATHINFO_EXTENSION);
-		$random = crypt($nama_file, time());
-		$ukuran_file = $_FILES['uploadgambar']['size'];
-		$tipe_file = $_FILES['uploadgambar']['type'];
-		$tmp_file = $_FILES['uploadgambar']['tmp_name'];
-		$path = "../produk/".$random.'.'.$ext;
-		$pathdb = "produk/".$random.'.'.$ext;
-        
-
-		if($tipe_file == "image/jpeg" || $tipe_file == "image/png"){
-		  if($ukuran_file <= 5000000){ 
-			if(move_uploaded_file($tmp_file, $path)){ 
-			
-			  $query = "insert into gallery ( judulpost, gambar, deskripsi)
-			  values('$judulpost','$pathdb','$deskripsi')";
-			  $sql = mysqli_query($conn, $query); // Eksekusi/ Jalankan query dari variabel $query
-			  
-			  if($sql){ 
-				
-				echo "<br><meta http-equiv='refresh' content='5; URL=gallery.php'> You will be redirected to the form in 5 seconds";
-					
-			  }else{
-				// Jika Gagal, Lakukan :
-				echo "Sorry, there's a problem while submitting.";
-				echo "<br><meta http-equiv='refresh' content='5; URL=gallery.php'> You will be redirected to the form in 5 seconds";
-			  }
-			}else{
-			  // Jika gambar gagal diupload, Lakukan :
-			  echo "Sorry, there's a problem while uploading the file.";
-			  echo "<br><meta http-equiv='refresh' content='5; URL=gallery.php'> You will be redirected to the form in 5 seconds";
-			}
-		  }else{
-			// Jika ukuran file lebih dari 1MB, lakukan :
-			echo "Sorry, the file size is not allowed to more than 1mb";
-			echo "<br><meta http-equiv='refresh' content='5; URL=gallery.php'> You will be redirected to the form in 5 seconds";
-		  }
-		}else{
-		  // Jika tipe file yang diupload bukan JPG / JPEG / PNG, lakukan :
-		  echo "Sorry, the image format should be JPG/PNG.";
-		  echo "<br><meta http-equiv='refresh' content='5; URL=gallery.php'> You will be redirected to the form in 5 seconds";
-		}
 	
-	};
 	?>
 
 <!doctype html>
@@ -75,7 +32,7 @@
       type="image/png" 
       href="../favicon.png">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kelola Gallery- SIPO</title>
+    <title>Kelola Staff - SIPO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -120,24 +77,15 @@
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                        <ul class="metismenu" id="menu">
-							<li><a href="index.php"><span>Home</span></a></li>
-							<li><a href="../"><span>Kembali ke Toko</span></a></li>
+                    <ul class="metismenu" id="menu">
+							<li class="active"><a href="index.php"><span>Home</span></a></li>
+							<li><a href="../"><span>Kembali ke Study Box</span></a></li>
 							<li>
-                                <a href="manageorder.php"><i class="ti-dashboard"></i><span>Kelola Pesanan</span></a>
+                                <a href="kelas.php"><i class="ti-dashboard"></i><span>Kelola Kelas</span></a>
                             </li>
-							<li >
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout"></i><span>Kelola Toko
-                                    </span></a>
-                                <ul class="collapse">
-                                    <li><a href="kategori.php">Kategori</a></li>
-                                    <li><a href="produk.php">Produk</a></li>
-									<li><a href="pembayaran.php">Metode Pembayaran</a></li>
-                                </ul>
-                            </li>
-                            <li class="active" ><a href="gallery.php"><span>Kelola Gallery</span></a></li>
-							<li><a href="customer.php"><span>Kelola Pelanggan</span></a></li>
-							<li><a href="user.php"><span>Kelola Staff</span></a></li>
+							
+							<li><a href="user.php"><span>Kelola user</span></a></li>
+							<li><a href="peserta.php"><span>Kelola pendaftar kelas</span></a></li>
                             <li>
                                 <a href="../logout.php"><span>Logout</span></a>
                                 
@@ -197,54 +145,37 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-									<h2>Daftar Gallery</h2>
-									<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2">Tambah  Gallery</button>
-                                </div>
+									<h2>Daftar Peserta</h2>
+									</div>
                                     <div class="data-tables datatable-dark">
 										 <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
 											<tr>
 												<th>No.</th>
-												<th>Judul Post</th>
-												<th>Deskripsi</th>
-												<th>Gambar</th>
-                                                <th>Action</th>
+												<th>Nama</th>
+												<th>Umur</th>
+												<th>Email</th>
+                                                <th>No. Whatsapp</th>
 											</tr></thead><tbody>
 											<?php 
-											$brgs=mysqli_query($conn,"SELECT * from gallery order by idpost ASC");
+											$brgs=mysqli_query($conn,"SELECT * from data_peserta ");
 											$no=1;
 											while($p=mysqli_fetch_array($brgs)){
-												$id = $p['idpost'];
 
 												?>
 												
 												<tr>
 													<td><?php echo $no++ ?></td>
-													<td><?php echo $p['judulpost'] ?></td>
-													<td><?php echo $p['deskripsi'] ?></td>
-                                                    <td><img src="../<?php echo $p['gambar'] ?>" style="width : 400px;height:200px" \="\"></td>
-													<td class="invert">
-                                                    <div class="rem">
-
-                                                        
-                                                    <a class="aksi" href="/sipo/admin/hapus_gallery.php?idpost=<?php echo $p['idpost'] ?>">  <input type="submit" name="hapus" class="form-control" value="Hapus" ></a>
-                                                    <a class="aksi" href="/sipo/admin/edit_gallery.php?idpost=<?php echo $p['idpost'] ?>">  <input type="submit" name="update" class="form-control" value="update" ></a>
-                                                    </form>
-                                                </div>
-                                                <script>
-                                                    $(document).ready(function (c) {
-                                                        $('.close1').on('click', function (c) {
-                                                            $('.rem1').fadeOut('slow', function (c) {
-                                                                $('.rem1').remove();
-                                                            });
-                                                        });
-                                                    });
-                                                </script>
-                                            </td>
+													<td><?php echo $p['nama'] ?></td>
+													<td><?php echo $p['umur'] ?></td>
+													<td><?php echo $p['email'] ?></td>
+                                                    <td><?php echo $p['no_wa'] ?></td>
+													
 												</tr>		
+												
 												
 												<?php 
 											}
-											
+													
 											?>
 										</tbody>
 										</table>
@@ -270,47 +201,34 @@
     </div>
     <!-- page container area end -->
 	
-	<div id="myModal" class="modal fade">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title">Tambah Produk</h4>
-        </div>
+	<!-- modal input 
+			<div id="myModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Tambah User Baru</h4>
+						</div>
+						<div class="modal-body">
+							<form method="post">
+								<div class="form-group">
+									<label>Username</label>
+									<input name="uname" type="text" class="form-control" placeholder="Username" required autofocus>
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									<input name="upass" type="password" class="form-control" placeholder="Password">
+								</div>
 
-        <div class="modal-body">
-            <form action="gallery.php" method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label>Judul Post</label>
-                    <input
-                        name="judulpost"
-                        type="text"
-                        class="form-control"
-                        required="required"
-                        autofocus="autofocus">
-                </div>
-                <div class="form-group">
-                    <label>Deskripsi</label>
-                    <input name="deskripsi" type="text" class="form-control" required="required">
-                </div>
-                
-                <div class="form-group">
-                    <label>Gambar</label>
-                    <input name="uploadgambar" type="file" class="form-control">
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                <input name="addpost" type="submit" class="btn btn-primary" value="Tambah">
-            </div>
-        </form>
-    </div>
-</div>
-
-
-
-</div>
-	
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+								<input name="adduser" type="submit" class="btn btn-primary" value="Simpan">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	-->
 	<script>
 	$(document).ready(function() {
     $('#dataTable3').DataTable( {

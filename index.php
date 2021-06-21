@@ -1,3 +1,16 @@
+<?php
+session_start();
+include 'dbconnect.php';
+if(isset($_POST['addprod'])){
+	if(!isset($_SESSION['log']))
+		{	
+			header('location:login.php');
+		}
+    else{
+      header('location:produk.php');
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -5,8 +18,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyBox</title>
-    <link rel="icon" href="/Assets/logo_color.svg" type="image/icon type">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
+    <link rel="stylesheet" href="style.css"/> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,12 +38,43 @@
         <div class="dropdown">
             <div class="dropbtn">Course</div>
             <div class="dropdown-content">
-              <a href="Produk/produk.html">UI/UX</a>
-              <a href="Produk/produk.html">App Developer</a>
+            <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
+
+															?>
+              <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
+              <?php
+																	}
+														?>
             </div>
           </div>
-          <span class="teks_menu" ><a href="masuk.php">Masuk</a></span>
-          <span class="teks_menu" ><a href="daftar.php">Daftar</a></span>
+          <div class="teks_menu" >
+          <span class="teks_menu"></span>
+          <?php
+								if(!isset($_SESSION['log'])){
+					echo '
+					<span class="teks_menu"><a href="daftar.php"> Daftar</a></span>
+					<span class="teks_menu"><a href="masuk.php">Masuk</a></span>
+					';
+				} else {
+					
+					if($_SESSION['role']=='Member'){
+					echo '
+					<span class="teks_menu" >Halo, '.$_SESSION["name"].'
+					<span class="teks_menu"><a href="logout.php">Keluar?</a></span>
+					';
+					} else {
+					echo '
+					<span class="teks_menu" style="color:white">Halo, '.$_SESSION["name"].'
+					<span class="teks_menu"><a href="admin">Admin Panel</a></span>
+					<span class="teks_menu"><a href="logout.php">Keluar?</a></span>
+					';
+					};
+					
+				}
+				?></div>
+          
         </div>
     
       </nav>
@@ -59,7 +103,11 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+<<<<<<< HEAD:index.html
       <div class="katakeren" style="font-style: italic;text-align: center;" >Langkah pertama Anda dimulai disini</div>
+=======
+      <div class="katakeren">Tegar Bujang</div>
+>>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
     </div>
  
 
@@ -108,20 +156,44 @@
             <h2 class="section-heading text-uppercase">Product</h2><br>
            
         </div>
+<<<<<<< HEAD:index.html
         <div class="row text-center">
             <div class="col-md-6">
+=======
+    
+      
+        <div class="row">
+           
+>>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
                 <!-- product item 1-->
-                <div class="product-item">
-                    <a class="product-link" data-bs-toggle="modal" href="#produk1"></a>
-                     
-                        <img class="img-fluid" src="Assets/product2.jpg" alt="..." style="height: 200px;" />
+                <div class="product-item" style="margin-left:15%;display:flex;flex-direction:row" >
+                <figure style="margin-right:20%"> 
+                    <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
+
+															?>
+                              <div style="display:flex;flex-direction:column">
+                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 200px;width:400px" />
                     </a>
+<<<<<<< HEAD:index.html
                     <div class="product-title2">
                         <div class="product-caption">UI/UX</div>
                         <button class="btn_product col-md-6">Cek Kelas</button> 
+=======
+                    <div class="product_section">
+                        <div class="product-title1 product-caption"> 
+                        <?php echo $p['nama_kelas'] ?></div>
+                         <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product" style="margin-left:-28%" >Cek Kelas</button> </a>
+>>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
                     </div>
-                    
+                    </figure>
+                    <?php
+																	}
+														?>
+                            </div>
                 </div>
+<<<<<<< HEAD:index.html
             </div>
             <div class="col-md-6 ">
                 <!-- product item 2-->
@@ -135,10 +207,14 @@
                         <button class="btn_product col-md-6">Cek Kelas</button> 
                      
                     </div>
+=======
+>>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
                 </div>
-            </div>
+        
+       
             
-        </div>
+    
+    </div>
     </div>
 </section>
 <!-- Benefit-->

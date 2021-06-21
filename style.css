@@ -86,12 +86,17 @@ background-position: 2pc;
 .menuu{
  
     position: relative;
+<<<<<<< HEAD
     left:60%;
     margin-top: 0.5%;
+=======
+    left:50%;
+>>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1
 
 }
   /*login text */
   .teks_menu {
+<<<<<<< HEAD
     
     padding: 12px; 
 }
@@ -105,6 +110,10 @@ background-position: 2pc;
 
 a{
   text-decoration: none !important;
+=======
+   margin-top: -2.2pc;
+    padding-left: 1.8em;
+>>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1
 }
 /* Style The Dropdown Button */
 .dropbtn {
@@ -243,7 +252,7 @@ button.btn-success:focus {
   background-color: #0d8d89  !important;
 }
 
-.visi-misi-teks{
+.visi-misi{
   padding:1.3vw 0px 1vw 0px;
 }
 

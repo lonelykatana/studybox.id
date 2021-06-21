@@ -1,10 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['log'])){
-	
-} else {
-	header('location:index.html');
-};
+
 include 'dbconnect.php';
 
 if(isset($_POST['adduser']))
