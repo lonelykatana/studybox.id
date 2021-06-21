@@ -86,34 +86,13 @@ background-position: 2pc;
 .menuu{
  
     position: relative;
-<<<<<<< HEAD
-    left:60%;
-    margin-top: 0.5%;
-=======
     left:50%;
->>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1
 
 }
   /*login text */
   .teks_menu {
-<<<<<<< HEAD
-    
-    padding: 12px; 
-}
-.teks_menu:hover  {
-  background-color:rgba(216, 216, 216, 0.438);  
-}
-.teks_menu a,.teks_menu a:hover{
-    color: #0aada8;
-
-}
-
-a{
-  text-decoration: none !important;
-=======
    margin-top: -2.2pc;
     padding-left: 1.8em;
->>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1
 }
 /* Style The Dropdown Button */
 .dropbtn {
