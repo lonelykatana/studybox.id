@@ -286,10 +286,10 @@ if(isset($_POST['addprod'])){
   
     <!-- Footer -->
     <footer class="footer-area footer--light" >
-        <div class="footer-big">
+        <div class="footer-big" >
           <!-- start .container -->
           <div class="container" style="padding:0px; ">
-            <div class="row">
+            <div class="row" style="padding:0px;">
               <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="footer-widget">
                   <div class="widget-about">
