@@ -116,7 +116,6 @@ if(isset($_POST['addprod'])){
 					<li ><a href="masuk.php">Masuk</a></li>
 					';
 				} else {
-					
 					if($_SESSION['role']=='Member'){
 				
             echo ' <div class="dropdownn" >
@@ -180,7 +179,7 @@ if(isset($_POST['addprod'])){
     <!-- ======= About Section ======= -->
     <section id="about" class="about" >
       <div class="text-center">
-        <h2 class="section-heading text-uppercase" style="margin-top: -65px;">Tentang kami</h2><br>
+        <h2 class="section-heading " style="margin-top: -4%;padding-bottom:3%;font-size: 4.5vh;">TENTANG KAMI</h2><br>
        <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
     </div>
       <div class="container" data-aos="fade-up">
@@ -188,10 +187,9 @@ if(isset($_POST['addprod'])){
         <div class="row gx-0">
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            
             <div class="content">
          
-              <h2>StudyBox</h2>
+              <h3>StudyBox</h3>
               <p>
                 Studybox adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
 	dikemas secara...
@@ -207,7 +205,7 @@ if(isset($_POST['addprod'])){
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
          
-            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 80%;border-radius: 8px;margin-left: 10%;">
+            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 65%;border-radius: 8px;margin-left: 10%;">
           </div>
         </div>
       </div>
@@ -227,8 +225,8 @@ if(isset($_POST['addprod'])){
         <div class="row">
            
                 <!-- product item 1-->
-                <div class="product-item" style="margin-left:15%;display:flex;flex-direction:row" >
-                <figure style="margin-right:20%"> 
+                <div class="product-item" style="margin-left:23%;display:flex;flex-direction:row" >
+                <figure style="padding-right:40%"> 
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
 														while($p=mysqli_fetch_array($kat)){
@@ -236,12 +234,12 @@ if(isset($_POST['addprod'])){
 															?>
               
                               <div style="display:flex;flex-direction:column">
-                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 200px;width:400px" />
+                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:35vh" />
                     </a>
                     <div class="product_section">
-                        <div class="product-title1 product-caption"> 
+                        <div class="product-title1 product-caption" style="margin-left:-28%"> 
                         <?php echo $p['nama_kelas'] ?></div>
-                         <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product" style="margin-left:-28%" >Cek Kelas</button> </a>
+                         <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product"  >Cek Kelas</button> </a>
                     </div>
                     </figure>
                     <?php

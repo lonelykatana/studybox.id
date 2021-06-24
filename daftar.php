@@ -237,9 +237,7 @@ if(isset($_POST['adduser']))
       $(window).scroll(function(){
         $('.logo').toggleClass('scrolled', $(this).scrollTop() > 550);
       }); 
-
       $(document).ready(function() {
-			
 				var defaults = {
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
