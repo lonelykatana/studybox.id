@@ -46,7 +46,71 @@ if(isset($_POST['addpeserta']))
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-   <nav class="navbar navbar-default2 navbar-expand-lg  bg-light navbar-light fixed-top" style=" box-shadow: 2px 3px 8px #888888;">
+
+<nav class="fixed-top">
+        <div class="logo2">
+        <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
+      <a class=" nav-item" href="index.php">
+      <span class="logo_text">STUDY BOX</span></a>
+    </div>
+    <div >
+        <ul class="nav-links">
+          
+            <div class="dropdownn" >
+          <li>Course</li>
+            <div class="dropdown-contentt">
+            <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
+
+															?>
+              <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
+              <?php
+																	}
+														?>
+            </div>
+          </div>
+            <?php
+          
+								if(!isset($_SESSION['log'])){
+					echo '
+					<li ><a href="daftar.php"> Daftar</a></li>
+					<li ><a href="masuk.php">Masuk</a></li>
+					';
+				} else {
+					
+					if($_SESSION['role']=='Member'){
+				
+            echo ' <div class="dropdownn" >
+            <li class="dropbtnn" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+            <div class="dropdown-contentt">
+              <li><a href="logout.php">Keluar?</a></li>
+              </div>
+              </div>';
+					} else {
+					echo '
+          <div class="dropdownn" >
+         <li class="dropbtn"style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+            <div class="dropdown-contentt">
+            <li ><a href="admin">Admin Panel</a></li>
+            <li><a href="logout.php">Keluar?</a></li>
+            </div></div>
+					';
+					};
+					
+				}
+        
+				?></li>
+           
+        </ul>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+       
+    </nav>
     <div class="logo2">
       <a class=" nav-item" href="index.php">
       <span class="logo_text">STUDY BOX</span></a>
@@ -62,7 +126,6 @@ if(isset($_POST['addpeserta']))
               Course
               </a>
               <div class="dropdown-menu" style="width: 200px;">
-                
                 <a class="dropdown-item nav-item" href="produk.html">UI/UX</a>
                 <a class="dropdown-item" href="produk.html">Web Developer</a>
               </div>
@@ -79,6 +142,7 @@ if(isset($_POST['addpeserta']))
       </nav>
       
       
+      
       <!-- product section-->
  
  <section id="product" class="product" style="margin-top:7%;">
@@ -91,7 +155,7 @@ if(isset($_POST['addpeserta']))
 				?>
       <div  class="col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
      
-        <img src="<?php echo $p['gambar']?>" class="img-fluid" alt="" style="width: 20vw; height: 15vw;  box-shadow: 2px 5px 10px #888888"\="\">  
+        <img src="<?php echo $p['gambar']?>" class="img-fluid" alt="" style="width: 500px; height: 15vw;  box-shadow: 2px 5px 10px #888888"\="\">  
         <div class="product-content">
      
           <h2><?php echo $p['nama_kelas'] ?></h2>

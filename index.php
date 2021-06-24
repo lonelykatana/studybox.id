@@ -20,6 +20,7 @@ if(isset($_POST['addprod'])){
     <title>StudyBox</title>
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="style.css"/> 
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,6 +31,7 @@ if(isset($_POST['addprod'])){
 </head>
 
 <body>
+<!--
   <nav class="navbar-default fixed-top">
         <div class="logo">
             <span class="logo_text" style="padding-top: 0.6em;">STUDYBOX</span>
@@ -39,19 +41,20 @@ if(isset($_POST['addprod'])){
             <div class="dropbtn">Course</div>
             <div class="dropdown-content">
             <?php 
-														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
-														while($p=mysqli_fetch_array($kat)){
+													//	$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+													//	while($p=mysqli_fetch_array($kat)){
 
 															?>
-              <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
+              <a href="produk.php?id_kelas=<?php //echo $p['id_kelas'] ?>"><?php //echo $p['nama_kelas'] ?></a>
               <?php
-																	}
+															//		}
 														?>
             </div>
           </div>
           <div class="teks_menu" >
           <span class="teks_menu"></span>
           <?php
+          /*
 								if(!isset($_SESSION['log'])){
 					echo '
 					<span class="teks_menu"><a href="daftar.php"> Daftar</a></span>
@@ -72,12 +75,80 @@ if(isset($_POST['addprod'])){
 					';
 					};
 					
-				}
+				} 
+        */
 				?></div>
           
         </div>
     
       </nav>
+      -->
+      
+        <!-- Navbar -->
+        <nav class="fixed-top">
+        <div class="logo2">
+        <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
+      <a class=" nav-item" href="index.php">
+      <span class="logo_text">STUDY BOX</span></a>
+    </div>
+    <div >
+        <ul class="nav-links">
+          
+            <div class="dropdownn" >
+          <li>Course</li>
+            <div class="dropdown-contentt">
+            <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
+
+															?>
+              <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
+              <?php
+																	}
+														?>
+            </div>
+          </div>
+            <?php
+          
+								if(!isset($_SESSION['log'])){
+					echo '
+					<li ><a href="daftar.php"> Daftar</a></li>
+					<li ><a href="masuk.php">Masuk</a></li>
+					';
+				} else {
+					
+					if($_SESSION['role']=='Member'){
+				
+            echo ' <div class="dropdownn" >
+            <li class="dropbtnn" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+            <div class="dropdown-contentt">
+              <li><a href="logout.php">Keluar?</a></li>
+              </div>
+              </div>';
+					} else {
+					echo '
+          <div class="dropdownn" >
+         <li class="dropbtn"style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+            <div class="dropdown-contentt">
+            <li ><a href="admin">Admin Panel</a></li>
+            <li><a href="logout.php">Keluar?</a></li>
+            </div></div>
+					';
+					};
+					
+				}
+        
+				?></li>
+           
+        </ul>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+       
+    </nav>
     <div class="carousell">
       <div id="carouselExample1" class="carousel slide z-depth-1-half" data-ride="carousel">
         <div class="carousel-inner">
@@ -87,8 +158,6 @@ if(isset($_POST['addprod'])){
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="Assets/carousel8.jpg" alt="Second slide" style="height: 40vw;">
-
-        
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="Assets/carousel7.png" alt="Third slide" style="height: 40vw;">
@@ -102,8 +171,9 @@ if(isset($_POST['addprod'])){
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+       
       </div>
-      <div class="katakeren">Tegar Bujang</div>
+     
     </div>
  
 
@@ -136,9 +206,8 @@ if(isset($_POST['addprod'])){
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 80%;border-radius: 30px;">
+            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 0vh;border-radius: 30px;">
           </div>
-
         </div>
       </div>
 
@@ -164,6 +233,7 @@ if(isset($_POST['addprod'])){
 														while($p=mysqli_fetch_array($kat)){
 
 															?>
+              
                               <div style="display:flex;flex-direction:column">
                         <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 200px;width:400px" />
                     </a>
@@ -264,6 +334,6 @@ if(isset($_POST['addprod'])){
         $('.logo').toggleClass('scrolled', $(this).scrollTop() > 550);
       });   
     </script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
