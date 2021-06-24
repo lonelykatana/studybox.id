@@ -1,6 +1,3 @@
-.a{
-  text-decoration: none;
-}
 
 body{
     margin: 0px;
@@ -238,4 +235,11 @@ button.btn-success:focus {
 .visi-misi{
   padding:1.3vw 0px 1vw 0px;
 }
+.alert{
+
+	color:#ff0033;
+  margin-top: -5%;
+  margin-bottom: 0 !important;
+	text-align: center;
+
 

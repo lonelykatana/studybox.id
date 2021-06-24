@@ -4,7 +4,7 @@ include 'dbconnect.php';
 if(isset($_POST['addprod'])){
 	if(!isset($_SESSION['log']))
 		{	
-			header('location:login.php');
+			header('location:masuk.php');
 		}
     else{
       header('location:produk.php');
@@ -218,7 +218,7 @@ if(isset($_POST['addprod'])){
 </section>
   
     <!-- Footer -->
-    <footer class="footer-area footer--light">
+    <footer class="footer-area footer--light" >
         <div class="footer-big">
           <!-- start .container -->
           <div class="container" style="padding:0px; ">
