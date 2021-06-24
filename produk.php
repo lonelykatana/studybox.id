@@ -34,7 +34,7 @@ if(isset($_POST['addpeserta']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyBox</title>
-    <link rel="icon" href="/Assets/logo_color.svg" type="image/icon type">
+    <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
     <link rel="stylesheet" href="produk.css"/>
     <link rel="stylesheet" href="style.css"/>
@@ -46,7 +46,7 @@ if(isset($_POST['addpeserta']))
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color: rgb(247,247,247);">
 
 <nav class="fixed-top">
         <div class="logo2">
@@ -58,7 +58,7 @@ if(isset($_POST['addpeserta']))
         <ul class="nav-links">
           
             <div class="dropdownn" >
-          <li>Course</li>
+          <li style="padding-left:8%;margin-top: 10%;">Course</li>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -75,23 +75,22 @@ if(isset($_POST['addpeserta']))
           
 								if(!isset($_SESSION['log'])){
 					echo '
-					<li ><a href="daftar.php"> Daftar</a></li>
-					<li ><a href="masuk.php">Masuk</a></li>
+					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
+					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
 					';
 				} else {
-					
 					if($_SESSION['role']=='Member'){
 				
             echo ' <div class="dropdownn" >
-            <li class="dropbtnn" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
             <div class="dropdown-contentt">
-              <li><a href="logout.php">Keluar?</a></li>
+              <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
           <div class="dropdownn" >
-         <li class="dropbtn"style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
             <div class="dropdown-contentt">
             <li ><a href="admin">Admin Panel</a></li>
             <li><a href="logout.php">Keluar?</a></li>
@@ -146,7 +145,7 @@ if(isset($_POST['addpeserta']))
       
       <!-- product section-->
  
- <section id="product" class="product" style="margin-top:7%;">
+ <section id="product" class="product" >
 
   <div class="container" data-aos="fade-up " style="margin-left:10%;">
     <div class="row gx-0" >
@@ -154,9 +153,9 @@ if(isset($_POST['addpeserta']))
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
 
 				?>
-      <div  class="col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div  class="produk-detail col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
      
-        <img src="<?php echo $p['gambar']?>" class="img-fluid" alt="" style="width: 500px; height: 15vw;  box-shadow: 2px 5px 10px #888888"\="\">  
+        <img src="<?php echo $p['gambar']?>" class="img_content" alt=""   >  
         <div class="product-content">
      
           <h2><?php echo $p['nama_kelas'] ?></h2>
@@ -165,9 +164,9 @@ if(isset($_POST['addpeserta']))
           </p>
           <div class="text-left text-lg-start">
             <div class="price-product snipcart-item block">
-              <div class="snipcart-thumb agileinfo_single_right_snipcart">
-                  <h5 class="m-sing">Rp  <?php echo $p['harga_before'] ?>
-                      <span>Rp <?php echo $p['harga_after'] ?></span></h4>
+              <div class="harga">
+                  <span class="harga1" style="text-decoration: line-through;"><i>Rp <?php echo $p['harga_before'] ?></i></span>
+                      <h6 class="harga2"style="padding-left: 2vh;"><b>Gratis</b> </h6>
               </div>
               <?php
           
@@ -426,5 +425,6 @@ if(isset($_POST['addpeserta']))
   <!-- End -->
 <script src="js/product.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

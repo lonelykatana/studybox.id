@@ -12,73 +12,7 @@ body {
   overflow-x: hidden;
   background-color: rgb(247,247,247);
 }
-/*
-.navbar-default{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 10%;
-   color: white;   
-
-}
-.navbar-default2{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 10%;
- color: black;  
- background-color: rgb(235, 235, 235)  ;
-
-
-}
-.navbar-default.scrolled  {
-  background-color: white  ;
-  color: black;
-  transition: background-color 0.3s ease;
-  box-shadow: 2px 5px 10px #888888;
-
-}
-
-.logo.scrolled{
-  color: #184F6E;
-  background-image: url("Assets/logo_color.svg");
-}
-.logo{
-    display: flex;
-    flex-direction: row;
-    padding: 1.2em 0px 0px 3.5em;
-    background-image: url("Assets/logo_white.svg");
-  background-position: 2pc;
-    background-size: 2.5pc 2.5pc;
-    background-repeat: no-repeat;
-    
-}
-
-.logo2{
-  color: #184F6E;
-  display: flex;
-  flex-direction: row;
-  padding: 1.2em 0px 0px 3.5em;
-  background-image: url("Assets/logo_color.svg");
-background-position: 2pc;
-  background-size: 2.5pc 2.5pc;
-  background-repeat: no-repeat;
-  
-}
-
-
-.logo_text{
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1.8rem;
-    line-height: 1.5em;
-    letter-spacing: 0.18em;
-    margin-top:-20px;
-    padding: 0 0 0 1.8pc;
-}
-*/
+ 
 
 /* Navbar */
 nav {
@@ -87,13 +21,17 @@ nav {
   height: 3.8vw;
   background-color: #fff;
   position: relative;
-  padding-left: 7.5%;
+  padding-left: 6.5%;
+}
+li.nav-menu{
+  margin-left: 8%;
+  margin-top: 0.8%;
 }
 .logo2{
   color: #184F6E;
   display: flex;
-  padding: 1em 0px 0px 1.4em;
-  z-index: 2;
+  padding: 0.8% 0px 0px 1%;
+  z-index: 1000;
 }
 .logo_text{
   display: flex;
@@ -139,65 +77,6 @@ li{
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  
-  .line {
-      width: 25px;
-      height: 3px;
-      background: black;
-      margin: 5px;
-  }
-
-  nav {
-      position: relative;
-      height: 10vh;
-     
-  }
-  .hamburger { 
-      position: absolute;
-      cursor: pointer;
-      right: 5%;
-      top: 50%;
-      transform: translate(-5%, -50%);
-      z-index: 2;
-  }
-  
-  .nav-links {
-      position: relative;
-      background: #fff;
-      height: 100vh;
-      width: 100%;
-      margin-left: 10vh;
-      z-index: 1;
-      flex-direction: column;
-      clip-path: circle(0px at 90% -15%);
-      -webkit-clip-path: circle(100px at 90% -15%);
-      transition: all 0.5s ease-in;
-      /*  Need to add this to not have any issues clicking them */
-      pointer-events: none;
-      
-  }
-  .nav-links.open {
-      clip-path: circle(1000px at 90% -10%);
-      -webkit-clip-path: circle(1000px at 90% -10%);
-      /*  Need to add this to not have any issues clicking them */
-      pointer-events: all;
-  }
-
-  .landing {
-      flex-direction: column;
-      
-      
-  }
-
-  .nav-links li {
-      opacity: 1;
-      padding-top: 5vh;
-      padding-right: 35vh;
-      
-  }
-
-}
 .logo_footer{
   display: flex;
   flex-direction: row;
@@ -274,20 +153,25 @@ li{
     text-align:center ;
   }
   .img_content{
-    width: 300px;
-    height:300px;
-     
+    width: 30vh; height: 30vh;
+    box-shadow: 2px 5px 10px #888888;
+    margin-left: -10vh;
   }
 .about{
   padding-top: 7%;
   padding-bottom: 3%;
+}
+.harga{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 .product-caption {
   padding-top: 10px;
   font-size: 1.5rem;
 }
 #product,#benefit{
-  padding: 3% 0px 10% 0px; 
+  padding: 1% 0px 10% 0px; 
 }
 .price-product{
   margin-top: 2vw;
@@ -353,5 +237,77 @@ button.btn-success:focus {
   margin-top: -5%;
   margin-bottom: 0 !important;
 	text-align: center;
+
+}
+@media screen and (max-width: 768px) {
+  .logo2{
+    margin-top: 1%;
+  }
+  
+  .line {
+      width: 25px;
+      height: 3px;
+      background: black;
+      margin: 5px;
+  }
+
+  nav {
+      position: relative;
+      height: 7vh;
+     
+  }
+ .harga1{
+   position:absolute;
+  
+ }
+ .harga2{
+   margin-left: 30%;
+ }
+  .hamburger { 
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+  }
+  
+  .nav-links {
+      position: relative;
+      background: #fff;
+      height: 100vh;
+      width: 100%;
+      margin-left: 10vh;
+      z-index: 1;
+      flex-direction: column;
+      clip-path: circle(0px at 90% -15%);
+      -webkit-clip-path: circle(100px at 90% -15%);
+      transition: all 0.5s ease-in;
+      /*  Need to add this to not have any issues clicking them */
+      pointer-events: none;
+      
+  }
+  .nav-links.open {
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      /*  Need to add this to not have any issues clicking them */
+      pointer-events: all;
+  }
+
+  .landing {
+      flex-direction: column;
+      
+      
+  }
+
+  .nav-links li {
+      opacity: 1;
+      padding-top: 5vh;
+      padding-right: 35vh;
+      
+  }
+  .produk-detail{
+    margin-left: -11vh;
+  }
 
 }

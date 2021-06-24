@@ -1,6 +1,6 @@
 body{
     margin: 0px;
- 
+	background-color: rgb(247, 247, 247);
 }
 
 .faqs
@@ -211,5 +211,17 @@ body{
 	color: rgba(0,0,0,1);
 }
 
-
+@media screen and (max-width: 768px) {
+	.accordion_container
+{
+    width: 78vh;
+	margin-bottom: 12px;
+	border: solid 1px #e5e5e5;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 16px;
+	padding-bottom: 5px;
+    
+}
+}
   

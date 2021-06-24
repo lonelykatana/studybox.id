@@ -32,58 +32,7 @@ if(isset($_POST['addprod'])){
 </head>
 
 <body>
-<!--
-  <nav class="navbar-default fixed-top">
-        <div class="logo">
-            <span class="logo_text" style="padding-top: 0.6em;">STUDYBOX</span>
-        </div>
-       <div class="menuu">
-        <div class="dropdown">
-            <div class="dropbtn">Course</div>
-            <div class="dropdown-content">
-            <?php 
-													//	$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
-													//	while($p=mysqli_fetch_array($kat)){
 
-															?>
-              <a href="produk.php?id_kelas=<?php //echo $p['id_kelas'] ?>"><?php //echo $p['nama_kelas'] ?></a>
-              <?php
-															//		}
-														?>
-            </div>
-          </div>
-          <div class="teks_menu" >
-          <span class="teks_menu"></span>
-          <?php
-          /*
-								if(!isset($_SESSION['log'])){
-					echo '
-					<span class="teks_menu"><a href="daftar.php"> Daftar</a></span>
-					<span class="teks_menu"><a href="masuk.php">Masuk</a></span>
-					';
-				} else {
-					
-					if($_SESSION['role']=='Member'){
-					echo '
-					<span class="teks_menu" >Halo, '.$_SESSION["name"].'
-					<span class="teks_menu"><a href="logout.php">Keluar?</a></span>
-					';
-					} else {
-					echo '
-					<span class="teks_menu" style="color:white">Halo, '.$_SESSION["name"].'
-					<span class="teks_menu"><a href="admin">Admin Panel</a></span>
-					<span class="teks_menu"><a href="logout.php">Keluar?</a></span>
-					';
-					};
-					
-				} 
-        */
-				?></div>
-          
-        </div>
-    
-      </nav>
-      -->
 
         <!-- Navbar -->
         <nav class="fixed-top">
@@ -96,7 +45,7 @@ if(isset($_POST['addprod'])){
         <ul class="nav-links">
           
             <div class="dropdownn" >
-          <li>Course</li>
+          <li style="padding-left:8%;margin-top: 10%;">Course</li>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -113,22 +62,22 @@ if(isset($_POST['addprod'])){
           
 								if(!isset($_SESSION['log'])){
 					echo '
-					<li ><a href="daftar.php"> Daftar</a></li>
-					<li ><a href="masuk.php">Masuk</a></li>
+					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
+					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
 					';
 				} else {
 					if($_SESSION['role']=='Member'){
 				
             echo ' <div class="dropdownn" >
-            <li class="dropbtnn" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
             <div class="dropdown-contentt">
-              <li><a href="logout.php">Keluar?</a></li>
+              <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
           <div class="dropdownn" >
-         <li class="dropbtn"style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
             <div class="dropdown-contentt">
             <li ><a href="admin">Admin Panel</a></li>
             <li><a href="logout.php">Keluar?</a></li>
@@ -190,14 +139,14 @@ if(isset($_POST['addprod'])){
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
          
-              <h3>StudyBox</h3>
+              <h3 style="margin-top:-10%">StudyBox</h3>
               <p>
                 Studybox adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
 	dikemas secara...
               </p>
               <div class="text-left text-lg-start">
                 <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Read More</span>
+                  <span><a href="about.html">Read More</a></span>
                  
                 </a>
               </div>
@@ -226,8 +175,8 @@ if(isset($_POST['addprod'])){
         <div class="row">
            
                 <!-- product item 1-->
-                <div class="product-item" style="margin-left:23%;display:flex;flex-direction:row" >
-                <figure style="padding-right:40%"> 
+                <div class="product-item" style="margin-left:14.5%;display:flex;flex-direction:row" >
+                <figure style="padding-right:42%"> 
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
 														while($p=mysqli_fetch_array($kat)){
@@ -235,10 +184,10 @@ if(isset($_POST['addprod'])){
 															?>
               
                               <div style="display:flex;flex-direction:column">
-                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:35vh" />
+                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:30vh;margin-left:35%" />
                     </a>
                     <div class="product_section">
-                        <div class="product-title1 product-caption" style="margin-left:-28%"> 
+                        <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         <?php echo $p['nama_kelas'] ?></div>
                          <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product"  >Cek Kelas</button> </a>
                     </div>
@@ -261,7 +210,6 @@ if(isset($_POST['addprod'])){
       </div>
       <div class="row text-center">
           <div class="col-md-4">
-             
               <h4 class="my-3">Benefit1</h4>
               <img src ="Assets/content1.jpeg" style="width: 80px; height: 80px; border-radius: 25px;">
               <p class="text-muted">Peserta dapat menelusuri suatu bidang secara perlahan dan bertahap dalam bimbingan terstruktur</p>
@@ -295,7 +243,7 @@ if(isset($_POST['addprod'])){
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px"><i>Langkah pertama Anda dimulai di sini</i></h5>
+                    <h5 style="color:white; margin-top:10px"><i>"Langkah pertama Anda dimulai di sini"</i></h5>
                     
                   </div>
                 </div>
