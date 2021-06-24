@@ -103,11 +103,7 @@ if(isset($_POST['addprod'])){
           <span class="sr-only">Next</span>
         </a>
       </div>
-<<<<<<< HEAD:index.html
-      <div class="katakeren" style="font-style: italic;text-align: center;" >Langkah pertama Anda dimulai disini</div>
-=======
       <div class="katakeren">Tegar Bujang</div>
->>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
     </div>
  
 
@@ -156,15 +152,10 @@ if(isset($_POST['addprod'])){
             <h2 class="section-heading text-uppercase">Product</h2><br>
            
         </div>
-<<<<<<< HEAD:index.html
-        <div class="row text-center">
-            <div class="col-md-6">
-=======
     
       
         <div class="row">
            
->>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
                 <!-- product item 1-->
                 <div class="product-item" style="margin-left:15%;display:flex;flex-direction:row" >
                 <figure style="margin-right:20%"> 
@@ -176,16 +167,10 @@ if(isset($_POST['addprod'])){
                               <div style="display:flex;flex-direction:column">
                         <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 200px;width:400px" />
                     </a>
-<<<<<<< HEAD:index.html
-                    <div class="product-title2">
-                        <div class="product-caption">UI/UX</div>
-                        <button class="btn_product col-md-6">Cek Kelas</button> 
-=======
                     <div class="product_section">
                         <div class="product-title1 product-caption"> 
                         <?php echo $p['nama_kelas'] ?></div>
                          <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product" style="margin-left:-28%" >Cek Kelas</button> </a>
->>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
                     </div>
                     </figure>
                     <?php
@@ -193,22 +178,6 @@ if(isset($_POST['addprod'])){
 														?>
                             </div>
                 </div>
-<<<<<<< HEAD:index.html
-            </div>
-            <div class="col-md-6 ">
-                <!-- product item 2-->
-                <div class="product-item">
-                    <a class="product-link" data-bs-toggle="modal" href="#produk2">
-                        
-                        <img class="img-fluid" src="Assets/product2.jpg" alt="..." style="height: 200px;" />
-                    </a>
-                    <div class="product-title2">
-                        <div class="product-caption">Web Developer</div>
-                        <button class="btn_product col-md-6">Cek Kelas</button> 
-                     
-                    </div>
-=======
->>>>>>> 75b1f71ed57089c45a18ed024bd949dfb74f01b1:index.php
                 </div>
         
        
