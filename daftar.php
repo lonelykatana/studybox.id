@@ -15,7 +15,9 @@ if(isset($_POST['adduser']))
 		echo " <div class='alert alert-success'>
 			Berhasil mendaftar, silakan masuk.
 		  </div>
-		<meta http-equiv='refresh' content='1; url= index.php'/>  ";
+
+		<meta http-equiv='refresh' content='1; url= masuk.php'/>  ";
+
 		} else { echo "<div class='alert alert-warning'>
 			Gagal mendaftar, silakan coba lagi.
 		  </div>

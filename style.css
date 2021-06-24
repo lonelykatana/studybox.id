@@ -202,7 +202,6 @@ li{
 .logo_footer{
   display: flex;
   flex-direction: row;
-  padding: 1.2em 0px 0px 2em;
 }
 .logo_text_footer{
   display: flex;
@@ -304,7 +303,7 @@ li{
   padding-top: 15px;
 }
 .product-title2{
-  padding-left:20%;
+ 
 }
 
 .product_section{

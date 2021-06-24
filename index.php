@@ -83,7 +83,7 @@ if(isset($_POST['addprod'])){
     
       </nav>
       -->
-      
+
         <!-- Navbar -->
         <nav class="fixed-top">
         <div class="logo2">
@@ -180,7 +180,7 @@ if(isset($_POST['addprod'])){
     <!-- ======= About Section ======= -->
     <section id="about" class="about" >
       <div class="text-center">
-        <h2 class="section-heading text-uppercase" style="margin-top: -30px;">Tentang kami</h2><br>
+        <h2 class="section-heading text-uppercase" style="margin-top: -65px;">Tentang kami</h2><br>
        <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
     </div>
       <div class="container" data-aos="fade-up">
@@ -206,7 +206,8 @@ if(isset($_POST['addprod'])){
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 0vh;border-radius: 30px;">
+         
+            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 80%;border-radius: 8px;margin-left: 10%;">
           </div>
         </div>
       </div>
@@ -249,10 +250,6 @@ if(isset($_POST['addprod'])){
                             </div>
                 </div>
                 </div>
-        
-       
-            
-    
     </div>
     </div>
 </section>
@@ -297,18 +294,18 @@ if(isset($_POST['addprod'])){
           </div>
           
        
-          <p class="font-italic text-muted" style="margin-left:2vw">Bootcamp berkualitas ,Harga Ekonomis!</p>
      
         </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" style="margin-left:2vw">
-          <h6 class="text-uppercase font-weight-bold mb-4" style="margin-left:-0.2vw"><a href="about.html" class="text-muted">About Us</a></h6>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
-            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
-            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
-            <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
-          </ul>
-        </div>
+       
+      </div>
+      <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" style="margin-left:3vw">
+        <h6 class="text-uppercase font-weight-bold mb-4" style="margin-left:-0.2vw"><a href="about.html" class="text-muted">About Us</a></h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
+          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
+          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
+          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
+        </ul>
       </div>
     </div>
 
