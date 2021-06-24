@@ -4,7 +4,7 @@ include 'dbconnect.php';
 if(isset($_POST['addprod'])){
 	if(!isset($_SESSION['log']))
 		{	
-			header('location:login.php');
+			header('location:masuk.php');
 		}
     else{
       header('location:produk.php');
@@ -19,6 +19,7 @@ if(isset($_POST['addprod'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyBox</title>
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
+    <link rel="stylesheet" href="footer.css"/> 
     <link rel="stylesheet" href="style.css"/> 
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -284,39 +285,103 @@ if(isset($_POST['addprod'])){
 </section>
   
     <!-- Footer -->
-  <footer class="bg-light">
-    <div class="container py-5">
-      <div class="row py-4">
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 ">
-          <div class="logo_footer" >
-            <img src="Assets/logo_color.svg" alt="" width="40" class="mb-3">
-            <span class="logo_text_footer">STUDY BOX</span>
-          </div>
-          
-       
-     
-        </div>
-       
-      </div>
-      <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" style="margin-left:3vw">
-        <h6 class="text-uppercase font-weight-bold mb-4" style="margin-left:-0.2vw"><a href="about.html" class="text-muted">About Us</a></h6>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
-          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
-          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
-          <li class="mb-2"><a href="#" class="text-muted"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
+    <footer class="footer-area footer--light" >
+        <div class="footer-big">
+          <!-- start .container -->
+          <div class="container" style="padding:0px; ">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="footer-widget">
+                  <div class="widget-about">
+                    <div class="logo_footer">
+                    <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
+                    <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
+                    </div>
+                    <h5 style="color:white; margin-top:10px"><i>Langkah pertama Anda dimulai di sini</i></h5>
+                    
+                  </div>
+                </div>
+                <!-- Ends: .footer-widget -->
+              </div>
+              <!-- end /.col-md-4 -->
+              <div class="col-xs-12 col-sm-6 col-md-3"> 
+                <div class="footer-widget">
+                  <div class="footer-menu footer-menu--1">
+                    <h4 class="footer-widget-title">Sitemap</h4>
+                    <ul>
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">Tentang Kami</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end /.footer-menu -->
+                </div>
+                <!-- Ends: .footer-widget -->
+              </div>
+              <!-- end /.col-md-3 -->
+      
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="footer-widget">
+                  <div class="footer-menu footer-menu--1">
+                    <h4 class="footer-widget-title">Kelas</h4>
+                    <ul>
+                      <li>
+                        <a href="#">UI/UX</a>
+                      </li>
+                      <li>
+                        <a href="#">Web Dev</a>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                  <!-- end /.footer-menu -->
+                </div>
+                <!-- Ends: .footer-widget -->
+              </div>
+              <!-- end /.col-lg-3 -->
+      
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="footer-widget">
+                  <div class="footer-menu no-padding">
+                    <h4 class="footer-widget-title">Hubungi Kami</h4>
+                    <ul>
+          <li><a href="#"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
+          <li><a href="#"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
+          <li><a href="#"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
+          <li><a href="#"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
         </ul>
-      </div>
-    </div>
-
-
-    <!-- Copyrights -->
-    <div class="bg-light py-4">
-      <div class="container text-center">
-        <p class="text-muted mb-0 py-2">© 2021 STUDYBOX All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+                  </div>
+                  <!-- end /.footer-menu -->
+                </div>
+                <!-- Ends: .footer-widget -->
+              </div>
+              <!-- Ends: .col-lg-3 -->
+      
+            </div>
+            <!-- end /.row -->
+          </div>
+          <!-- end /.container -->
+        </div>
+        <!-- end /.footer-big -->
+      
+        <div class="mini-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="copyright-text">
+                  <p>© 2021 STUDYBOX All rights reserved.
+                  </p>
+                </div>
+      
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
   <!-- End -->
 
 	<script type="text/javascript">

@@ -1,10 +1,13 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 body {
+  margin: 0px;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
@@ -352,4 +355,11 @@ button.btn-success:focus {
 .visi-misi{
   padding:1.3vw 0px 1vw 0px;
 }
+.alert{
+
+	color:#ff0033;
+  margin-top: -5%;
+  margin-bottom: 0 !important;
+	text-align: center;
+
 
