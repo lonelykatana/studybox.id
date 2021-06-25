@@ -57,7 +57,7 @@ if(isset($_POST['adduser']))
         <ul class="nav-links">
           
             <div class="dropdownn" >
-          <li>Course</li>
+          <li style="padding-left:8%;margin-top: 10%;">Course</li>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -71,26 +71,24 @@ if(isset($_POST['adduser']))
             </div>
           </div>
             <?php
-          
 								if(!isset($_SESSION['log'])){
 					echo '
-					<li ><a href="daftar.php"> Daftar</a></li>
-					<li ><a href="masuk.php">Masuk</a></li>
+					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
+					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
 					';
 				} else {
-					
 					if($_SESSION['role']=='Member'){
 				
             echo ' <div class="dropdownn" >
-            <li class="dropbtnn" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
             <div class="dropdown-contentt">
-              <li><a href="logout.php">Keluar?</a></li>
+              <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
           <div class="dropdownn" >
-         <li class="dropbtn"style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
             <div class="dropdown-contentt">
             <li ><a href="admin">Admin Panel</a></li>
             <li><a href="logout.php">Keluar?</a></li>
@@ -111,37 +109,7 @@ if(isset($_POST['adduser']))
         </div>
        
     </nav>
-    <div class="logo2">
      
-      <span class="logo_text">STUDY BOX</span>
-    </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav menuu mr-auto ">
-            <li class="nav-item dropdown teks_menu">
-              <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-              Course
-              </a>
-              <div class="dropdown-menu" style="width: 200px;">
-                
-                <a class="dropdown-item nav-item" href="Produk/produk.html">UI/UX</a>
-                <a class="dropdown-item" href="Produk/produk.html">Web Developer</a>
-              </div>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="daftar.html">Daftar</a>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="masuk.html">Masuk</a>
-            </li>
-            
-           
-        </div>
-      </nav>
-
     <!-- form daftar-->
 
     <div class="container" style="margin-top: 0px;">

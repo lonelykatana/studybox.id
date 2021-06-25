@@ -72,7 +72,6 @@ if(isset($_POST['addpeserta']))
             </div>
           </div>
             <?php
-          
 								if(!isset($_SESSION['log'])){
 					echo '
 					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
@@ -111,35 +110,7 @@ if(isset($_POST['addpeserta']))
         </div>
        
     </nav>
-    <div class="logo2">
-      <a class=" nav-item" href="index.php">
-      <span class="logo_text">STUDY BOX</span></a>
-    </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav menuu mr-auto ">
-            <li class="nav-item dropdown teks_menu">
-              <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-              Course
-              </a>
-              <div class="dropdown-menu" style="width: 200px;">
-                <a class="dropdown-item nav-item" href="produk.html">UI/UX</a>
-                <a class="dropdown-item" href="produk.html">Web Developer</a>
-              </div>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="daftar.html">Daftar</a>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="masuk.html">Masuk</a>
-            </li>
-            
-           
-        </div>
-      </nav>
+
       
       
       

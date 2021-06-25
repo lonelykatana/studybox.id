@@ -33,70 +33,69 @@ if(isset($_POST['addprod'])){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
-<body>
-  <nav class="fixed-top">
-    <div class="logo2">
-    <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
-  <a class=" nav-item" href="index.php">
-  <span class="logo_text">STUDY BOX</span></a>
-</div>
-<div >
-    <ul class="nav-links">
-      
-        <div class="dropdownn" >
-      <li style="padding-left:8%;margin-top: 10%;">Course</li>
-        <div class="dropdown-contentt">
-        <?php 
-                        $kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
-                        while($p=mysqli_fetch_array($kat)){
+<body style="background-color: rgb(247,247,247);">
+<nav class="fixed-top">
+        <div class="logo2">
+        <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
+      <a class=" nav-item" href="index.php">
+      <span class="logo_text">STUDY BOX</span></a>
+    </div>
+    <div >
+        <ul class="nav-links">
+          
+            <div class="dropdownn" >
+          <li style="padding-left:8%;margin-top: 10%;">Course</li>
+            <div class="dropdown-contentt">
+            <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
 
-                          ?>
-          <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
-          <?php
-                              }
-                        ?>
-        </div>
-      </div>
-        <?php
-      
-            if(!isset($_SESSION['log'])){
-      echo '
-      <li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
-      <li class="nav-menu"><a href="masuk.php">Masuk</a></li>
-      ';
-    } else {
-      if($_SESSION['role']=='Member'){
-    
-        echo ' <div class="dropdownn" >
-        <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
-        <div class="dropdown-contentt">
-          <li ><a href="logout.php">Keluar?</a></li>
+															?>
+              <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
+              <?php
+																	}
+														?>
+            </div>
           </div>
-          </div>';
-      } else {
-      echo '
-      <div class="dropdownn" >
-     <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
-        <div class="dropdown-contentt">
-        <li ><a href="admin">Admin Panel</a></li>
-        <li><a href="logout.php">Keluar?</a></li>
-        </div></div>
-      ';
-      };
-      
-    }
-    
-    ?></li>
+            <?php
+								if(!isset($_SESSION['log'])){
+					echo '
+					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
+					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+					';
+				} else {
+					if($_SESSION['role']=='Member'){
+				
+            echo ' <div class="dropdownn" >
+            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+            <div class="dropdown-contentt">
+              <li ><a href="logout.php">Keluar?</a></li>
+              </div>
+              </div>';
+					} else {
+					echo '
+          <div class="dropdownn" >
+         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+            <div class="dropdown-contentt">
+            <li ><a href="admin">Admin Panel</a></li>
+            <li><a href="logout.php">Keluar?</a></li>
+            </div></div>
+					';
+					};
+					
+				}
+        
+				?></li>
+           
+        </ul>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
        
-    </ul>
-    </div>
-    <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-   
-</nav>
+    </nav>
        <!-- ======= About Section ======= -->
     <section id="about" class="about" style="padding-bottom:3vw" >
         <div class="text-center">
@@ -131,7 +130,7 @@ if(isset($_POST['addprod'])){
 
     
       <!-- feature_part start-->
-    <section class="feature_part single_feature_padding page-section bg-light " style="padding: 4vw 0 3vw 0 ;">
+    <section class="feature_part single_feature_padding page-section bg-white" style="padding: 4vw 0 3vw 0 ;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xl-3 align-self-center">
@@ -297,7 +296,7 @@ if(isset($_POST['addprod'])){
       </div>
     </div>
   </footer>
-      
+<script src="script.js"></script>
 <script src="/js/product.js"></script>
 <script src="/js/jquery-3.2.1.min.js"></script>
 </body>
