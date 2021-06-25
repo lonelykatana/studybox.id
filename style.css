@@ -333,6 +333,13 @@ p.product-description{
   font-size: 16px;
   margin: 4% 2px 0px ;
   cursor: pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+a.btn_product:hover, a.btn_product:focus,
+button.btn_product:hover,
+button.btn_product:focus {
+  background-color: #0d8d89  !important;
 }
 footer{
   background-color: white;
@@ -343,7 +350,8 @@ footer{
 }
 .btn-success {
   background-color: #0aada8 !important;
-  border-color: #0aada8 !important
+  border-color: #0aada8 !important;
+  
 }
 
 a.btn-success:hover, a.btn-success:focus,

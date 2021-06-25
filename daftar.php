@@ -144,7 +144,7 @@ if(isset($_POST['adduser']))
 
     <!-- form daftar-->
 
-    <div class="container" style="margin-top: 8%;">
+    <div class="container" style="margin-top: 0px;">
 
         <div class="card o-hidden border-0 shadow-lg col-lg-6 my-5 mx-auto" s>
           <div class="card-body p-0">
