@@ -37,6 +37,7 @@ include 'dbconnect.php';
     <link rel="stylesheet" href="footer.css"/> 
     <link rel="stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -141,25 +142,25 @@ include 'dbconnect.php';
   
  <!-- Footer -->
  <footer class="footer-area footer--light" >
-        <div class="footer-big">
+        <div class="footer-big" >
           <!-- start .container -->
           <div class="container" style="padding:0px; ">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="footer-widget">
+            <div class="row" style="padding:0px;">
+              <div class="col-xs-12 col-sm-6 col-md-5" >
+                <div class="footer-widget" >
                   <div class="widget-about">
                     <div class="logo_footer">
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px"><i>Langkah pertama Anda dimulai di sini</i></h5>
+                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>" Langkah pertama Anda dimulai di sini "</i></h5>
                     
                   </div>
                 </div>
                 <!-- Ends: .footer-widget -->
               </div>
               <!-- end /.col-md-4 -->
-              <div class="col-xs-12 col-sm-6 col-md-3"> 
+              <div class="col-xs-12 col-sm-6 col-md-2"> 
                 <div class="footer-widget">
                   <div class="footer-menu footer-menu--1">
                     <h4 class="footer-widget-title">Sitemap</h4>
@@ -177,18 +178,25 @@ include 'dbconnect.php';
                 <!-- Ends: .footer-widget -->
               </div>
               <!-- end /.col-md-3 -->
-      
-              <div class="col-xs-12 col-sm-6 col-md-3">
+     
+              <div class="col-xs-12 col-sm-6 col-md-2">
                 <div class="footer-widget">
                   <div class="footer-menu footer-menu--1">
                     <h4 class="footer-widget-title">Kelas</h4>
                     <ul>
+                    <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
+
+															?>
+             
+             
                       <li>
-                        <a href="#">UI/UX</a>
+                      <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
                       </li>
-                      <li>
-                        <a href="#">Web Dev</a>
-                      </li>
+                      <?php
+																	}
+														?>
                      
                     </ul>
                   </div>
@@ -198,7 +206,7 @@ include 'dbconnect.php';
               </div>
               <!-- end /.col-lg-3 -->
       
-              <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-2">
                 <div class="footer-widget">
                   <div class="footer-menu no-padding">
                     <h4 class="footer-widget-title">Hubungi Kami</h4>

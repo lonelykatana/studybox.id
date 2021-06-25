@@ -21,7 +21,7 @@ if(isset($_POST['addprod'])){
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
     <link rel="stylesheet" href="style.css"/> 
-    
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -233,21 +233,21 @@ if(isset($_POST['addprod'])){
           <!-- start .container -->
           <div class="container" style="padding:0px; ">
             <div class="row" style="padding:0px;">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="footer-widget">
+              <div class="col-xs-12 col-sm-6 col-md-5" >
+                <div class="footer-widget" >
                   <div class="widget-about">
                     <div class="logo_footer">
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px"><i>"Langkah pertama Anda dimulai di sini"</i></h5>
+                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>" Langkah pertama Anda dimulai di sini "</i></h5>
                     
                   </div>
                 </div>
                 <!-- Ends: .footer-widget -->
               </div>
               <!-- end /.col-md-4 -->
-              <div class="col-xs-12 col-sm-6 col-md-3"> 
+              <div class="col-xs-12 col-sm-6 col-md-2"> 
                 <div class="footer-widget">
                   <div class="footer-menu footer-menu--1">
                     <h4 class="footer-widget-title">Sitemap</h4>
@@ -266,7 +266,7 @@ if(isset($_POST['addprod'])){
               </div>
               <!-- end /.col-md-3 -->
      
-              <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-2">
                 <div class="footer-widget">
                   <div class="footer-menu footer-menu--1">
                     <h4 class="footer-widget-title">Kelas</h4>
@@ -293,7 +293,7 @@ if(isset($_POST['addprod'])){
               </div>
               <!-- end /.col-lg-3 -->
       
-              <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="col-xs-12 col-sm-6 col-md-2">
                 <div class="footer-widget">
                   <div class="footer-menu no-padding">
                     <h4 class="footer-widget-title">Hubungi Kami</h4>
