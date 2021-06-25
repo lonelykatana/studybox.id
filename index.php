@@ -31,9 +31,7 @@ if(isset($_POST['addprod'])){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
-<body>
-
-
+<body style="background-color:rgb(247,247,247)">
         <!-- Navbar -->
         <nav class="fixed-top">
         <div class="logo2">
@@ -59,7 +57,6 @@ if(isset($_POST['addprod'])){
             </div>
           </div>
             <?php
-          
 								if(!isset($_SESSION['log'])){
 					echo '
 					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
@@ -146,7 +143,7 @@ if(isset($_POST['addprod'])){
               </p>
               <div class="text-left text-lg-start">
                 <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span><a href="about.html">Read More</a></span>
+                  <span><a href="about.php">Read More</a></span>
                  
                 </a>
               </div>
@@ -268,18 +265,25 @@ if(isset($_POST['addprod'])){
                 <!-- Ends: .footer-widget -->
               </div>
               <!-- end /.col-md-3 -->
-      
+     
               <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="footer-widget">
                   <div class="footer-menu footer-menu--1">
                     <h4 class="footer-widget-title">Kelas</h4>
                     <ul>
+                    <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
+
+															?>
+             
+             
                       <li>
-                        <a href="#">UI/UX</a>
+                      <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
                       </li>
-                      <li>
-                        <a href="#">Web Dev</a>
-                      </li>
+                      <?php
+																	}
+														?>
                      
                     </ul>
                   </div>

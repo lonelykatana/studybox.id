@@ -21,10 +21,10 @@ nav {
   height: 3.8vw;
   background-color: #fff;
   position: relative;
-  padding-left: 6.5%;
+  padding-left: 12%;
 }
 li.nav-menu{
-  margin-left: 8%;
+  margin-left: 10%;
   margin-top: 0.8%;
 }
 .logo2{
@@ -58,7 +58,7 @@ li.nav-menu{
   /* Spaces out the elements of the div */
   /* Aligns them on the middle */
   align-items: center;
-  margin-left: 60%;
+  margin-left: 64%;
   margin-top: -35px;
 } 
 li{
