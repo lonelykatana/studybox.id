@@ -1,3 +1,16 @@
+<?php
+session_start();
+include 'dbconnect.php';
+if(isset($_POST['addprod'])){
+	if(!isset($_SESSION['log']))
+		{	
+			header('location:masuk.php');
+		}
+    else{
+      header('location:produk.php');
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -5,10 +18,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyBox</title>
-    <link rel="icon" href="/Assets/logo_color.svg" type="image/icon type">
+    <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
     <link rel="stylesheet" href="produk.css"/>
-    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,43 +31,76 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </head>
 <body>
-  <nav class="navbar navbar-default2 navbar-expand-lg  bg-light navbar-light fixed-top" style=" box-shadow: 2px 3px 8px #888888;">
+  <nav class="fixed-top">
     <div class="logo2">
+    <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
+  <a class=" nav-item" href="index.php">
+  <span class="logo_text">STUDY BOX</span></a>
+</div>
+<div >
+    <ul class="nav-links">
       
-      <span class="logo_text">STUDY BOX</span>
-    </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav menuu mr-auto ">
-            <li class="nav-item dropdown teks_menu">
-              <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-              Course
-              </a>
-              <div class="dropdown-menu" style="width: 200px;">
-                
-                <a class="dropdown-item nav-item" href="Produk/produk.html">UI/UX</a>
-                <a class="dropdown-item" href="Produk/produk.html">Web Developer</a>
-              </div>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="daftar.html">Daftar</a>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="masuk.html">Masuk</a>
-            </li>
-            
-           
+        <div class="dropdownn" >
+      <li style="padding-left:8%;margin-top: 10%;">Course</li>
+        <div class="dropdown-contentt">
+        <?php 
+                        $kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+                        while($p=mysqli_fetch_array($kat)){
+
+                          ?>
+          <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
+          <?php
+                              }
+                        ?>
         </div>
-      </nav>
+      </div>
+        <?php
+      
+            if(!isset($_SESSION['log'])){
+      echo '
+      <li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
+      <li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+      ';
+    } else {
+      if($_SESSION['role']=='Member'){
+    
+        echo ' <div class="dropdownn" >
+        <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+        <div class="dropdown-contentt">
+          <li ><a href="logout.php">Keluar?</a></li>
+          </div>
+          </div>';
+      } else {
+      echo '
+      <div class="dropdownn" >
+     <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+        <div class="dropdown-contentt">
+        <li ><a href="admin">Admin Panel</a></li>
+        <li><a href="logout.php">Keluar?</a></li>
+        </div></div>
+      ';
+      };
+      
+    }
+    
+    ?></li>
+       
+    </ul>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+   
+</nav>
        <!-- ======= About Section ======= -->
     <section id="about" class="about" style="padding-bottom:3vw" >
         <div class="text-center">
-          <h2 class="section-heading text-uppercase" style="margin-top: px;">Tentang kami</h2><br>
+          <h2 class="section-heading text-uppercase" style="margin-top: px;font-size:2.2vw">Tentang kami</h2><br>
          <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
       </div>
         <div class="container" data-aos="fade-up">
@@ -75,7 +121,7 @@
             </div>
   
             <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-              <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 80%;border-radius: 30px;">
+              <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 65%;border-radius: 8px;margin-left: 10%;">
             </div>
   
           </div>
@@ -85,13 +131,13 @@
 
     
       <!-- feature_part start-->
-    <section class="feature_part single_feature_padding page-section bg-light " style="padding-top: 4vw;">
+    <section class="feature_part single_feature_padding page-section bg-light " style="padding: 4vw 0 3vw 0 ;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xl-3 align-self-center">
                     <div class="single_feature_text ">
                         <h2>Visi & Misi</h2>
-                        <p class="visi-misi-teks"   >Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital </p>
+                        <p class="visi-misi-teks"  style="margin-top: 1.5rem;" >Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital </p>
                        
                     </div>
                 </div>
@@ -126,7 +172,7 @@
         </div>
     </section>
  <!-- Benefit-->
-<section class="page-section" id="benefit">
+<section class="page-section" id="benefit" style="padding-top: 3vw;">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase" >Benefit</h2><br>
