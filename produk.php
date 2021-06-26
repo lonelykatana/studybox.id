@@ -269,12 +269,12 @@ if(isset($_POST['addpeserta']))
 <!-- Benefit-->
 <section class="page-section bg-white" id="mentor">
   <div class="container" style="padding-left: 2vw;">
-      <div class="text-left">
-          <h4 class="section-heading text-uppercase align-items-center" >Mentor</h4><br>
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase align-items-center" >Mentor</h2><br>
          <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
       </div>
       <div class="row text-center">
-          <div class="col-md-" >
+          <div style="padding-left: 42%;" >
           <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
 

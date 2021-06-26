@@ -170,19 +170,19 @@ if(isset($_POST['addprod'])){
         </div>
     
       
-        <div class="row" style="margin-top:1.8vw;">
+        <div   style="margin-top:1.8vw;">
            
                 <!-- product item 1-->
-                <div class="product-item" style="margin-left:14.5%;display:flex;flex-direction:row" >
-                <figure style="padding-right:42%"> 
+                <div class="product-item">
+                <figure class="figure-product"  > 
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas  ASC");
 														while($p=mysqli_fetch_array($kat)){
 
 															?>
               
-                              <div style="display:flex;flex-direction:column">
-                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:30vh;margin-left:35%" />
+                              <div  style="display:flex;flex-direction:column;padding-top:2%">
+                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:30vh;margin-left:35%;border-radius:25px;" />
                     </a>
                     <div class="product_section">
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
@@ -208,20 +208,19 @@ if(isset($_POST['addprod'])){
       </div>
       <div class="row text-center">
           <div class="col-md-4">
-              <h4 class="my-3">Benefit1</h4>
-              <img src ="Assets/2919220.jpg" style="width: 80px; height: 80px; border-radius: 25px;">
+             
+              <img src ="Assets/benefit1.svg" style="width:15vh; height: 15vh; border-radius: 25px;">
               <p class="text-muted">Peserta dapat menelusuri suatu bidang secara perlahan dan bertahap dalam bimbingan terstruktur</p>
           </div>
           <div class="col-md-4">
             
-              <h4 class="my-3">Benefit2</h4>
-              <img src ="Assets/content1.jpeg" style="width: 80px; height: 80px; border-radius: 25px;">
+              <img src ="Assets/benefit2.svg" style="width:15vh; height: 15vh;; border-radius: 25px;">
               <p class="text-muted">Dengan biaya yang relatif murah, peserta mendapatkan materi yang dimulai dari tingkat dasar hingga memahami fundamental dunia digital</p>
           </div>
           <div class="col-md-4">
               
-              <h4 class="my-3">Benefit3</h4>
-              <img src ="Assets/content1.jpeg" style="width: 80px; height: 80px; border-radius: 25px;">
+             
+              <img src ="Assets/benefit3.svg" style="width:15vh; height: 15vh;; border-radius: 25px;">
               <p class="text-muted">Peserta bisa berelasi dengan mentor yang sudah berpengalaman di dunia kerja</p>
           </div>
       </div>

@@ -198,7 +198,7 @@ p.product-description{
   width: 30vw;
 }
 .btn_product {
-  width:14em;
+  width:30vh;
   background-color: #0aada8; /* Green */
   border: none;
   border-radius: 10px;
@@ -239,6 +239,11 @@ button.btn-success:focus {
 .visi-misi{
   padding:1.3vw 0px 1vw 0px;
 }
+.product-item{
+  margin-left:10%;
+  display:flex;
+  flex-direction:row;
+}
 .alert{
 
 	color:#ff0033;
@@ -247,6 +252,11 @@ button.btn-success:focus {
 	text-align: center;
 
 }
+.figure-product{
+  padding-right:27%
+}
+
+
 @media screen and (max-width: 768px) {
   .logo2{
     margin-top: 1%;
@@ -316,6 +326,16 @@ button.btn-success:focus {
   }
   .produk-detail{
     margin-left: -11vh;
+  }
+  .product-item{
+    display: flex;
+    flex-direction: column;
+    margin-left: -6vh;
+    
+  }
+  .figure-product{
+    padding-right:0px
+  
   }
 
 }

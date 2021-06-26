@@ -179,24 +179,22 @@ if(isset($_POST['addprod'])){
            <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
         </div>
         <div class="row text-center">
-            <div class="col-md-4">
-               
-                <h4 class="my-3">Benefit1</h4>
-                <img src ="Assets/content1.jpeg" style="width: 80px; height: 80px; border-radius: 25px;">
-                <p class="text-muted">Peserta dapat menelusuri suatu bidang secara perlahan dan bertahap dalam bimbingan terstruktur</p>
-            </div>
-            <div class="col-md-4">
-              
-                <h4 class="my-3">Benefit2</h4>
-                <img src ="Assets/content1.jpeg" style="width: 80px; height: 80px; border-radius: 25px;">
-                <p class="text-muted">Dengan biaya yang relatif murah, peserta mendapatkan materi yang dimulai dari tingkat dasar hingga memahami fundamental dunia digital</p>
-            </div>
-            <div class="col-md-4">
-                
-                <h4 class="my-3">Benefit3</h4>
-                <img src ="Assets/content1.jpeg" style="width: 80px; height: 80px; border-radius: 25px;">
-                <p class="text-muted">Peserta bisa berelasi dengan mentor yang sudah berpengalaman di dunia kerja</p>
-            </div>
+        <div class="col-md-4">
+             
+             <img src ="Assets/benefit1.svg" style="width:15vh; height: 15vh; border-radius: 25px;">
+             <p class="text-muted">Peserta dapat menelusuri suatu bidang secara perlahan dan bertahap dalam bimbingan terstruktur</p>
+         </div>
+         <div class="col-md-4">
+           
+             <img src ="Assets/benefit2.svg" style="width:15vh; height: 15vh;; border-radius: 25px;">
+             <p class="text-muted">Dengan biaya yang relatif murah, peserta mendapatkan materi yang dimulai dari tingkat dasar hingga memahami fundamental dunia digital</p>
+         </div>
+         <div class="col-md-4">
+             
+            
+             <img src ="Assets/benefit3.svg" style="width:15vh; height: 15vh;; border-radius: 25px;">
+             <p class="text-muted">Peserta bisa berelasi dengan mentor yang sudah berpengalaman di dunia kerja</p>
+         </div>
         </div>
     </div>
   </section>
