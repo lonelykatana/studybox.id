@@ -75,8 +75,8 @@ if(isset($_POST['addpeserta']))
             <?php
 								if(!isset($_SESSION['log'])){
 					echo '
-					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
-					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+          <li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
+          <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
 					';
 				} else {
 					if($_SESSION['role']=='Member'){
@@ -303,7 +303,7 @@ if(isset($_POST['addpeserta']))
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>" Langkah pertama Anda dimulai di sini "</i></h5>
+                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>Langkah pertama Anda dimulai di sini</i></h5>
                     
                   </div>
                 </div>
@@ -316,10 +316,10 @@ if(isset($_POST['addpeserta']))
                     <h4 class="footer-widget-title">Sitemap</h4>
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                       </li>
                       <li>
-                        <a href="#">Tentang Kami</a>
+                        <a href="about.php">Tentang Kami</a>
                       </li>
                     </ul>
                   </div>
@@ -337,7 +337,7 @@ if(isset($_POST['addpeserta']))
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
 														while($p=mysqli_fetch_array($kat)){
-
+                                
 															?>
              
              
@@ -357,7 +357,7 @@ if(isset($_POST['addpeserta']))
               <!-- end /.col-lg-3 -->
       
               <div class="col-xs-12 col-sm-6 col-md-2">
-                  <div class="footer-widget">
+                <div class="footer-widget">
                   <div class="footer-menu no-padding">
                     <h4 class="footer-widget-title">Hubungi Kami</h4>
                     <ul>

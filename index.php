@@ -25,7 +25,7 @@ if(isset($_POST['addprod'])){
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -58,9 +58,9 @@ if(isset($_POST['addprod'])){
           </div>
             <?php
 								if(!isset($_SESSION['log'])){
-					echo '
-					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
-					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+					echo '					
+					<li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
+          <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
 					';
 				} else {
 					if($_SESSION['role']=='Member'){
@@ -96,12 +96,13 @@ if(isset($_POST['addprod'])){
         </div>
        
     </nav>
-    <div class="carousell">
-      <div id="carouselExample1" class="carousel slide z-depth-1-half" data-ride="carousel">
+    <div class="carousell" style=" position: relative;">  
+      <div id="carouselExample1" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-
-            <img class="d-block w-100" src="Assets/carousel1.jpg" alt="First slide" style="height: 40vw;object-fit: cover;">
+          
+            <img class="d-block w-100" src="Assets/carousel1.jpg" alt="First slide" style="height: 40vw;object-fit: cover;" >
+                  
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="Assets/carousel2.jpg" alt="Second slide" style="height: 40vw;object-fit: cover;">
@@ -120,6 +121,10 @@ if(isset($_POST['addprod'])){
         </a>
        
       </div>
+      <h5 class="centered"> <span class="caro">&nbsp Sukses adalah mereka yang memiliki fundamental yang kuat &nbsp </span> <br><br>
+      <span class="caro" >&nbsp Bersama Study Box raih kesuksesanmu &nbsp </span>
+      </h5>
+     
      
     </div>
  
@@ -153,7 +158,7 @@ if(isset($_POST['addprod'])){
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
          
-            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 83.5%;border-radius: 8px;margin-left: 10%;">
+            <img src="Assets/whoweare.jpg" class="img-fluid" alt="" style="width: 83.5%;border-radius: 8px;margin-left: 10%;">
           </div>
         </div>
       </div>
@@ -240,7 +245,7 @@ if(isset($_POST['addprod'])){
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>" Langkah pertama Anda dimulai di sini "</i></h5>
+                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>Langkah pertama Anda dimulai di sini</i></h5>
                     
                   </div>
                 </div>
@@ -253,10 +258,10 @@ if(isset($_POST['addprod'])){
                     <h4 class="footer-widget-title">Sitemap</h4>
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                       </li>
                       <li>
-                        <a href="#">Tentang Kami</a>
+                        <a href="about.php">Tentang Kami</a>
                       </li>
                     </ul>
                   </div>

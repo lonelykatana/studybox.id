@@ -74,8 +74,8 @@ if(isset($_POST['adduser']))
             <?php
 								if(!isset($_SESSION['log'])){
 					echo '
-					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
-					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+          <li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
+          <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
 					';
 				} else {
 					if($_SESSION['role']=='Member'){
@@ -113,11 +113,11 @@ if(isset($_POST['adduser']))
      
     <!-- form daftar-->
 
-    <div class="container" style="margin-top: 0px;">
+    <div class="container" style="margin-top:8%">
 
-        <div class="card o-hidden border-0 shadow-lg col-lg-6 my-5 mx-auto" s>
+        <div class="card o-hidden border-0 shadow-lg col-lg-6 my-5 mx-auto">
           <div class="card-body p-0">
-            <div class="row">      
+            <div class="row" >      
               <div class="col-lg">
                 <div class="p-5">
                   <div class="text-center">
@@ -145,7 +145,8 @@ if(isset($_POST['adduser']))
                   </form>
                   <hr>
                   <div class="text-center">
-                        <a class="small" >Sudah Punya akun?Langsung  <a href="masuk.php" style="text-decoration: none;">Login!</a></a>
+                        <a class="small" >Sudah punya akun?<a href="masuk.php" style="text-decoration: none;font-size: 80%;
+    font-weight: 400;"> Masuk sekarang</a></a>
                       </div>
                 
                 </div>
@@ -177,7 +178,7 @@ if(isset($_POST['adduser']))
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>" Langkah pertama Anda dimulai di sini "</i></h5>
+                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>Langkah pertama Anda dimulai di sini</i></h5>
                     
                   </div>
                 </div>
@@ -190,10 +191,10 @@ if(isset($_POST['adduser']))
                     <h4 class="footer-widget-title">Sitemap</h4>
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                       </li>
                       <li>
-                        <a href="#">Tentang Kami</a>
+                        <a href="about.php">Tentang Kami</a>
                       </li>
                     </ul>
                   </div>
@@ -211,7 +212,7 @@ if(isset($_POST['adduser']))
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
 														while($p=mysqli_fetch_array($kat)){
-
+                                
 															?>
              
              
