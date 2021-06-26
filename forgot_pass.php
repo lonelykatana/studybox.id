@@ -46,37 +46,68 @@ include 'dbconnect.php';
 </head>
 
 <body>
-  <nav class="navbar navbar-default2 navbar-expand-lg  bg-light navbar-light fixed-top" style=" box-shadow: 2px 3px 8px #888888;">
-    <div class="logo2">
+<nav class="fixed-top">
+        <div class="logo2">
+        <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
       <a class=" nav-item" href="index.php">
       <span class="logo_text">STUDY BOX</span></a>
     </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav menuu mr-auto ">
-            <li class="nav-item dropdown teks_menu">
-              <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-              Course
-              </a>
-              <div class="dropdown-menu" style="width: 200px;">
-                
-                <a class="dropdown-item nav-item" href="Produk/produk.html">UI/UX</a>
-                <a class="dropdown-item" href="Produk/produk.html">Web Developer</a>
+    <div >
+        <ul class="nav-links">
+          
+            <div class="dropdownn" >
+          <li style="padding-left:8%;margin-top: 10%;">Course</li>
+            <div class="dropdown-contentt">
+            <?php 
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														while($p=mysqli_fetch_array($kat)){
+
+															?>
+              <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
+              <?php
+																	}
+														?>
+            </div>
+          </div>
+            <?php
+								if(!isset($_SESSION['log'])){
+					echo '
+					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
+					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+					';
+				} else {
+					if($_SESSION['role']=='Member'){
+				
+            echo ' <div class="dropdownn" >
+            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
+            <div class="dropdown-contentt">
+              <li ><a href="logout.php">Keluar?</a></li>
               </div>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="daftar.php">Daftar</a>
-            </li>
-            <li class="nav-item teks_menu">
-              <a class="nav-link" href="masuk.php">Masuk</a>
-            </li>
-            
+              </div>';
+					} else {
+					echo '
+          <div class="dropdownn" >
+         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+            <div class="dropdown-contentt">
+            <li ><a href="min">Admin Panel</a></li>
+            <li><a href="logout.php">Keluar?</a></li>
+            </div></div>
+					';
+					};
+					
+				}
+        
+				?></li>
            
+        </ul>
         </div>
-      </nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+       
+    </nav>
 
     <!-- form masuk-->
 

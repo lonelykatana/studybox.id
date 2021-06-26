@@ -208,7 +208,7 @@ if(isset($_POST['addprod'])){
       <div class="row text-center">
           <div class="col-md-4">
               <h4 class="my-3">Benefit1</h4>
-              <img src ="Assets/content1.jpeg" style="width: 80px; height: 80px; border-radius: 25px;">
+              <img src ="Assets/2919220.jpg" style="width: 80px; height: 80px; border-radius: 25px;">
               <p class="text-muted">Peserta dapat menelusuri suatu bidang secara perlahan dan bertahap dalam bimbingan terstruktur</p>
           </div>
           <div class="col-md-4">
