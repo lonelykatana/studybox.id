@@ -14,6 +14,7 @@ if(isset($_POST['addprod'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>  
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,25 +101,32 @@ if(isset($_POST['addprod'])){
        
     </nav>
        <!-- ======= About Section ======= -->
-    <section id="about" class="about" style="padding:10vw;" >
-        
-        <div class="container" style="margin-top:0">
+    <section id="about" class="about" style="padding-bottom:5vw" >
+    <div class="text-center">
+        <h2 class="section-heading " style=" padding-bottom:2%;font-size: 4.5vh;">TENTANG KAMI</h2><br>
+         <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
+      </div>
+        <div class="container" data-aos="fade-up">
           
-           
+          <div class="row gx-0">
+  
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
               
-              <div class="content">           
-                <h4 style="font-family: 'Roboto';color:#165A74;">Study Box adalah</h4>
-                <p style=" font-family: 'Roboto';font-size: 64px;line-height: 70px; color:#505050;">
-                    startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
+              <div class="content" style="margin-top:6%">
+           
+              <h3 >StudyBox</h3>
+                <p>
+                    Studybox adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
                     dikemas secara bertahap dan mendetail dalam sebuah lingkungan komunitas belajar yang suportif
                 </p>
-              
               </div>
-            
+            </div>
   
-            
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="Assets/whoweare.jpg" class="img-fluid" alt="" style="width: 83.5%;border-radius: 8px;margin-left: 10%;">
+            </div>
   
-          
+          </div>
         </div>
   
       </section><!-- End About Section -->
@@ -130,7 +138,7 @@ if(isset($_POST['addprod'])){
             
                
                         <h2 style= "text-align:center;">Visi</h2>
-                        <p style="text-align:center; font-size:30px"  style="margin-top: 1.5rem;" >" Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital. "</p>
+                        <p style="text-align:center; font-size:1.8vw"  style="margin-top: 1.5rem;" >" Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital. "</p>
                        
                     
         </div>
@@ -139,32 +147,32 @@ if(isset($_POST['addprod'])){
     <section class="feature_part single_feature_padding page-section" style="padding: 4vw 0 3vw 0 ;">
         <div class="container">
           <h2 style="text-align:center;">Misi</h2>
-            <div class="row" >
+            <div class="row" style="padding-top: 3vh;" >
                 
                 <div class="col-sm-6 col-xl-4">
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <span class="single_feature_icon"><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 64px;"></i></span>
-                            
-                            <p class="visi-misi-teks">Mengadakan online course yang minim biaya namun kaya akan ilmu</p>
+                            <span class="single_feature_icon" style="margin-left:17vh"><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 64px;"></i></span>
+                             
+                            <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Mengadakan online course yang minim biaya namun kaya akan ilmu</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-xl-4">
                     <div class="single_feature">
-                        <div class="single_feature_part">
-                            <span class="single_feature_icon"><i class="fa fa-briefcase " aria-hidden="true" style="font-size: 64px;"></i></span>
+                        <div class="single_feature_part align-center">
+                            <span class="single_feature_icon " style="margin-left:17vh"><i class="fa fa-briefcase " aria-hidden="true" style="font-size: 64px;"></i></span>
                          
-                            <p class="visi-misi-teks">Menyediakan materi dasar yang mampu menguatkan fundamental peserta dalam dunia digital hingga siap kerja</p>
+                            <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Menyediakan materi dasar yang mampu<br>menguatkan fundamental peserta dalam dunia digital hingga siap kerja</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-xl-4"">
-                    <div class="single_feature">
+                    <div class="single_feature ">
                         <div class="single_feature_part single_feature_part_2">
-                            <span class="single_service_icon style_icon"><i class="fad fa-chalkboard-teacher " aria-hidden="true" style="font-size: 64px;"></i></span>
+                            <span class="single_service_icon style_icon" style="margin-left:19vh"><img src="Assets/iconguru.svg" width="64px" height="64px"    aria-hidden="true"  ></img></span>
                          
-                            <p class="visi-misi-teks">Memfasilitasi peserta dengan mentor yang expert dibidangnya</p>
+                            <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Memfasilitasi peserta dengan mentor yang expert dibidangnya</p>
                         </div>
                     </div>
                 </div>

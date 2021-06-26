@@ -73,9 +73,9 @@ function ubahproduk($data){
   $path1 = "../produk/".$random1.'.'.$ext1;
   $pathmentordb = "produk/".$random1.'.'.$ext1;
 
-  if($tipe_file == "image/jpeg" || $tipe_file == "image/png" ||$tipe_file1 == "image/jpeg" || $tipe_file1 == "image/png"){
-    if($ukuran_file <= 5000000 || $ukuran_file1 <= 5000000){ 
-      if(move_uploaded_file($tmp_file,$tmp_file1, $path,$path1)){ 
+  if( $tipe_file1 == "image/jpeg" || $tipe_file1 == "image/png"){
+    if( $ukuran_file1 <= 10000000){ 
+      if(move_uploaded_file( $tmp_file1, $path1)){ 
 
 
       }
@@ -85,7 +85,7 @@ function ubahproduk($data){
   $query = "UPDATE kelas SET 
 
 
-   id_kelas='$idkelas',  nama_kelas ='$namakelas',deskripsi = '$deskripsi',nama_mentor = '$nama_mentor',cv_mentor = '$cv_mentor', gambar = '$pathdb',gambar_mentor = '$pathmentordb', nama_kelas = '$namakelas',
+   id_kelas='$idkelas',nama_kelas ='$namakelas',deskripsi = '$deskripsi',nama_mentor = '$nama_mentor',cv_mentor = '$cv_mentor' ,gambar_mentor = '$pathmentordb', nama_kelas = '$namakelas',
    harga_before = '$hargabefore', harga_after = '$hargaafter', judul_week1 = '$jweek1', detail_week1 = '$dweek1', judul_week2 = '$jweek2', detail_week2 = '$dweek2', judul_week3 = '$jweek3', detail_week3 = '$dweek3',
     judul_week4 = '$jweek4', detail_week4 = '$dweek4', judul_week5 = '$jweek5', detail_week5 = '$dweek5', judul_week6 = '$jweek6', detail_week6 = '$dweek6', judul_week7 = '$jweek7', detail_week7 = '$dweek7', judul_week8 = '$jweek8', detail_week8 = '$dweek8'
     WHERE id_kelas=$idkelas

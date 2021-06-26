@@ -124,7 +124,7 @@ if(isset($_POST['addpeserta']))
 				?>
       <div  class="produk-detail col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
      
-        <img src="<?php echo $p['gambar']?>" class="img_content" alt=""   >  
+        <img src="<?php echo $p['gambar']?>" class="img_content" style="border-radius:25px;" alt=""   >  
         <div class="product-content">
      
           <h2><?php echo $p['nama_kelas'] ?></h2>
@@ -135,7 +135,7 @@ if(isset($_POST['addpeserta']))
             <div class="price-product snipcart-item block">
               <div class="harga">
                   <span class="harga1" style="text-decoration: line-through;"><i>Rp <?php echo $p['harga_before'] ?></i></span>
-                      <h6 class="harga2"style="padding-left: 2vh;"><b>Rp <?php echo $p['harga_after'] ?></b> </h6>
+                      <h6 class="harga2" style="padding-left: 2vh; "><b>Rp <?php echo $p['harga_after'] ?></b> </h6>
               </div>
               <?php
           
@@ -274,7 +274,7 @@ if(isset($_POST['addpeserta']))
          <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
       </div>
       <div class="row text-center">
-          <div style="padding-left: 42%;" >
+          <div style="padding-left: 39.5%;" id="mentor-data">
           <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
 

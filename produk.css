@@ -214,7 +214,7 @@ body{
 @media screen and (max-width: 768px) {
 	.accordion_container
 {
-    width: 78vh;
+    width: 10vh;
 	margin-bottom: 12px;
 	border: solid 1px #e5e5e5;
 	padding-left: 30px;

@@ -65,7 +65,7 @@ include 'dbconnect.php';
         <ul class="nav-links">
           
             <div class="dropdownn" >
-          <li style="padding-left:8%;margin-top: 10%;">Course</li>
+          <li style="padding-left:8%;margin-top: 10%;"><span style="display: flex;flex-direction:row;margin-top:0.4vw;">Course  <i class="fa fa-caret-down" style="margin-top:0.3vw;margin-left:0.4vw"></i></span></li>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -80,23 +80,24 @@ include 'dbconnect.php';
           </div>
             <?php
 								if(!isset($_SESSION['log'])){
-					echo '
-          <li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
+					echo '					
+					<li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
           <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
 					';
 				} else {
 					if($_SESSION['role']=='Member'){
 				
-            echo ' <div class="dropdownn" >
-            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
-            <div class="dropdown-contentt">
+            echo '
+            <div class="dropdownn" style="margin-top:0.4vw;margin-left:9vh">
+            <li class="nav-menu" style="width:200px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
+            <div class="dropdown-contentt" >
               <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
-          <div class="dropdownn" >
-         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+          <div class="dropdownn"  style="margin-top:0.4vw;margin-left:9vh">
+         <li class="nav-menu" style="width:200px; "  ><h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
             <div class="dropdown-contentt">
             <li ><a href="admin">Admin Panel</a></li>
             <li><a href="logout.php">Keluar?</a></li>

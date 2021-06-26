@@ -66,15 +66,15 @@ if(isset($_POST['addprod'])){
 					if($_SESSION['role']=='Member'){
 				
             echo '
-            <div class="dropdownn" style="margin-top:0.4vw;margin-left:9vh">
-            <li class="nav-menu" style="width:200px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
+            <div class="dropdownn dropdwn "" >
+            <li class="nav-menu" style="width:250px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
             <div class="dropdown-contentt" >
               <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
-          <div class="dropdownn"  style="margin-top:0.4vw;margin-left:9vh">
+          <div class="dropdownn dropdwn"  >
          <li class="nav-menu" style="width:200px; "  ><h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
             <div class="dropdown-contentt">
             <li ><a href="admin">Admin Panel</a></li>
@@ -101,14 +101,14 @@ if(isset($_POST['addprod'])){
         <div class="carousel-inner">
           <div class="carousel-item active">
           
-            <img class="d-block w-100" src="Assets/carousel1.jpg" alt="First slide" style="height: 40vw;object-fit: cover;" >
+            <img class="d-block w-100" src="Assets/carousel1.png" alt="First slide" style="height: 40vw;object-fit: cover;" >
                   
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Assets/carousel2.jpg" alt="Second slide" style="height: 40vw;object-fit: cover;">
+            <img class="d-block w-100" src="Assets/carousel2.png" alt="Second slide" style="height: 40vw;object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Assets/carousel3.jpg" alt="Third slide" style="height: 40vw;object-fit: cover;">
+            <img class="d-block w-100" src="Assets/carousel3.png" alt="Third slide" style="height: 40vw;object-fit: cover;">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExample1" role="button" data-slide="prev">
@@ -186,7 +186,7 @@ if(isset($_POST['addprod'])){
 
 															?>
               
-                              <div  style="display:flex;flex-direction:column;padding-top:2%">
+                              <div  style="display:flex;flex-direction:column;">
                         <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:30vh;margin-left:35%;border-radius:25px;" />
                     </a>
                     <div class="product_section">
