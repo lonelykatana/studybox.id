@@ -58,9 +58,9 @@ if(isset($_POST['addprod'])){
           </div>
             <?php
 								if(!isset($_SESSION['log'])){
-					echo '
-					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
-					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+					echo '					
+					<li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
+          <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
 					';
 				} else {
 					if($_SESSION['role']=='Member'){
@@ -153,7 +153,7 @@ if(isset($_POST['addprod'])){
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
          
-            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 83.5%;border-radius: 8px;margin-left: 10%;">
+            <img src="Assets/whoweare.jpg" class="img-fluid" alt="" style="width: 83.5%;border-radius: 8px;margin-left: 10%;">
           </div>
         </div>
       </div>
@@ -241,7 +241,7 @@ if(isset($_POST['addprod'])){
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>" Langkah pertama Anda dimulai di sini "</i></h5>
+                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>Langkah pertama Anda dimulai di sini</i></h5>
                     
                   </div>
                 </div>
@@ -254,10 +254,10 @@ if(isset($_POST['addprod'])){
                     <h4 class="footer-widget-title">Sitemap</h4>
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                       </li>
                       <li>
-                        <a href="#">Tentang Kami</a>
+                        <a href="about.php">Tentang Kami</a>
                       </li>
                     </ul>
                   </div>

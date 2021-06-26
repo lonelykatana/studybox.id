@@ -62,8 +62,8 @@ if(isset($_POST['addprod'])){
             <?php
 								if(!isset($_SESSION['log'])){
 					echo '
-					<li class="nav-menu"><a href="daftar.php"> Daftar</a></li>
-					<li class="nav-menu"><a href="masuk.php">Masuk</a></li>
+					<li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
+          <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
 					';
 				} else {
 					if($_SESSION['role']=='Member'){
@@ -225,10 +225,10 @@ if(isset($_POST['addprod'])){
                     <h4 class="footer-widget-title">Sitemap</h4>
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                       </li>
                       <li>
-                        <a href="#">Tentang Kami</a>
+                        <a href="about.php">Tentang Kami</a>
                       </li>
                     </ul>
                   </div>
@@ -246,7 +246,7 @@ if(isset($_POST['addprod'])){
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
 														while($p=mysqli_fetch_array($kat)){
-
+                                
 															?>
              
              
