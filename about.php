@@ -24,6 +24,7 @@ if(isset($_POST['addprod'])){
     <link rel="stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
@@ -99,33 +100,25 @@ if(isset($_POST['addprod'])){
        
     </nav>
        <!-- ======= About Section ======= -->
-    <section id="about" class="about" style="padding-bottom:3vw" >
-        <div class="text-center">
-          <h2 class="section-heading text-uppercase" style="margin-top: px;font-size:2.2vw">Tentang kami</h2><br>
-         <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
-      </div>
-        <div class="container" data-aos="fade-up">
+    <section id="about" class="about" style="padding:10vw;" >
+        
+        <div class="container" style="margin-top:0">
           
-          <div class="row gx-0">
-  
-            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-              
-              <div class="content">
            
-                <h2 style="margin-top:-10%">StudyBox</h2><br>
-                <p>
-                    Studybox adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
+              
+              <div class="content">           
+                <h4 style="font-family: 'Roboto';color:#165A74;">Study Box adalah</h4>
+                <p style=" font-family: 'Roboto';font-size: 64px;line-height: 70px; color:#505050;">
+                    startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
                     dikemas secara bertahap dan mendetail dalam sebuah lingkungan komunitas belajar yang suportif
                 </p>
               
               </div>
-            </div>
+            
   
-            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-              <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 65%;border-radius: 8px;margin-left: 10%;">
-            </div>
+            
   
-          </div>
+          
         </div>
   
       </section><!-- End About Section -->
@@ -134,36 +127,42 @@ if(isset($_POST['addprod'])){
       <!-- feature_part start-->
     <section class="feature_part single_feature_padding page-section bg-white" style="padding: 4vw 0 3vw 0 ;">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-xl-3 align-self-center">
-                    <div class="single_feature_text ">
-                        <h2>Visi & Misi</h2>
-                        <p class="visi-misi-teks"  style="margin-top: 1.5rem;" >Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital </p>
+            
+               
+                        <h2 style= "text-align:center;">Visi</h2>
+                        <p style="text-align:center; font-size:30px"  style="margin-top: 1.5rem;" >" Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital. "</p>
                        
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
+                    
+        </div>
+    </section>
+
+    <section class="feature_part single_feature_padding page-section" style="padding: 4vw 0 3vw 0 ;">
+        <div class="container">
+          <h2 style="text-align:center;">Misi</h2>
+            <div class="row" >
+                
+                <div class="col-sm-6 col-xl-4">
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <span class="single_feature_icon"><i class="fa fa-graduation-cap " aria-hidden="true" style="font-size: 64px;padding-left: 25%;"></i></span>
+                            <span class="single_feature_icon"><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 64px;"></i></span>
                             
                             <p class="visi-misi-teks">Mengadakan online course yang minim biaya namun kaya akan ilmu</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-6 col-xl-4">
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <span class="single_feature_icon"><i class="fa fa-briefcase " aria-hidden="true" style="font-size: 64px;padding-left: 25%;"></i></span>
+                            <span class="single_feature_icon"><i class="fa fa-briefcase " aria-hidden="true" style="font-size: 64px;"></i></span>
                          
                             <p class="visi-misi-teks">Menyediakan materi dasar yang mampu menguatkan fundamental peserta dalam dunia digital hingga siap kerja</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-6 col-xl-4"">
                     <div class="single_feature">
                         <div class="single_feature_part single_feature_part_2">
-                            <span class="single_service_icon style_icon"><i class="fad fa-chalkboard-teacher " aria-hidden="true" style="font-size: 64px;padding-left: 25%;"></i></span>
+                            <span class="single_service_icon style_icon"><i class="fad fa-chalkboard-teacher " aria-hidden="true" style="font-size: 64px;"></i></span>
                          
                             <p class="visi-misi-teks">Memfasilitasi peserta dengan mentor yang expert dibidangnya</p>
                         </div>
@@ -173,7 +172,7 @@ if(isset($_POST['addprod'])){
         </div>
     </section>
  <!-- Benefit-->
-<section class="page-section" id="benefit" style="padding-top: 3vw;">
+<section class="page-section bg-white" id="benefit" style="padding-top: 3vw;">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase" >Benefit</h2><br>
@@ -213,7 +212,7 @@ if(isset($_POST['addprod'])){
                     <img src="Assets/logo_white.svg" alt="" width="40" class="mb-3">
                     <span class="logo_text_footer" style="color:white; ">STUDY BOX</span>
                     </div>
-                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>" Langkah pertama Anda dimulai di sini "</i></h5>
+                    <h5 style="color:white; margin-top:10px; font-family: 'Caveat';font-size: 30px;"><i>Langkah pertama Anda dimulai di sini</i></h5>
                     
                   </div>
                 </div>
