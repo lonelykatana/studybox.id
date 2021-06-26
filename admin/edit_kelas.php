@@ -180,6 +180,16 @@ if(isset($_POST["update"])){
                                   value="<?php echo $p['deskripsi'] ?>">
                               </div>
                               <div class="form-group">
+                                  <label>nama_mentor</label>
+                                  <input name="nama_mentor" type="text" class="form-control" required="required"
+                                  value="<?php echo $p['nama_mentor'] ?>">
+                              </div>
+                              <div class="form-group">
+                                  <label>cv_mentor</label>
+                                  <input name="cv_mentor" type="text" class="form-control" required="required"
+                                  value="<?php echo $p['cv_mentor'] ?>">
+                              </div>
+                              <div class="form-group">
                                 <label>hargabefore</label>
                                 <input name="harga_before" type="text" class="form-control" required="required"
                                 value="<?php echo $p['harga_before'] ?>"
@@ -275,6 +285,10 @@ if(isset($_POST["update"])){
                           <div class="form-group">
                         <label>Gambar</label>
                         <input name="uploadgambar" type="file" class="form-control">
+                    </div>   
+                    <div class="form-group">
+                        <label>Gambar mentor</label>
+                        <input name="uploadgambarmentor" type="file" class="form-control">
                     </div>   
 
             </div>

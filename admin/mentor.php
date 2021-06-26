@@ -4,7 +4,7 @@
 
 
     if(isset($_POST["hapuskelas"])){
-        $id= $_GET["id_kelas"];
+        $id= $_GET["id_mentor"];
 
 if( hapuskelas($id)>0){
     
@@ -23,26 +23,7 @@ else{
     if(isset($_POST["addkelas"])) {
 		$nama_kelas=$_POST['nama_kelas'];
 		$deskripsi=$_POST['deskripsi'];
-        $nama_mentor=$_POST['nama_mentor'];
-        $cv_mentor=$_POST['cv_mentor'];
-		$hargabefore=$_POST['harga_before'];
-		$hargaafter=$_POST['harga_after'];
-        $jweek1=$_POST['judul_week1'];
-		$dweek1=$_POST['detail_week1'];
-        $jweek2=$_POST['judul_week2'];
-		$dweek2=$_POST['detail_week2'];
-        $jweek3=$_POST['judul_week3'];
-		$dweek3=$_POST['detail_week3'];
-        $jweek4=$_POST['judul_week4'];
-		$dweek4=$_POST['detail_week4'];
-        $jweek5=$_POST['judul_week5'];
-		$dweek5=$_POST['detail_week5'];
-        $jweek6=$_POST['judul_week6'];
-		$dweek6=$_POST['detail_week6'];
-        $jweek7=$_POST['judul_week7'];
-		$dweek7=$_POST['detail_week7'];
-        $jweek8=$_POST['judul_week8'];
-		$dweek8=$_POST['detail_week8'];
+	
 
 		$nama_file = $_FILES['uploadgambar']['name'];
 		$ext = pathinfo($nama_file, PATHINFO_EXTENSION);
@@ -53,20 +34,13 @@ else{
 		$path = "../produk/".$random.'.'.$ext;
 		$pathdb = "produk/".$random.'.'.$ext;
 
-        $nama_file1 = $_FILES['uploadgambarmentor']['name'];
-		$ext1 = pathinfo($nama_file1, PATHINFO_EXTENSION);
-		$random1 = crypt($nama_file1, time());
-		$ukuran_file1 = $_FILES['uploadgambarmentor']['size'];
-		$tipe_file1 = $_FILES['uploadgambarmentor']['type'];
-		$tmp_file1 = $_FILES['uploadgambarmentor']['tmp_name'];
-		$path1 = "../produk/".$random1.'.'.$ext1;
-        $pathmentordb = "produk/".$random1.'.'.$ext1;
 
-		if($tipe_file == "image/jpeg" || $tipe_file == "image/png" ||$tipe_file1 == "image/jpeg" || $tipe_file1 == "image/png"){
-            if($ukuran_file <= 5000000 || $ukuran_file1 <= 5000000){ 
-              if(move_uploaded_file($tmp_file,$tmp_file1, $path,$path1)){ 
-			  $query = "insert into kelas (nama_kelas, gambar,gambar_mentor, deskripsi,nama_mentor,cv_mentor,harga_before, harga_after,judul_week1,detail_week1 ,judul_week2,detail_week2 ,judul_week3,detail_week3 ,judul_week4,detail_week4 ,judul_week5,detail_week5 ,judul_week6,detail_week6 ,judul_week7,detail_week7 ,judul_week8,detail_week8)
-			  values('$nama_kelas','$pathdb','$pathmentordb','$deskripsi','$nama_mentor','$cv_mentor','$hargabefore','$hargaafter','$jweek1','$dweek1', '$jweek2','$dweek2','$jweek3','$dweek3','$jweek4','$dweek4','$jweek5','$dweek5','$jweek6','$dweek6','$jweek7','$dweek7','$jweek8','$dweek8')";
+		if($tipe_file == "image/jpeg" || $tipe_file == "image/png"){
+		  if($ukuran_file <= 5000000){ 
+			if(move_uploaded_file($tmp_file, $path)){ 
+			
+			  $query = "insert into kelas (nama_kelas, gambar, deskripsi,harga_before, harga_after,judul_week1,detail_week1 ,judul_week2,detail_week2 ,judul_week3,detail_week3 ,judul_week4,detail_week4 ,judul_week5,detail_week5 ,judul_week6,detail_week6 ,judul_week7,detail_week7 ,judul_week8,detail_week8)
+			  values('$nama_kelas','$pathdb','$deskripsi','$hargabefore','$hargaafter','$jweek1','$dweek1', '$jweek2','$dweek2','$jweek3','$dweek3','$jweek4','$dweek4','$jweek5','$dweek5','$jweek6','$dweek6','$jweek7','$dweek7','$jweek8','$dweek8')";
 			  $sql = mysqli_query($conn, $query); // Eksekusi/ Jalankan query dari variabel $query
 			  
 			  if($sql){ 
@@ -241,94 +215,12 @@ else{
                                   <label>deskripsi</label>
                                   <input name="deskripsi" type="text" class="form-control" required="required">
                               </div>
-                              <div class="form-group">
-                                  <label>nama_mentor</label>
-                                  <input name="nama_mentor" type="text" class="form-control" required="required">
-                              </div>
-                              <div class="form-group">
-                                  <label>cv_mentor</label>
-                                  <input name="cv_mentor" type="text" class="form-control" required="required">
-                              </div>
-                              <div class="form-group">
-                                <label>hargabefore</label>
-                                <input name="harga_before" type="text" class="form-control" required="required">
-                            </div>
-                            <div class="form-group">
-                              <label>Harga After</label>
-                              <input name="harga_after" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week1 </label>
-                              <input name="judul_week1" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week 1</label>
-                              <input name="detail_week1" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week2 </label>
-                              <input name="judul_week2" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week2 </label>
-                              <input name="detail_week2" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week3 </label>
-                              <input name="judul_week3" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week3 </label>
-                              <input name="detail_week3" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week4 </label>
-                              <input name="judul_week4" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week4 </label>
-                              <input name="detail_week4" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week5 </label>
-                              <input name="judul_week5" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week5 </label>
-                              <input name="detail_week5" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week6 </label>
-                              <input name="judul_week6" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week6 </label>
-                              <input name="detail_week6" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week7 </label>
-                              <input name="judul_week7" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week7 </label>
-                              <input name="detail_week7" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>judul week8 </label>
-                              <input name="judul_week8" type="text" class="form-control" required="required">
-                          </div>
-                          <div class="form-group">
-                              <label>detail week8 </label>
-                              <input name="detail_week8" type="text" class="form-control" required="required">
+                              
                           </div>
 
                           <div class="form-group">
                         <label>Gambar</label>
                         <input name="uploadgambar" type="file" class="form-control">
-                    </div>  
-                    <div class="form-group">
-                        <label>Gambar mentor</label>
-                        <input name="uploadgambarmentor" type="file" class="form-control">
                     </div>             
                 
                             </div>
@@ -349,73 +241,35 @@ else{
                                         <thead class="thead-dark">
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Nama Produk</th>
+                                                <th>Nama mentor</th>
                                                 <th>Gambar</th>
-                                                <th>Gambar Mentor</th>
-                                                <th>Deskripsi</th>
-                                                <th>Nama Mentor</th>
-                                                <th>CV Mentor</th>
-                                                <th>Harga before</th>
-                                                <th>Harga after</th>
-                                                <th>Judul Week 1</th>
-                                                <th>Detail Week 1</th>
-                                                <th>Judul Week 2</th>
-                                                <th>Detail Week 2</th>
-                                                <th>Judul Week 3</th>
-                                                <th>Detail Week 3</th>
-                                                <th>Judul Week 4</th>
-                                                <th>Detail Week 4</th>
-                                                <th>Judul Week 5</th>
-                                                <th>Detail Week 5</th>
-                                                <th>Judul Week 6</th>
-                                                <th>Detail Week 6</th>
-                                                <th>Judul Week 7</th>
-                                                <th>Detail Week 7</th>
-                                                <th>Judul Week 8</th>
-                                                <th>Detail Week 8</th>
+                                                <th>cv mentor</th>
+                                   
+                                           
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php 
-											$brgs=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+											$brgs=mysqli_query($conn,"SELECT * from mentor order by id_mentor ASC");
 											$no=1;
 											while($p=mysqli_fetch_array($brgs)){
-                                                $id = $p['id_kelas'];
+                                                $id = $p['id_mentor'];
 
 												?>
 
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
-                                                <td><?php echo $p['nama_kelas'] ?></td>
-                                                <td><img src="../<?php echo $p['gambar'] ?>" width="50%" \="\"></td>
-                                                <td><img src="../<?php echo $p['gambar_mentor'] ?>" width="50%" \="\"></td>
-                                                <td><?php echo $p['deskripsi'] ?></td>
                                                 <td><?php echo $p['nama_mentor'] ?></td>
-                                                <td><?php echo $p['cv_mentor'] ?></td>
-                                                <td><?php echo $p['harga_before'] ?></td>
-                                                <td><?php echo $p['harga_after'] ?></td>
-                                                <td><?php echo $p['judul_week1'] ?></td>
-                                                <td><?php echo $p['detail_week1'] ?></td>
-                                                <td><?php echo $p['judul_week2'] ?></td>
-                                                <td><?php echo $p['detail_week2'] ?></td>
-                                                <td><?php echo $p['judul_week3'] ?></td>
-                                                <td><?php echo $p['detail_week3'] ?></td>
-                                                <td><?php echo $p['judul_week4'] ?></td>
-                                                <td><?php echo $p['detail_week4'] ?></td>
-                                                <td><?php echo $p['judul_week5'] ?></td>
-                                                <td><?php echo $p['detail_week5'] ?></td>
-                                                <td><?php echo $p['judul_week6'] ?></td>
-                                                <td><?php echo $p['detail_week6'] ?></td>
-                                                <td><?php echo $p['judul_week7'] ?></td>
-                                                <td><?php echo $p['detail_week7'] ?></td>
-                                                <td><?php echo $p['judul_week8'] ?></td>
-                                                <td><?php echo $p['detail_week8'] ?></td>
+                                                <td><img src="../<?php echo $p['gambar_mentor'] ?>" width="50%" \="\"></td>
+                                                <td><?php echo $p['cv_mnetor'] ?></td>
+                                        
+                                         
                                                
                                                 <td class="invert">
                                                     <div class="rem">           
-                                                    <a class="aksi" href="hapus_kelas.php?id_kelas=<?php echo $p['id_kelas'] ?>">  <input type="submit" name="hapus" class="form-control" value="Hapus" ></a> 
-                                                    <a class="aksi" href="edit_kelas.php?id_kelas=<?php echo $p['id_kelas'] ?>">  <input type="submit" name="update" class="form-control" value="update" ></a>  
+                                                    <a class="aksi" href="hapus_kelas.php?id_mentor=<?php echo $p['id_mentor'] ?>">  <input type="submit" name="hapus" class="form-control" value="Hapus" ></a> 
+                                                    <a class="aksi" href="edit_kelas.php?id_mentor=<?php echo $p['id_mentor'] ?>">  <input type="submit" name="update" class="form-control" value="update" ></a>  
                                                     </form>
                                                 </div>
                                                 

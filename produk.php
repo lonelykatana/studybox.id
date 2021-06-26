@@ -15,7 +15,7 @@ if(isset($_POST['addpeserta']))
     
 		if ($tambahuser){
 		echo " <div class='alert alert-success'>
-			Berhasil mendaftar, silakan masuk.
+		<script>alert('Berhasil mendaftar, silakan masuk.')</script>	
 		  </div>
 		<meta http-equiv='refresh' content='1; url= index.php'/>  ";
 		} else { echo "<div class='alert alert-warning'>
@@ -59,7 +59,7 @@ if(isset($_POST['addpeserta']))
         <ul class="nav-links">
           
             <div class="dropdownn" >
-          <li style="padding-left:8%;margin-top: 10%;">Course</li>
+          <li style="padding-left:8%;margin-top: 10%;"><span style="display: flex;flex-direction:row;margin-top:-0.4vw;">Course  <i class="fa fa-caret-down" style="margin-top:0.3vw;margin-left:0.4vw"></i></span></li>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -81,16 +81,17 @@ if(isset($_POST['addpeserta']))
 				} else {
 					if($_SESSION['role']=='Member'){
 				
-            echo ' <div class="dropdownn" >
-            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
-            <div class="dropdown-contentt">
+            echo '
+            <div class="dropdownn" style="margin-top:0.4vw;margin-left:10vh">
+            <li class="nav-menu" style="width:200px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
+            <div class="dropdown-contentt" >
               <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
-          <div class="dropdownn" >
-         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+          <div class="dropdownn"  style="margin-top:0.4vw;margin-left:10vh">
+         <li class="nav-menu" style="width:200px; "  ><h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
             <div class="dropdown-contentt">
             <li ><a href="admin">Admin Panel</a></li>
             <li><a href="logout.php">Keluar?</a></li>
@@ -111,15 +112,11 @@ if(isset($_POST['addpeserta']))
         </div>
        
     </nav>
-
-      
-      
-      
       <!-- product section-->
  
  <section id="product" class="product" >
 
-  <div class="container" data-aos="fade-up " style="margin-left:10%;">
+  <div class="container" data-aos="fade-up " style="margin-left:15%;padding-top:4vw;">
     <div class="row gx-0" >
     <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
@@ -138,7 +135,7 @@ if(isset($_POST['addpeserta']))
             <div class="price-product snipcart-item block">
               <div class="harga">
                   <span class="harga1" style="text-decoration: line-through;"><i>Rp <?php echo $p['harga_before'] ?></i></span>
-                      <h6 class="harga2"style="padding-left: 2vh;"><b>Gratis</b> </h6>
+                      <h6 class="harga2"style="padding-left: 2vh;"><b>Rp <?php echo $p['harga_after'] ?></b> </h6>
               </div>
               <?php
           
@@ -270,28 +267,25 @@ if(isset($_POST['addpeserta']))
 
 </section><!-- End About Section -->
 <!-- Benefit-->
-<section class="page-section bg-light" id="mentor">
-  <div class="container">
-      <div class="text-center">
-          <h2 class="section-heading text-uppercase align-items-center" >Mentor</h2><br>
+<section class="page-section bg-white" id="mentor">
+  <div class="container" style="padding-left: 2vw;">
+      <div class="text-left">
+          <h4 class="section-heading text-uppercase align-items-center" >Mentor</h4><br>
          <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
       </div>
       <div class="row text-center">
-          <div class="col-md-6" >
-             
-              <h4 class="my-2">UI/UX</h4>
-              <img src ="Assets/mentor1.jpg" style="width: 10vw; height: 10vw; border-radius:100px;object-fit: cover;padding-top: 2%;">
-              <div class="instructor_name"><a href="instructors.html">Elon Musk</a></div>
-              <p class="text-muted">Matamu to the moon
+          <div class="col-md-" >
+          <?php 
+				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
+
+				?>
+              <div class="my-2"></div>
+              <img src ="<?php echo $p['gambar_mentor']?>" style="width: 12vw; height: 13vw; border-radius:25vw;object-fit: cover;padding-top: 2%;">
+              <div class="instructor_name"><a href="instructors.html"><?php echo $p['nama_mentor']?></a></div>
+              <p class="text-muted"><?php echo $p['cv_mentor']?>
               </p>
           </div>
-          <div class="col-md-5">
-            
-              <h4 class="my-2">Web Developer</h4>
-              <img src ="Assets/mentor2.jpg" style="width: 10vw; height: 10vw; border-radius: 100px;object-fit: cover;padding-top: 2%;">
-              <div class="instructor_name"><a href="instructors.html">Keanu Reeves</a></div>
-              <p class="text-muted">He killed Three men in a bar with a f*cking pencil</p>
-          </div>
+      
           
       </div>
   </div>
@@ -363,7 +357,7 @@ if(isset($_POST['addpeserta']))
               <!-- end /.col-lg-3 -->
       
               <div class="col-xs-12 col-sm-6 col-md-2">
-                <div class="footer-widget">
+                  <div class="footer-widget">
                   <div class="footer-menu no-padding">
                     <h4 class="footer-widget-title">Hubungi Kami</h4>
                     <ul>

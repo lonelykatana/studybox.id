@@ -46,7 +46,7 @@ include 'dbconnect.php';
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color:rgb(247,247,247)">
 <nav class="fixed-top">
         <div class="logo2">
         <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
@@ -57,7 +57,7 @@ include 'dbconnect.php';
         <ul class="nav-links">
           
             <div class="dropdownn" >
-          <li style="padding-left:8%;margin-top: 10%;">Course</li>
+          <li style="padding-left:8%;margin-top: 10%;"><span style="display: flex;flex-direction:row;margin-top:-0.4vw;">Course  <i class="fa fa-caret-down" style="margin-top:0.3vw;margin-left:0.4vw"></i></span></li>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -79,18 +79,19 @@ include 'dbconnect.php';
 				} else {
 					if($_SESSION['role']=='Member'){
 				
-            echo ' <div class="dropdownn" >
-            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
-            <div class="dropdown-contentt">
+            echo '
+            <div class="dropdownn" style="margin-top:0.4vw;margin-left:10vh">
+            <li class="nav-menu" style="width:200px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
+            <div class="dropdown-contentt" >
               <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
-          <div class="dropdownn" >
-         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+          <div class="dropdownn"  style="margin-top:0.4vw;margin-left:10vh">
+         <li class="nav-menu" style="width:200px; "  ><h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
             <div class="dropdown-contentt">
-            <li ><a href="min">Admin Panel</a></li>
+            <li ><a href="admin">Admin Panel</a></li>
             <li><a href="logout.php">Keluar?</a></li>
             </div></div>
 					';
@@ -109,7 +110,6 @@ include 'dbconnect.php';
         </div>
        
     </nav>
-
     <!-- form masuk-->
 
     <div class="container" style="margin-top: 5%;">
@@ -127,7 +127,7 @@ include 'dbconnect.php';
                   <div class="col-lg-12">
                     <div class="p-5">
                       <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">Masuk Ke Study Box</h1>
+                        <h1 class="h4 text-gray-900 mb-4">Reset Password</h1>
                       </div>                  
                 <form method="post" action="forgot_pass.php">
                         <div class="form-group">
@@ -136,7 +136,7 @@ include 'dbconnect.php';
                         </div>
                         <div class="form-group">
                           <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
-                          <a class="small" style="padding-left: 2%;">Lupa Password </a>
+                          <a class="small">Belum punya Akun? </a><a class="small" href="daftar.php"><b>Daftar Sekarang</b></a>
                         </div>
                        
                         <hr>

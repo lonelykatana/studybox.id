@@ -47,7 +47,7 @@ if(isset($_POST['adduser']))
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color:rgb(247,247,247)">
 <nav class="fixed-top">
         <div class="logo2">
         <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
@@ -145,7 +145,7 @@ if(isset($_POST['adduser']))
                   </form>
                   <hr>
                   <div class="text-center">
-                        <a class="small" >Sudah Punya akun? Lansung Login!</a>
+                        <a class="small" >Sudah Punya akun?Langsung  <a href="masuk.php" style="text-decoration: none;">Login!</a></a>
                       </div>
                 
                 </div>

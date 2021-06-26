@@ -20,7 +20,7 @@ include 'dbconnect.php';
 		if( password_verify($pass, $cariuser['password']) ) {
 			$_SESSION['id_user'] = $cariuser['id_user'];
 			$_SESSION['role'] = $cariuser['role'];
-      $_SESSION['name'] = $cariuser['nama'];
+      $_SESSION['name'] = $cariuser['username'];
       $_SESSION['log'] = "Logged";
 			header('location:index.php');
       echo 'berhasil!';
@@ -54,7 +54,7 @@ include 'dbconnect.php';
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color:rgb(247,247,247)">
 <nav class="fixed-top">
         <div class="logo2">
         <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">

@@ -43,7 +43,7 @@ if(isset($_POST['addprod'])){
         <ul class="nav-links">
           
             <div class="dropdownn" >
-          <li style="padding-left:8%;margin-top: 10%;">Course</li>
+          <li style="padding-left:8%;margin-top: 10%;"><span style="display: flex;flex-direction:row;margin-top:-0.4vw;">Course  <i class="fa fa-caret-down" style="margin-top:0.3vw;margin-left:0.4vw"></i></span></li>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -65,16 +65,17 @@ if(isset($_POST['addprod'])){
 				} else {
 					if($_SESSION['role']=='Member'){
 				
-            echo ' <div class="dropdownn" >
-            <li class="nav-menu" style="width:150px;margin-left:5vh">Halo, '.$_SESSION["name"].' </li>
-            <div class="dropdown-contentt">
+            echo '
+            <div class="dropdownn" style="margin-top:0.4vw;margin-left:10vh">
+            <li class="nav-menu" style="width:200px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
+            <div class="dropdown-contentt" >
               <li ><a href="logout.php">Keluar?</a></li>
               </div>
               </div>';
 					} else {
 					echo '
-          <div class="dropdownn" >
-         <li class="nav-menu" style="width:150px;margin-left:5vh" >Halo, '.$_SESSION["name"].'</li>
+          <div class="dropdownn"  style="margin-top:0.4vw;margin-left:10vh">
+         <li class="nav-menu" style="width:200px; "  ><h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
             <div class="dropdown-contentt">
             <li ><a href="admin">Admin Panel</a></li>
             <li><a href="logout.php">Keluar?</a></li>
@@ -100,13 +101,13 @@ if(isset($_POST['addprod'])){
         <div class="carousel-inner">
           <div class="carousel-item active">
 
-            <img class="d-block w-100" src="Assets/carousel7.png" alt="First slide" style="height: 40vw;">
+            <img class="d-block w-100" src="Assets/carousel7.png" alt="First slide" style="height: 40vw;object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Assets/carousel8.jpg" alt="Second slide" style="height: 40vw;">
+            <img class="d-block w-100" src="Assets/carousel8.jpg" alt="Second slide" style="height: 40vw;object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Assets/carousel7.png" alt="Third slide" style="height: 40vw;">
+            <img class="d-block w-100" src="Assets/carousel7.png" alt="Third slide" style="height: 40vw;object-fit: cover;">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExample1" role="button" data-slide="prev">
@@ -134,9 +135,9 @@ if(isset($_POST['addprod'])){
         <div class="row gx-0">
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
+            <div class="content"style="margin-top:6%">
          
-              <h3 style="margin-top:-10%">StudyBox</h3>
+              <h3 >StudyBox</h3>
               <p>
                 Studybox adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
 	dikemas secara...
@@ -152,7 +153,7 @@ if(isset($_POST['addprod'])){
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
          
-            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 65%;border-radius: 8px;margin-left: 10%;">
+            <img src="Assets/content1.jpeg" class="img-fluid" alt="" style="width: 83.5%;border-radius: 8px;margin-left: 10%;">
           </div>
         </div>
       </div>
@@ -161,7 +162,7 @@ if(isset($_POST['addprod'])){
 
    
     <!-- product Grid-->
-  <section class="bg-light " id="product">
+  <section class="bg-white " id="product">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Product</h2><br>
@@ -169,13 +170,13 @@ if(isset($_POST['addprod'])){
         </div>
     
       
-        <div class="row">
+        <div class="row" style="margin-top:1.8vw;">
            
                 <!-- product item 1-->
                 <div class="product-item" style="margin-left:14.5%;display:flex;flex-direction:row" >
                 <figure style="padding-right:42%"> 
                     <?php 
-														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
+														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas  ASC");
 														while($p=mysqli_fetch_array($kat)){
 
 															?>
@@ -274,7 +275,7 @@ if(isset($_POST['addprod'])){
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
 														while($p=mysqli_fetch_array($kat)){
-
+                                
 															?>
              
              
