@@ -148,16 +148,15 @@ include 'dbconnect.php';
     
 	}
 	?>                 
-                <form method="post"  action="">
+                <form method="post"  action="#" "> 
                         <div class="form-group">
-
-                          <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email">
-                          
+                          <input  type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email" autofocus   >
                         </div>
                         <div class="form-group">
-                          <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
+                          <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password"    >
                           <a class="small" href="forgot_pass.php" style="padding-left: 2%;">Lupa Password </a>
                         </div>
+                      
                        
                         <hr>
       

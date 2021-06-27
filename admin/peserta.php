@@ -22,7 +22,7 @@
 	};
 	
 	?>
-
+    
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -154,7 +154,9 @@
 												<th>Nama</th>
 												<th>Umur</th>
 												<th>Email</th>
+                                                <th>Nama Kelas</th>
                                                 <th>No. Whatsapp</th>
+                                                <th>Motivation Letter</th>
 											</tr></thead><tbody>
 											<?php 
 											$brgs=mysqli_query($conn,"SELECT * from data_peserta ");
@@ -169,6 +171,8 @@
 													<td><?php echo $p['umur'] ?></td>
 													<td><?php echo $p['email'] ?></td>
                                                     <td><?php echo $p['no_wa'] ?></td>
+                                                    <td><?php echo $p['nama_kelas'] ?></td>
+                                                    <td><?php echo $p['motivation_letter'] ?></td>
 													
 												</tr>		
 												

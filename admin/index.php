@@ -164,8 +164,7 @@
                                     <div class="s-report-title d-flex justify-content-between">
                                         <h4 class="header-title mb-0">Konfirmasi Pembayaran</h4>
                                     </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                     
+                                    <div class="d-flex justify-content-between pb-2">  
                                     </div>
 									<!--
 									<button type="button" class="<?php 
@@ -203,8 +202,6 @@
                         </div>
                     </div>
                 </div>
-              
-                
                 <!-- row area start-->
             </div>
         </div>

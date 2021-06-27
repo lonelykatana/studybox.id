@@ -142,9 +142,9 @@ if(isset($_POST['addprod'])){
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content"style="margin-top:6%">
          
-              <h3 >StudyBox</h3>
+              <h3 >Study Box</h3>
               <p>
-                Studybox adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
+                Study box adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
 	dikemas secara...
               </p>
               <div class="text-left text-lg-start">
@@ -165,7 +165,6 @@ if(isset($_POST['addprod'])){
 
     </section><!-- End About Section -->
 
-   
     <!-- product Grid-->
   <section class="bg-white " id="product">
     <div class="container">
@@ -175,7 +174,7 @@ if(isset($_POST['addprod'])){
         </div>
     
       
-        <div   style="margin-top:1.8vw;">
+        <div class="col-md-12" style="margin-top:1.8vw;">
            
                 <!-- product item 1-->
                 <div class="product-item">
@@ -303,10 +302,10 @@ if(isset($_POST['addprod'])){
                   <div class="footer-menu no-padding">
                     <h4 class="footer-widget-title">Hubungi Kami</h4>
                     <ul>
-          <li><a href="#"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
-          <li><a href="#"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
-          <li><a href="#"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
-          <li><a href="#"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
+          <li><a href="mailto:info@studybox.id"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
+          <li><a href="https://www.linkedin.com/company/studybox-id/"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
+          <li><a href="https://wa.me/6281260648147"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
+          <li><a href="https://www.instagram.com/studybox.id/"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
         </ul>
                   </div>
                   <!-- end /.footer-menu -->

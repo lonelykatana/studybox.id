@@ -18,7 +18,7 @@ if(isset($_POST['addprod'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyBox</title>
+    <title>Study Box</title>
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
     <link rel="stylesheet" href="produk.css"/>
@@ -114,9 +114,9 @@ if(isset($_POST['addprod'])){
               
               <div class="content" style="margin-top:6%">
            
-              <h3 >StudyBox</h3>
+              <h3 >Study Box</h3>
                 <p>
-                    Studybox adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
+                    Study Box adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
                     dikemas secara bertahap dan mendetail dalam sebuah lingkungan komunitas belajar yang suportif
                 </p>
               </div>
@@ -300,7 +300,7 @@ if(isset($_POST['addprod'])){
             <div class="row">
               <div class="col-md-12">
                 <div class="copyright-text">
-                  <p>© 2021 STUDYBOX All rights reserved.
+                  <p>© 2021 STUDY BOX All rights reserved.
                   </p>
                 </div>
       

@@ -9,9 +9,11 @@ if(isset($_POST['addpeserta']))
 		$email = $_POST['email'];
     $umur = $_POST['umur'];
     $nowa = $_POST['nowa'];
+    $nama_kelas = $_POST['nama_kelas'];
+    $motivation_letter = $_POST['motivation_letter'];
    
-		$tambahuser = mysqli_query($conn,"insert into data_peserta (nama, email, umur, no_wa) 
-		values('$nama','$email','$umur','$nowa')");
+		$tambahuser = mysqli_query($conn,"insert into data_peserta (nama, email, umur, no_wa,nama_kelas, motivation_letter) 
+		values('$nama','$email','$umur','$nowa','$nama_kelas','$motivation_letter')");
     
 		if ($tambahuser){
 		echo " <div class='alert alert-success'>
@@ -174,11 +176,17 @@ if(isset($_POST['addpeserta']))
                                 <input name="email" type="text" class="form-control" required="required">
                             </div>
                             <div class="form-group">
+                                <label>Nama Kelas</label>
+                                <input name="nama_kelas" type="text" class="form-control" value="<?php echo $p['nama_kelas'] ?>" disabled>
+                            </div>
+                            <div class="form-group">
                               <label>No. Whatsapp</label>
                               <input name="nowa" type="text" class="form-control" required="required">
                           </div>
-                                                          
-                
+                          <div class="form-group">
+                              <label>Motivation Letter</label>
+                              <textarea name="motivation_letter"class="form-control" id="exampleFormControlTextarea1" rows="3"required="required"></textarea>
+                          </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
@@ -274,7 +282,8 @@ if(isset($_POST['addpeserta']))
          <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
       </div>
       <div class="row text-center">
-          <div style="padding-left: 39.5%;" id="mentor-data">
+      <div>
+          <div style="padding-left: 39.5%" id="mentor-data">
           <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
 
@@ -286,7 +295,7 @@ if(isset($_POST['addpeserta']))
               </p>
           </div>
       
-          
+          </div>
       </div>
   </div>
 </section>

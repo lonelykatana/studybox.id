@@ -130,8 +130,6 @@ a {
 .widget-about .contact-details li a {
  color:#5867dd
 }
-@media (max-width:991px) {
- .footer-menu {
-  padding-left:0
- }
+@media (max-width:768px) {
+ 
 }
