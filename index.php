@@ -20,7 +20,7 @@ if(isset($_POST['addprod'])){
     <title>StudyBox</title>
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
-    <link rel="stylesheet" href="style.css"/> 
+    <link rel="stylesheet" href="style2.css"/> 
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -33,17 +33,22 @@ if(isset($_POST['addprod'])){
 
 <body style="background-color:rgb(247,247,247)">
         <!-- Navbar -->
-        <nav class="fixed-top">
-        <div class="logo2">
+        <nav class="navbar navbar-expand-md bg-putih navbar-light">
+<div class="logo2">
         <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
       <a class=" nav-item" href="index.php">
       <span class="logo_text">STUDY BOX</span></a>
     </div>
-    <div >
-        <ul class="nav-links">
-          
-            <div class="dropdownn" >
-          <li style="padding-left:8%;margin-top: 10%;"><span style="display: flex;flex-direction:row;margin-top:0.4vw;">Course  <i class="fa fa-caret-down" style="margin-top:0.3vw;margin-left:0.4vw"></i></span></li>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav" style="margin-left:auto">
+
+<!-- Dropdown -->
+<li class="nav-item dropdownn" >
+<a  class="nav-link" style="margin-right:20px;">Course<i class="fa fa-caret-down" style="margin-left:8px"></i></span></a>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -55,47 +60,54 @@ if(isset($_POST['addprod'])){
 																	}
 														?>
             </div>
-          </div>
-            <?php
+          </li>
+
+
+<li class="nav-item dropdown">
+<?php
 								if(!isset($_SESSION['log'])){
-					echo '					
-					<li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
-          <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
-					';
+					echo '		
+
+      <ul class="nav3">
+      <li class="nav-item nav3">
+        <a class="nav-link nav2" href="masuk.php">Masuk</a>
+      </li>
+      <li class="nav-item nav3">
+        <a class="nav-link nav1" href="daftar.php">Daftar</a>
+      </li>    
+      </ul>
+      ';
 				} else {
 					if($_SESSION['role']=='Member'){
 				
             echo '
-            <div class="dropdownn dropdwn "" >
-            <li class="nav-menu" style="width:250px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
-            <div class="dropdown-contentt" >
-              <li ><a href="logout.php">Keluar?</a></li>
-              </div>
-              </div>';
-					} else {
-					echo '
-          <div class="dropdownn dropdwn"  >
-         <li class="nav-menu" style="width:200px; "  ><h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
+
+            <li class="nav-item dropdownn" >
+          <a  class="nav-link"> <h6>Halo, '.$_SESSION["name"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
             <div class="dropdown-contentt">
-            <li ><a href="admin">Admin Panel</a></li>
-            <li><a href="logout.php">Keluar?</a></li>
-            </div></div>
+            <a style="font-size:1rem;"href="logout.php">Keluar</a>
+            </div>
+          </li>
+
+            ';
+					} else if($_SESSION['role']=='Admin') {
+					echo '
+          <li class="nav-item dropdownn" >
+          <a  class="nav-link"><h6>Halo, '.$_SESSION["name"].' <i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
+            <div class="dropdown-contentt">
+            <a style="font-size:1rem;"href="admin">Admin Panel</a>
+            <a style="font-size:1rem;"href="logout.php">Keluar</a>
+            </div>
+          </li>
 					';
 					};
 					
 				}
         
-				?></li>
-           
-        </ul>
-        </div>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-       
-    </nav>
+				?>
+    </ul>
+  </div>  
+</nav>
     <div class="carousell" style=" position: relative;">  
       <div id="carouselExample1" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
         <div class="carousel-inner">
@@ -166,7 +178,7 @@ if(isset($_POST['addprod'])){
     </section><!-- End About Section -->
 
     <!-- product Grid-->
-  <section class="bg-white " id="product">
+ <section class="bg-white " id="product">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Product</h2><br>
@@ -186,10 +198,10 @@ if(isset($_POST['addprod'])){
 															?>
               
                               <div  style="display:flex;flex-direction:column;">
-                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:30vh;margin-left:35%;border-radius:25px;" />
+                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:30vh;border-radius:25px;" />
                     </a>
                     <div class="product_section">
-                        <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
+                        <div class="product-title1 product-caption" style="display:inline-block;text-align:center;"> 
                         <?php echo $p['nama_kelas'] ?></div>
                          <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product"  >Cek Kelas</button> </a>
                     </div>
