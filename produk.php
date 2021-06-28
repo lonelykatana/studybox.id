@@ -40,7 +40,7 @@ if(isset($_POST['addpeserta']))
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
     <link rel="stylesheet" href="produk.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style2.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -52,17 +52,22 @@ if(isset($_POST['addpeserta']))
 </head>
 <body style="background-color: rgb(247,247,247);">
 
-<nav class="fixed-top">
-        <div class="logo2">
+<nav class="navbar navbar-expand-md bg-putih navbar-light">
+<div class="logo2">
         <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
       <a class=" nav-item" href="index.php">
       <span class="logo_text">STUDY BOX</span></a>
     </div>
-    <div >
-        <ul class="nav-links">
-          
-            <div class="dropdownn" >
-          <li style="padding-left:8%;margin-top: 10%;"><span style="display: flex;flex-direction:row;margin-top:-0.4vw;">Course  <i class="fa fa-caret-down" style="margin-top:0.3vw;margin-left:0.4vw"></i></span></li>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav" style="margin-left:auto">
+
+<!-- Dropdown -->
+<li class="nav-item dropdownn" >
+<a  class="nav-link" style="margin-right:20px;">Course<i class="fa fa-caret-down" style="margin-left:8px"></i></span></a>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -74,47 +79,54 @@ if(isset($_POST['addpeserta']))
 																	}
 														?>
             </div>
-          </div>
-            <?php
+          </li>
+
+
+<li class="nav-item dropdown">
+<?php
 								if(!isset($_SESSION['log'])){
-					echo '
-          <li class="nav-menu"><a class="nav2" href="masuk.php">Masuk</a></li>
-          <li class="nav-menu"><a class="nav1" href="daftar.php">Daftar</a></li>
-					';
+					echo '		
+
+      <ul class="nav3">
+      <li class="nav-item nav3">
+        <a class="nav-link nav2" href="masuk.php">Masuk</a>
+      </li>
+      <li class="nav-item nav3">
+        <a class="nav-link nav1" href="daftar.php">Daftar</a>
+      </li>    
+      </ul>
+      ';
 				} else {
 					if($_SESSION['role']=='Member'){
 				
             echo '
-            <div class="dropdownn" style="margin-top:0.4vw;margin-left:10vh">
-            <li class="nav-menu" style="width:200px; " > <h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
-            <div class="dropdown-contentt" >
-              <li ><a href="logout.php">Keluar?</a></li>
-              </div>
-              </div>';
-					} else {
-					echo '
-          <div class="dropdownn"  style="margin-top:0.4vw;margin-left:10vh">
-         <li class="nav-menu" style="width:200px; "  ><h6>Halo, '.$_SESSION["name"].'  <i class="fa fa-caret-down" style="margin-left:0.2vw;margin-top:0.1vw"></i></h6> </li>
+
+            <li class="nav-item dropdownn" >
+          <a  class="nav-link"> <h6>Halo, '.$_SESSION["name"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
             <div class="dropdown-contentt">
-            <li ><a href="admin">Admin Panel</a></li>
-            <li><a href="logout.php">Keluar?</a></li>
-            </div></div>
+            <a style="font-size:1rem;"href="logout.php">Keluar</a>
+            </div>
+          </li>
+
+            ';
+					} else if($_SESSION['role']=='Admin') {
+					echo '
+          <li class="nav-item dropdownn" >
+          <a  class="nav-link"><h6>Halo, '.$_SESSION["name"].' <i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
+            <div class="dropdown-contentt">
+            <a style="font-size:1rem;"href="admin">Admin Panel</a>
+            <a style="font-size:1rem;"href="logout.php">Keluar</a>
+            </div>
+          </li>
 					';
 					};
 					
 				}
         
-				?></li>
-           
-        </ul>
-        </div>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-       
-    </nav>
+				?>
+    </ul>
+  </div>  
+</nav>
       <!-- product section-->
  
  <section id="product" class="product" >
