@@ -171,7 +171,7 @@
 													<td><?php echo $p['umur'] ?></td>
 													<td><?php echo $p['email'] ?></td>
                                                     <td><?php echo $p['no_wa'] ?></td>
-                                                    <td><?php echo $p['nama_kelas'] ?></td>
+                                                    <td><?php echo $p['nama_kelas2'] ?></td>
                                                     <td><?php echo $p['motivation_letter'] ?></td>
 													
 												</tr>		

@@ -9,15 +9,16 @@ if(isset($_POST['addpeserta']))
 		$email = $_POST['email'];
     $umur = $_POST['umur'];
     $nowa = $_POST['nowa'];
-    $nama_kelas = $_POST['nama_kelas'];
+    $nama_kelas = $_POST['nama_kelas2'];
     $motivation_letter = $_POST['motivation_letter'];
+
    
-		$tambahuser = mysqli_query($conn,"insert into data_peserta (nama, email, umur, no_wa,nama_kelas, motivation_letter) 
+		$tambahuser = mysqli_query($conn,"insert into data_peserta (nama, email, umur, no_wa, nama_kelas2, motivation_letter) 
 		values('$nama','$email','$umur','$nowa','$nama_kelas','$motivation_letter')");
     
 		if ($tambahuser){
 		echo " <div class='alert alert-success'>
-		<script>alert('Berhasil mendaftar, silakan masuk.')</script>	
+		<script>alert('Terima Kasih sudah Mendaftar Kelas di Study Box.')</script>	
 		  </div>
 		<meta http-equiv='refresh' content='1; url= index.php'/>  ";
 		} else { echo "<div class='alert alert-warning'>
@@ -177,7 +178,7 @@ if(isset($_POST['addpeserta']))
                             </div>
                             <div class="form-group">
                                 <label>Nama Kelas</label>
-                                <input name="nama_kelas" type="text" class="form-control" value="<?php echo $p['nama_kelas'] ?>" disabled>
+                                <input name="nama_kelas2" type="text" class="form-control" value="<?php echo $p['nama_kelas'] ?>" readonly>
                             </div>
                             <div class="form-group">
                               <label>No. Whatsapp</label>
@@ -195,11 +196,7 @@ if(isset($_POST['addpeserta']))
                         </form>
                     </div>
                 </div>
-                
-                
-                
                 </div>
-            
           </div>
         </div>
       </div>
