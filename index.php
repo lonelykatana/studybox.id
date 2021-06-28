@@ -178,19 +178,17 @@ if(isset($_POST['addprod'])){
     </section><!-- End About Section -->
 
     <!-- product Grid-->
- <section class="bg-white " id="product">
+    <section class="bg-white " id="product">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Product</h2><br>
            
         </div>
-    
-      
-        <div class="col-md-12" style="margin-top:1.8vw;">
+        <div style="margin-top:1.8vw;">
            
                 <!-- product item 1-->
                 <div class="product-item">
-                <figure class="figure-product"  > 
+                <figure class="figure-product"> 
                     <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas  ASC");
 														while($p=mysqli_fetch_array($kat)){
@@ -198,22 +196,23 @@ if(isset($_POST['addprod'])){
 															?>
               
                               <div  style="display:flex;flex-direction:column;">
-                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height: 30vh;width:30vh;border-radius:25px;" />
+                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height:15vw;width:15vw;margin-left:35%;border-radius:25px;" />
                     </a>
                     <div class="product_section">
-                        <div class="product-title1 product-caption" style="display:inline-block;text-align:center;"> 
+                        <div class="product-title1 product-caption" style="display:inline-block;width:15vw;text-align:center;"> 
                         <?php echo $p['nama_kelas'] ?></div>
                          <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product"  >Cek Kelas</button> </a>
+                    </div>
                     </div>
                     </figure>
                     <?php
 																	}
 														?>
-                            </div>
+                            
                 </div>
                 </div>
     </div>
-    </div>
+     
 </section>
 <!-- Benefit-->
 <section class="page-section" id="benefit">
@@ -234,8 +233,6 @@ if(isset($_POST['addprod'])){
               <p class="text-muted">Dengan biaya yang relatif murah, peserta mendapatkan materi yang dimulai dari tingkat dasar hingga memahami fundamental dunia digital</p>
           </div>
           <div class="col-md-4">
-              
-             
               <img src ="Assets/benefit3.svg" style="width:15vh; height: 15vh;; border-radius: 25px;">
               <p class="text-muted">Peserta bisa berelasi dengan mentor yang sudah berpengalaman di dunia kerja</p>
           </div>
@@ -351,7 +348,7 @@ if(isset($_POST['addprod'])){
   <!-- End -->
 
 	<script type="text/javascript">
-  console.log("halo");
+   
 
     $(window).scroll(function(){
       $('nav').toggleClass('scrolled', $(this).scrollTop() > 550);

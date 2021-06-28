@@ -4,8 +4,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  
   body {
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -347,7 +345,7 @@
     padding:1.3vw 0px 1vw 0px;
   }
   .product-item{
-    margin-left:20%;
+    margin-left:15.5%;
     display:flex;
     flex-direction:row;
   }
@@ -360,7 +358,7 @@
   
   }
   .figure-product{
-    padding-right:27%
+    padding-right:15%
   }
   .dropdwn{
     margin-top:0.4vw;margin-left:9vh

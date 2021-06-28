@@ -333,9 +333,9 @@ button.btn-success:focus {
   padding:1.3vw 0px 1vw 0px;
 }
 .product-item{
-  margin-left:20%;
+  margin-left:0%;
   display:flex;
-  flex-direction:row;
+  
 }
 .alert{
 
@@ -346,7 +346,9 @@ button.btn-success:focus {
 
 }
 .figure-product{
-  padding-right:27%
+  padding-right:0%;
+  display:flex;
+  flex-direction:row;
 }
 .dropdwn{
   margin-top:0.4vw;margin-left:9vh
