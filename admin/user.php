@@ -20,6 +20,8 @@
 		}
 		
 	};
+    if(isset($_SESSION['login_admin']))
+    {
 	
 	?>
 
@@ -278,3 +280,11 @@
 	
 </body>
 </html>
+<?php
+}
+else
+{
+echo 'You shall not pass!';
+}
+
+?>

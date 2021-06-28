@@ -69,6 +69,11 @@ else{
 		}
 	
 	};
+    if(isset($_SESSION['login_admin']))
+    {
+
+	
+
 	?>
 
 <head>
@@ -359,3 +364,8 @@ else{
 </body>
 
 </html>
+<?php
+}
+
+
+?>

@@ -109,6 +109,7 @@ if(isset($_POST['adduser']))
 
             ';
 					} else if($_SESSION['role']=='Admin') {
+            $_SESSION['login_admin']=true;
 					echo '
           <li class="nav-item dropdownn" >
           <a  class="nav-link">Course<i class="fa fa-caret-down" style="margin-left:8px"></i></span></a>

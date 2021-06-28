@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION['login_admin']))
+{
+?>
 
 
 <!doctype html>
@@ -249,3 +254,14 @@
 </body>
 
 </html>
+
+
+<?php
+}
+else
+{
+echo 'You shall not pass!';
+}
+
+?>
+

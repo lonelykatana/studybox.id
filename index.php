@@ -10,6 +10,14 @@ if(isset($_POST['addprod'])){
       header('location:produk.php');
     }
   }
+
+ 
+    
+   
+    
+    
+    
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +98,15 @@ if(isset($_POST['addprod'])){
           </li>
 
             ';
-					} else if($_SESSION['role']=='Admin') {
+					}
+           else if($_SESSION['role']=='Admin') {
+            $_SESSION['login_admin']=true;
+
+
+            
+
+
+
 					echo '
           <li class="nav-item dropdownn" >
           <a  class="nav-link"><h6>Halo, '.$_SESSION["name"].' <i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
@@ -100,7 +116,9 @@ if(isset($_POST['addprod'])){
             </div>
           </li>
 					';
-					};
+					}
+          
+          ;
 					
 				}
         
