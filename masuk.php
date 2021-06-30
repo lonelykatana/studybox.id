@@ -5,7 +5,7 @@ if(!isset($_SESSION['log'])){
 	
 } else {
 	header('location:index.php');
-};
+}
 
 include 'dbconnect.php';
 
@@ -16,18 +16,18 @@ include 'dbconnect.php';
 	$pass = mysqli_real_escape_string($conn,$_POST['password']);
 	$queryuser = mysqli_query($conn,"SELECT * FROM login WHERE email='$email'");
 	$cariuser = mysqli_fetch_assoc($queryuser);
+  if ( $_POST['email'] =="" ||  $_POST['password'] =="") {
+    header("location:masuk.php?pesan=kosong");
+  }
 		
-		if( password_verify($pass, $cariuser['password']) ) {
+		else if( password_verify($pass, $cariuser['password']) ) {
 			$_SESSION['id_user'] = $cariuser['id_user'];
 			$_SESSION['role'] = $cariuser['role'];
       $_SESSION['name'] = $cariuser['username'];
       $_SESSION['log'] = "Logged";
 			header('location:index.php');
       echo 'berhasil!';
-		} else if ($email=='' || $pass=='') {
-      
-      header("location:masuk.php?pesan=kosong");
-		}	 else {
+		}  else {
       header("location:masuk.php?pesan=gagal");
     } 
     
@@ -134,7 +134,7 @@ include 'dbconnect.php';
 
     <!-- form masuk-->
 
-    <div class="container" style="margin-top:5%;margin-bottom:-4%;" >
+    <div class="container" style="margin-top:3%;" >
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
