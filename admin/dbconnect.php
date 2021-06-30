@@ -1,7 +1,6 @@
 <?php 
 
-if(isset($_SESSION['login_admin']))
-{
+ 
 // isi nama host, username mysql, dan password mysql anda
 $conn = mysqli_connect("localhost","root","","studybox");
 
@@ -98,8 +97,5 @@ function ubahproduk($data){
 
   return mysqli_affected_rows($conn);
 }
-}
-else echo 'You shall not pass!'
-
-
+ 
 ?>

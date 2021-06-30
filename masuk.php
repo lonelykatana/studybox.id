@@ -22,7 +22,7 @@ include 'dbconnect.php';
 			$_SESSION['role'] = $cariuser['role'];
       $_SESSION['name'] = $cariuser['username'];
       $_SESSION['log'] = "Logged";
-			header('location:index.php');
+			header('location:/StudyBoxWebsite/index.php');
       echo 'berhasil!';
 		} else if ($email=='' || $pass=='') {
       
@@ -65,7 +65,7 @@ include 'dbconnect.php';
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <div class="collapse navbar-collapse" id=ww"collapsibleNavbar">
     <ul class="navbar-nav" style="margin-left:auto">
 
 <!-- Dropdown -->
@@ -113,7 +113,7 @@ include 'dbconnect.php';
 
             ';
 					} else if($_SESSION['role']=='Admin') {
-            $_SESSION['login_admin']=true;
+            
 					echo '
           <li class="nav-item dropdownn" >
           <a  class="nav-link"><h6>Halo, '.$_SESSION["name"].' <i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>

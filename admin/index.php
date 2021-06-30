@@ -1,7 +1,13 @@
 <?php
 session_start();
-if(isset($_SESSION['login_admin']))
-{
+
+if(!isset($_SESSION['log1']))
+{	
+    header('location:login.php');
+}
+else{
+ 
+}
 ?>
 
 
@@ -35,7 +41,8 @@ if(isset($_SESSION['login_admin']))
 </head>
 
 <body>
-   
+ 
+				?>
     <div id="preloader">
         <div class="loader"></div>
     </div>
@@ -256,12 +263,5 @@ if(isset($_SESSION['login_admin']))
 </html>
 
 
-<?php
-}
-else
-{
-echo 'You shall not pass!';
-}
-
-?>
+ 
 
