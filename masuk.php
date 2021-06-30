@@ -8,7 +8,7 @@ if(!isset($_SESSION['log'])){
 };
 
 include 'dbconnect.php';
-
+ 
 
 	if(isset($_POST['login']))
 	{
