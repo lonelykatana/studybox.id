@@ -151,7 +151,7 @@ if(isset($_POST['addprod'])){
             
                
                         <h2 style= "text-align:center;">Visi</h2>
-                        <p style="text-align:center; font-size:1.8vw"  style="margin-top: 1.5rem;" >" Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital. "</p>
+                        <p style="text-align:center; font-size:1.8vh"  style="margin-top: 1.5rem;" >" Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital. "</p>
                        
                     
         </div>
@@ -165,7 +165,7 @@ if(isset($_POST['addprod'])){
                 <div class="col-sm-6 col-xl-4">
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <span class="single_feature_icon" style="margin-left:17vh"><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 64px;"></i></span>
+                            <span class="single_feature_icon" style="margin-left:22vh"><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 64px;"></i></span>
                              
                             <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Mengadakan online course yang minim biaya namun kaya akan ilmu</p>
                         </div>
@@ -174,7 +174,7 @@ if(isset($_POST['addprod'])){
                 <div class="col-sm-6 col-xl-4">
                     <div class="single_feature">
                         <div class="single_feature_part align-center">
-                            <span class="single_feature_icon " style="margin-left:17vh"><i class="fa fa-briefcase " aria-hidden="true" style="font-size: 64px;"></i></span>
+                            <span class="single_feature_icon " style="margin-left:22vh"><i class="fa fa-briefcase " aria-hidden="true" style="font-size: 64px;"></i></span>
                          
                             <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Menyediakan materi dasar yang mampu<br>menguatkan fundamental peserta dalam dunia digital hingga siap kerja</p>
                         </div>
@@ -183,7 +183,7 @@ if(isset($_POST['addprod'])){
                 <div class="col-sm-6 col-xl-4"">
                     <div class="single_feature ">
                         <div class="single_feature_part single_feature_part_2">
-                            <span class="single_service_icon style_icon" style="margin-left:19vh"><img src="Assets/iconguru.svg" width="64px" height="64px"    aria-hidden="true"  ></img></span>
+                            <span class="single_service_icon style_icon" style="margin-left:22vh"><img src="Assets/iconguru.svg" width="64px" height="64px"    aria-hidden="true"  ></img></span>
                          
                             <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Memfasilitasi peserta dengan mentor yang expert dibidangnya</p>
                         </div>

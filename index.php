@@ -188,7 +188,7 @@ if(isset($_POST['addprod'])){
             <h2 class="section-heading text-uppercase">Product</h2><br>
            
         </div>
-        <div style="margin-top:1.8vw;">
+      
            
                 <!-- product item 1-->
                 <div class="product-item">
@@ -200,10 +200,10 @@ if(isset($_POST['addprod'])){
 															?>
               
                               <div  style="display:flex;flex-direction:column;">
-                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height:15vw;width:15vw;margin-left:35%;border-radius:25px;" />
+                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height:30vh;width:30vh;margin-left:35%;border-radius:25px;" />
                     </a>
                     <div class="product_section">
-                        <div class="product-title1 product-caption" style="display:inline-block;width:15vw;text-align:center;"> 
+                        <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         <?php echo $p['nama_kelas'] ?></div>
                          <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product"  >Cek Kelas</button> </a>
                     </div>
@@ -215,7 +215,7 @@ if(isset($_POST['addprod'])){
                             
                 </div>
                 </div>
-    </div>
+   
      
 </section>
 <!-- Benefit-->
