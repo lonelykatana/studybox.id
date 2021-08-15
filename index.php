@@ -181,43 +181,39 @@ if(isset($_POST['addprod'])){
 
     </section><!-- End About Section -->
 
-    <!-- product Grid-->
+     
     <section class="bg-white " id="product">
-    <div class="container">
+   
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Product</h2><br>
            
         </div>
       
            
-                <!-- product item 1-->
-                <div class="product-item">
-                <figure class="figure-product"> 
-                    <?php 
-														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas  ASC");
-														while($p=mysqli_fetch_array($kat)){
-
-															?>
-              
-                              <div  style="display:flex;flex-direction:column;">
-                        <img class="img-fluid" src="<?php echo $p['gambar'] ?>" alt="..." style="height:30vh;width:30vh;margin-left:35%;border-radius:25px;" />
-                    </a>
+            
+                <div class="product-box">
+                   
                     <div class="product_section">
+                    <img class="img-fluid" src="uiux.png" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
-                        <?php echo $p['nama_kelas'] ?></div>
-                         <a href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"> <button type="submit" class="btn_product"  >Cek Kelas</button> </a>
-                    </div>
-                    </div>
-                    </figure>
-                    <?php
-																	}
-														?>
+                        UI/UX</div>
+                         <a href="produk.php?id_kelas=1?>"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
+                    </div> 
+                    <div class="product_section">
+                    <img class="img-fluid" src="uiux.png" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
+                        <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
+                        Web Developer</div>
+                         <a href="produk.php?id_kelas=2?>"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
+                    </div> 
+                     
                             
-                </div>
+                
                 </div>
    
      
 </section>
+ 
+ 
 <!-- Benefit-->
 <section class="page-section" id="benefit">
   <div class="container">
@@ -341,9 +337,7 @@ if(isset($_POST['addprod'])){
                 <div class="copyright-text">
                   <p>© 2021 STUDYBOX All rights reserved.
                   </p>
-                </div>
-      
-               
+                </div>          
               </div>
             </div>
           </div>

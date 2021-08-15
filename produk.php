@@ -132,15 +132,16 @@ if(isset($_POST['addpeserta']))
  
  <section id="product" class="product" >
 
-  <div class="container" data-aos="fade-up " style="margin-left:15%;padding-top:4vw;">
-    <div class="row gx-0" >
+  <div class="container" id="product-konten" data-aos="fade-up " style="margin-left:15%;padding-top:4vw;">
+    
     <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
 
 				?>
-      <div  class="produk-detail col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div  class="produk-detail col-lg-6 d-flex  justify-content-center" data-aos="fade-up" data-aos-delay="200">
      
-        <img src="<?php echo $p['gambar']?>" class="img_content" style="border-radius:25px;" alt=""   >  
+        <img src="<?php echo $p['gambar']?>" class="img_content"   alt=""   >  
+        
         <div class="product-content">
      
           <h2><?php echo $p['nama_kelas'] ?></h2>
