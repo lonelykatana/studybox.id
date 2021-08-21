@@ -22,7 +22,7 @@ if(isset($_POST['addpeserta']))
 		  </div>
 		<meta http-equiv='refresh' content='1; url= index.php'/>  ";
 		} else { echo "<div class='alert alert-warning'>
-			Gagal mendaftar, silakan coba lagi.
+			Gagal mendaf, silakan coba lagi.
 		  </div>
 		 <meta http-equiv='refresh' content='1; url= produk.php'/> ";
 		}
