@@ -5,25 +5,29 @@ include 'dbconnect.php';
 
 if(isset($_POST['adduser']))
 	{
+    if($_POST['password']==$_POST['password1']){
 		$nama = $_POST['nama'];
 		$username = $_POST['username'];
 		$email = $_POST['email'];
 		$password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
 		$tambahuser = mysqli_query($conn,"insert into login (nama, username, email, password) 
 		values('$nama','$username','$email','$password')");
-		if ($tambahuser){
-		echo " <div class='alert alert-success'>
-			Berhasil mendaftar, silakan masuk.
-		  </div>
 
-		<meta http-equiv='refresh' content='1; url= masuk.php'/>  ";
+    if ( $_POST['nama'] =="" ||  $_POST['username'] =="" ||$_POST['email'] =="" ||  $_POST['password'] =="") {
+      header('location:daftar.php?pesan=kosong');
+    }
+		elseif ($tambahuser){
+      header('location:masuk.php');
 
 		} else { echo "<div class='alert alert-warning'>
 			Gagal mendaftar, silakan coba lagi.
 		  </div>
 		 <meta http-equiv='refresh' content='1; url= daftar.php'/> ";
 		}
-		
+    
+  }else{
+    header("location:daftar.php?pesan=gagal");}
+
 	};
 
 ?>
@@ -137,6 +141,18 @@ if(isset($_POST['adduser']))
               <div class="p-5">
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4">Mulai Dengan Gratis</h1>
+
+                  <?php 
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan']=="gagal"){
+			echo "<div class='alert'>Password Tidak Sama</div>";
+		} else if($_GET['pesan']=="kosong"){
+      echo "<div class='alert'>Silahkan Isi Form</div>";
+    }
+	}
+	?>                 
+
+
                 </div>
                   <form method="post">
                   <div class="form-group">
@@ -148,12 +164,12 @@ if(isset($_POST['adduser']))
                   <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email">
                     </div>
-                  <div class="form-group">
-                    
+                  <div class="form-group">                    
                       <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
-                      
-                    
                   </div>
+                  <div class="form-group">                    
+                      <input type="password" class="form-control form-control-user" id="exampleInputPassword1" placeholder="Ulang Password" name="password1">                    
+                   </div>
                  
                   <hr>
     <button type="submit" name="adduser" class="btn btn-success form-control">Daftar</button>
