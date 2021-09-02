@@ -363,6 +363,14 @@
       text-align: center;
   
   }
+  .sukses{
+  
+    color:rgb(6, 216, 6);
+  margin-top: -5%;
+  margin-bottom: 0 !important;
+    text-align: center;
+
+}
  
   .dropdwn{
     margin-top:0.4vw;margin-left:9vh

@@ -1,31 +1,47 @@
 <?php
+ini_set('display_errors', 1); ini_set('log_errors',1); error_reporting(E_ALL); mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);	
 session_start();
-
+include 'dbconnect.php';
+include 'function.php';
 if(!isset($_SESSION['log'])){
 	
 } else {
 	header('location:index.php');
 };
 
-include 'dbconnect.php';
-	if(isset($_POST['updatepass']))
-	{
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
-    $tambahuser = mysqli_query($conn,"UPDATE login SET password='$password' where email = '$_POST[email]'");
-	
-    if($tambahuser){
-        
-        echo " <script'>
-			Berhasil mengubah password, silakan masuk.
-		  </script>
-		<meta http-equiv='refresh' content='1; url= masuk.php'/>  ";
-    }else { echo "<div class='alert alert-warning'>
-        Gagal mendaftar, silakan coba lagi.
-      </div>
-     <meta http-equiv='refresh' content='1; url= forgot_pass.php'/> ";
+$err="";
+$sukses="";
+$email= "";
+	if(isset($_POST['updatepass'])){
+      $email=$_POST['email'];
+      if($email==""){
+          $err="Silahkan masukkan email";
+      } else{
+        $sqli1="select * from login where email='$email'";
+        $q1=mysqli_query($conn,$sqli1);
+        $n1=mysqli_num_rows($q1);
+
+        if($n1<1){
+            $err ="Email <b>$email</b> tidak ditemukan";
+        }
+      }
+      
+      if(empty($err)){
+          $token_ganti_password=md5(rand(0,1000));
+          $judul_email="Ganti Password";
+          $isi_email="Mau ganti password,klik link! </br>";
+          $isi_email.=url_dasar()."/ganti_password.php?email=$email&token=$token_ganti_password";
+          kirim_email($email,$email,$judul_email,$isi_email);
+
+          $sqli1="update login set token_ganti_password='$token_ganti_password' where email='$email'";
+          mysqli_query($conn,$sqli1);
+          $sukses="Link sudah dikirim ke email anda.";
+          
+      }
     }
-}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -35,7 +51,7 @@ include 'dbconnect.php';
     <title>StudyBox</title>
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style2.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -141,20 +157,16 @@ include 'dbconnect.php';
                     <div class="p-5">
                       <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Reset Password</h1>
+                        <?php if($err){echo "<div class='alert'>$err</div>";}?>
+                        <?php if($sukses){echo "<div class='sukses'>$sukses</div>";}?>
                       </div>                  
                 <form method="post" action="forgot_pass.php">
                         <div class="form-group">
-                          <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email">
-                          
+                          <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email" value="<?php echo $email?>">                          
                         </div>
-                        <div class="form-group">
-                          <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
-                          <a class="small">Belum punya Akun? </a><a class="small" href="daftar.php"><b>Daftar Sekarang</b></a>
-                        </div>
-                       
-                        <hr>
+                         <hr>
       
-                        <button type="submit" name="updatepass" class="btn btn-success form-control">Masuk</button>
+                        <button type="submit" name="updatepass" class="btn btn-success form-control">Reset Password</button>
                         
                       </form>
                       <hr>
