@@ -1,42 +1,51 @@
 <?php
+ini_set('display_errors', 1); ini_set('log_errors',1); error_reporting(E_ALL); mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);	
 session_start();
-
+include 'dbconnect.php';
+include 'function.php';
 if(!isset($_SESSION['log'])){
 	
 } else {
 	header('location:index.php');
 };
 
-include 'dbconnect.php';
- 
+$err="";
+$sukses="";
+$email= $_GET['email'];
+$token= $_GET['token'];
 
-if(isset($_POST['login']))
-{
-$email = mysqli_real_escape_string($conn,$_POST['email']);
-$pass = mysqli_real_escape_string($conn,$_POST['password']);
-$queryuser = mysqli_query($conn,"SELECT * FROM login WHERE email='$email'");
-$cariuser = mysqli_fetch_assoc($queryuser);
-if ( $_POST['email'] =="" ||  $_POST['password'] =="") {
-  header("location:masuk.php?pesan=kosong");
+if($token =='' or $email==''){
+    $err .="Link tidak valid. Email dan token tidak tersedia.";
+} else{
+    $sql1="select * from login where email='$email' and token_ganti_password='$token'";
+    $q1=mysqli_query($conn,$sql1);
+    $n1=mysqli_num_rows($q1);
+
+    if($n1<1){
+        $err .="Link tidak valid. Email dan Token tidak sesuai.";
+    }
 }
-		
-else if( password_verify($pass, $cariuser['password']) ) {
-			$_SESSION['id_user'] = $cariuser['id_user'];
-			$_SESSION['role'] = $cariuser['role'];
-      $_SESSION['name'] = $cariuser['username'];
-      $_SESSION['log'] = "Logged";
-			header('location:/StudyBoxWebsite/index.php');
-      echo 'berhasil!';
-		} else if ($email=='' || $pass=='') {
-      
-      header("location:masuk.php?pesan=kosong");
-		}	 else {
-      header("location:masuk.php?pesan=gagal");
-    } 
-    
-	} 
 
+if(isset($_POST['updatepass'])){
+    $password =$_POST['password']; 
+    $password1 = password_hash($password, PASSWORD_DEFAULT); 
+      $konfirmasi_password=$_POST['konfirmasi_password'];
+
+      if($password=='' or $konfirmasi_password==''){
+          $err.="Silahkan masukkan Password dan Konfirmasi Password";
+      } elseif( $konfirmasi_password!=$password){
+            $err .="Password dan Konfirmasi Password tidak sesuai.";
+      }
+      
+      if(empty($err)){
+          $sql1="update login set token_ganti_password='',password='$password1' where email='$email'";
+          mysqli_query($conn,$sql1);
+          $sukses="Password berhasil diganti. Silahkan <a href='".url_dasar()."/masuk.php'>login</a> ";
+      }
+}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -46,7 +55,7 @@ else if( password_verify($pass, $cariuser['password']) ) {
     <title>StudyBox</title>
     <link rel="icon" href="Assets/logo_color.svg" type="image/icon type">
     <link rel="stylesheet" href="footer.css"/> 
-    <link rel="stylesheet" href="style2.css"/> 
+    <link rel="stylesheet" href="style2.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -73,7 +82,7 @@ else if( password_verify($pass, $cariuser['password']) ) {
 
 <!-- Dropdown -->
 <li class="nav-item dropdownn" >
-<a  class="nav-link" style="margin-right:20px;">Course<i class="fa fa-caret-down" style="margin-left:8px"></i></span></a>
+          <a  class="nav-link" style="margin-right:20px;">Course<i class="fa fa-caret-down" style="margin-left:8px"></i></span></a>
             <div class="dropdown-contentt">
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
@@ -108,18 +117,18 @@ else if( password_verify($pass, $cariuser['password']) ) {
             echo '
 
             <li class="nav-item dropdownn" >
-          <a  class="nav-link"> <h6>Halo, '.$_SESSION["name"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
+          <a  class="nav-link">Course<i class="fa fa-caret-down" style="margin-left:8px"></i></span></a>
             <div class="dropdown-contentt">
             <a style="font-size:1rem;"href="logout.php">Keluar</a>
-            </div>
+            /div>
           </li>
 
             ';
 					} else if($_SESSION['role']=='Admin') {
-            
+            $_SESSION['login_admin']=true;
 					echo '
           <li class="nav-item dropdownn" >
-          <a  class="nav-link"><h6>Halo, '.$_SESSION["name"].' <i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
+          <a  class="nav-link">Course<i class="fa fa-caret-down" style="margin-left:8px"></i></span></a>
             <div class="dropdown-contentt">
             <a style="font-size:1rem;"href="admin">Admin Panel</a>
             <a style="font-size:1rem;"href="logout.php">Keluar</a>
@@ -134,10 +143,9 @@ else if( password_verify($pass, $cariuser['password']) ) {
     </ul>
   </div>  
 </nav>
-
     <!-- form masuk-->
 
-    <div class="container" style="margin-top:5%;margin-bottom:-4%;" >
+    <div class="container" style="margin-top: 5%;">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -152,31 +160,20 @@ else if( password_verify($pass, $cariuser['password']) ) {
                   <div class="col-lg-12">
                     <div class="p-5">
                       <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">Masuk Ke Study Box</h1>
-                      </div> 
-                      <?php 
-	if(isset($_GET['pesan'])){
-		if($_GET['pesan']=="kosong"){
-			echo "<div class='alert''>Silahkan masukkan Email dan password</div>";
-		} else if($_GET['pesan']=="gagal"){
-      echo "<div class='alert''>Email atau password salah</div>";
-    }
-    
-	}
-	?>                 
-                <form method="post"  action="#" > 
+                        <h1 class="h4 text-gray-900 mb-4">Ganti Password</h1>
+                        <?php if($err){echo "<div class='alert'>$err</div>";}?>
+                        <?php if($sukses){echo "<div class='sukses'>$sukses</div>";}?>
+                      </div>                  
+                <form method="post" action="">
                         <div class="form-group">
-                          <input  type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email" autofocus   >
+                          <input type="password" class="form-control form-control-user" id="exampleInputEmail" placeholder="Password baru" name="password" >                          
                         </div>
                         <div class="form-group">
-                          <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password"    >
-                          <a class="small" href="forgot_pass.php" style="padding-left: 2%;">Lupa Password </a>
-                        </div>
-                      
-                       
-                        <hr>
+                          <input type="password" class="form-control form-control-user" id="exampleInputEmail" placeholder="Konfirmasi Password" name="konfirmasi_password">                          
+                        </div> 
+                         <hr>
       
-                        <button type="submit" name="login" class="btn btn-success form-control">Masuk</button>
+                        <button type="submit" name="updatepass" class="btn btn-success form-control">Ganti Password</button>
                         
                       </form>
                       <hr>
@@ -323,6 +320,6 @@ else if( password_verify($pass, $cariuser['password']) ) {
         $('.logo').toggleClass('scrolled', $(this).scrollTop() > 550);
       });   
     </script>
-    <script src="script.js"></script>
+    
 </body>
 </html>
