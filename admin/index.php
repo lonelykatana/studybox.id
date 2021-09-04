@@ -1,13 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['log1']))
-{	
-    header('location:login.php');
-}
-else{
- 
-}
+
 ?>
 
 

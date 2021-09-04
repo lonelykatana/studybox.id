@@ -97,7 +97,7 @@ if(isset($_POST['addprod'])){
           <li class="nav-item dropdownn" >
           <a  class="nav-link"><h6>Halo, '.$_SESSION["name"].' <i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
             <div class="dropdown-contentt">
-            <a style="font-size:1rem;"href="admin">Admin Panel</a>
+            <a style="font-size:1rem;"href="admin/index.php">Admin Panel</a>
             <a style="font-size:1rem;"href="logout.php">Keluar</a>
             </div>
           </li>
