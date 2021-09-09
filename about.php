@@ -50,48 +50,39 @@ if(isset($_POST['addprod'])){
         <div class="container">
             
                
-                        <h2 style= "text-align:center;">Visi</h2>
-                        <p style="text-align:center; font-size:1.8vh"  style="margin-top: 1.5rem;" >" Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital. "</p>
+                        <h2 style= "text-align:center; padding-bottom: 2rem;" >Visi</h2>
+                        <p style="text-align:center; font-size:2.5vh">" Menciptakan sarana belajar online dengan materi dan lingkungan yang membangun fundamental di dunia digital. "</p>
                        
                     
         </div>
     </section>
 
-    <section class="feature_part single_feature_padding page-section" style="padding: 4vw 0 3vw 0 ;">
-        <div class="container">
-          <h2 style="text-align:center;">Misi</h2>
-            <div class="row" style="padding-top: 3vh;" >
-                
-                <div class="col-sm-6 col-xl-4">
-                    <div class="single_feature">
-                        <div class="single_feature_part">
-                            <span class="single_feature_icon" style="margin-left:22vh"><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 64px;"></i></span>
-                             
-                            <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Mengadakan online course yang minim biaya namun kaya akan ilmu</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-4">
-                    <div class="single_feature">
-                        <div class="single_feature_part align-center">
-                            <span class="single_feature_icon " style="margin-left:22vh"><i class="fa fa-briefcase " aria-hidden="true" style="font-size: 64px;"></i></span>
-                         
-                            <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Menyediakan materi dasar yang mampu<br>menguatkan fundamental peserta dalam dunia digital hingga siap kerja</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-4"">
-                    <div class="single_feature ">
-                        <div class="single_feature_part single_feature_part_2">
-                            <span class="single_service_icon style_icon" style="margin-left:22vh"><img src="Assets/iconguru.svg" width="64px" height="64px"    aria-hidden="true"  ></img></span>
-                         
-                            <p class="visi-misi-teks text-center" style="padding-top: 1vw;">Memfasilitasi peserta dengan mentor yang expert dibidangnya</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="page-section" id="benefit" style="padding-top: 3vw;">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase" >Misi</h2><br>
+           <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
         </div>
-    </section>
+        <div class="row text-center">
+        <div class="col-md-4">
+             
+             <img src ="Assets/online-learning.svg" style="width:15vh; height: 15vh; ">
+             <p class="text-muted">Mengadakan online course yang minim biaya namun kaya akan ilmu</p>
+         </div>
+         <div class="col-md-4">
+           
+             <img src ="Assets/work-from-home.svg" style="width:15vh; height: 15vh;">
+             <p class="text-muted">Menyediakan materi dasar yang mampu<br>menguatkan fundamental peserta dalam dunia digital hingga siap kerja</p>
+         </div>
+         <div class="col-md-4">
+             
+            
+             <img src ="Assets/customer.svg" style="width:15vh; height: 15vh;">
+             <p class="text-muted">Memfasilitasi peserta dengan mentor yang expert dibidangnya</p>
+         </div>
+        </div>
+    </div>
+  </section>
  <!-- Benefit-->
 <section class="page-section bg-white" id="benefit" style="padding-top: 3vw;">
     <div class="container">
@@ -107,13 +98,13 @@ if(isset($_POST['addprod'])){
          </div>
          <div class="col-md-4">
            
-             <img src ="Assets/benefit2.svg" style="width:15vh; height: 15vh;; border-radius: 25px;">
+             <img src ="Assets/benefit2.svg" style="width:15vh; height: 15vh; border-radius: 25px;">
              <p class="text-muted">Dengan biaya yang relatif murah, peserta mendapatkan materi yang dimulai dari tingkat dasar hingga memahami fundamental dunia digital</p>
          </div>
          <div class="col-md-4">
              
             
-             <img src ="Assets/benefit3.svg" style="width:15vh; height: 15vh;; border-radius: 25px;">
+             <img src ="Assets/benefit3.svg" style="width:15vh; height: 15vh; border-radius: 25px;">
              <p class="text-muted">Peserta bisa berelasi dengan mentor yang sudah berpengalaman di dunia kerja</p>
          </div>
         </div>

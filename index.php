@@ -11,7 +11,7 @@ if(isset($_POST['addprod'])){
     }
   }
 ?>
-<?php include("partials/header.php") ?>
+<?php include("partials/headerindex.php") ?>
 <?php include("partials/navbar.php") ?>
 
 
@@ -144,9 +144,63 @@ if(isset($_POST['addprod'])){
   </div>
 </section>
   
+
+<section class="bg-white " id="product">
+   
+   <div class="text-center">
+       <h2 class="section-heading">Apa kata para Alumni Study Box</h2><br>      
+   </div>
+ 
+   <div class="blog-slider">
+  <div class="blog-slider__wrp swiper-wrapper">
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        
+        <img src="foto1.JPG" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">Alumni angkatan 1</span>
+        <div class="blog-slider__title">Erick Gultom</div>
+        <div class="blog-slider__text">" Dulu saya susah tidur, setelah join Study Box saya tidak bisa bangun "</div>
+       
+      </div>
+    </div>
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="foto2.JPG" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">Alumni angkatan 1</span>
+        <div class="blog-slider__title">Ricky</div>
+        <div class="blog-slider__text">"Seperti kata pepatah thailand.. palai kakakpakatumahterfdfs ye"</div>
+       
+      </div>
+    </div>
+    
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="foto3.JPG" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">Alumni angkatan 1</span>
+        <div class="blog-slider__title">Eric</div>
+        <div class="blog-slider__text">" Saya gak tau kok bisa ada di halaman testimoni"</div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div class="blog-slider__pagination"></div>
+</div>
+       
+      
+
+</section>
     <!-- Footer -->
     <?php include("partials/footer.php") ?>
   <!-- End -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script><script  src="./script_testimoni.js"></script>
 
 	<script type="text/javascript">
    

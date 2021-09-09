@@ -35,8 +35,8 @@ if(isset($_POST['addpeserta1']))
 	*/
 
 ?>
-<?php include("partials/headerproduk.php") ?>
-<?php include("partials/navbar.php") ?>
+<?php include("partials/headerproduk.php"); ?>
+<?php include("partials/navbar.php") ;?>
       <!-- product section-->
  
  <section id="product" class="product" >
