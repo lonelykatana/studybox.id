@@ -21,8 +21,7 @@ if(isset($_POST['addprod'])){
         <div class="carousel-inner">
           <div class="carousel-item active">
           
-            <img class="d-block w-100" src="Assets/carousel1.png" alt="First slide" style="height: 40vw;object-fit: cover;" >
-                  
+            <img class="d-block w-100" src="Assets/carousel1.png" alt="First slide" style="height: 40vw;object-fit: cover;" >      
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="Assets/carousel2.png" alt="Second slide" style="height: 40vw;object-fit: cover;">
