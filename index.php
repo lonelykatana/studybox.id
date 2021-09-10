@@ -1,10 +1,11 @@
 <?php
+
 session_start();
 include 'dbconnect.php';
 if(isset($_POST['addprod'])){
 	if(!isset($_SESSION['log']))
 		{	
-			header('location:masuk.php');
+			header('location:masuk');
 		}
     else{
       header('location:produk.php');
@@ -68,7 +69,7 @@ if(isset($_POST['addprod'])){
               </p>
               <div class="text-left text-lg-start">
                 <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span><a href="about.php">Read More</a></span>
+                  <span><a href="about">Read More</a></span>
                  
                 </a>
               </div>

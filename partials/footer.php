@@ -23,10 +23,10 @@
                     <h4 class="footer-widget-title">Sitemap</h4>
                     <ul>
                       <li>
-                        <a href="index.php">Home</a>
+                        <a href="index">Home</a>
                       </li>
                       <li>
-                        <a href="about.php">Tentang Kami</a>
+                        <a href="about">Tentang Kami</a>
                       </li>
                     </ul>
                   </div>
