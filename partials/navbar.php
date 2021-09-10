@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-md bg-putih navbar-light">
 <div class="logo2">
         <img src="Assets/logo_color.svg" style="width:2pc;height: 2pc;">
-      <a class=" nav-item" href="index.php">
+      <a class=" nav-item" href="index">
       <span class="logo_text">STUDY BOX</span></a>
     </div>
 
@@ -37,10 +37,10 @@
 
       <ul class="nav3">
       <li class="nav-item nav3">
-        <a class="nav-link nav2" href="masuk.php">Masuk</a>
+        <a class="nav-link nav2" href="masuk">Masuk</a>
       </li>
       <li class="nav-item nav3">
-        <a class="nav-link nav1" href="daftar.php">Daftar</a>
+        <a class="nav-link nav1" href="daftar">Daftar</a>
       </li>    
       </ul>
       ';
@@ -52,7 +52,7 @@
             <li class="nav-item dropdownn" >
           <a  class="nav-link"> <h6>Halo, '.$_SESSION["name"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
             <div class="dropdown-contentt">
-            <a style="font-size:1rem;"href="logout.php">Keluar</a>
+            <a style="font-size:1rem;"href="logout">Keluar</a>
             </div>
           </li>
 
@@ -65,7 +65,7 @@
           <a  class="nav-link"><h6>Halo, '.$_SESSION["name"].' <i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
             <div class="dropdown-contentt">
             <a style="font-size:1rem;"href="admin">Admin Panel</a>
-            <a style="font-size:1rem;"href="logout.php">Keluar</a>
+            <a style="font-size:1rem;"href="logout">Keluar</a>
             </div>
           </li>
 					';
