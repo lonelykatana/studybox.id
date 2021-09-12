@@ -34,7 +34,6 @@
 <?php
 								if(!isset($_SESSION['log'])){
 					echo '		
-
       <ul class="nav3">
       <li class="nav-item nav3">
         <a class="nav-link nav2" href="masuk">Masuk</a>
@@ -50,15 +49,12 @@
             echo '
 
             <li class="nav-item dropdownn" >
-          <a  class="nav-link"> <h6>Halo, '.$_SESSION["name"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
+          <a  class="nav-link"> <h6>Halo, '.$_SESSION["usern"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
             <div class="dropdown-contentt">
-<<<<<<< HEAD
+
             <a style="font-size:1rem;"href="profil.php">Profil Saya</a>
             <a style="font-size:1rem;"href="logout.php">Keluar</a>
-=======
-            <a style="font-size:1rem;"href="logout">Keluar</a>
->>>>>>> 2401682593ace97e6e369ff68443598d4758da25
-            </div>
+           
           </li>
 
             ';

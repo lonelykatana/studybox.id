@@ -16,6 +16,25 @@ function query($query){
     }
     return $rows;
 
+
 } 
+function ubahproduk($data){
+    global $conn;
+  
+    $iduser=htmlspecialchars($data["id_user"]);
+    $nama=htmlspecialchars($data["nama"]);
+    $usern=htmlspecialchars($data["username"]);
+    $emaill=htmlspecialchars($data["email"]);
+
+  
+    $query = "UPDATE login SET 
+  
+  
+     id_user='$iduser',nama ='$nama',username = '$usern',email = '$emaill' WHERE id_user=$iduser" ;
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+  }
+   
 
 ?>

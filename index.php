@@ -92,9 +92,6 @@ if(isset($_POST['addprod'])){
             <h2 class="section-heading text-uppercase">Product</h2><br>
            
         </div>
-      
-           
-            
                 <div class="product-box">
                    
                     <div class="product_section">
