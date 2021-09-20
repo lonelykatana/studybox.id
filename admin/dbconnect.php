@@ -79,7 +79,6 @@ function ubahproduk($data){
     if( $ukuran_file1 <= 10000000){ 
       if(move_uploaded_file( $tmp_file1, $path1)){ 
 
-
       }
     }
   }

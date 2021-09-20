@@ -3,7 +3,7 @@ session_start();
 
 include 'dbconnect.php';
 
-if(isset($_POST['adduser']))
+    if(isset($_POST['adduser']))
 	{
     if($_POST['password']==$_POST['password1']){
 		$nama = $_POST['nama'];

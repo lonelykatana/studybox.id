@@ -33,8 +33,8 @@ if(isset($_POST['addprod'])){
 <?php include("partials/navbar.php") ?>
 
 <div class="profile-container">
-    <div class="name-account">
-        <img src="foto12.jpg  " class="pict-profile">
+    <div class="name-account">  
+        <img src="<?php echo '.$_SESSION["gambar_user"]. ';?>"  class="pict-profile">
        
         <span class="name-profile">
         <?php
@@ -47,7 +47,7 @@ if(isset($_POST['addprod'])){
 
     <table style="margin-top:4vw">
         <tr>
-            <td width="19%" style="border-right: 1px solid black;" valign="top" >
+            <td width="19%" style="border-right: 1px solid black;cursor: context-menu;" valign="top" >
 
             <ul>
         <li class="menu-profile-text" onclick="openCity('London')"><i class="fa fa-user" aria-hidden="true" style="font-size:20px; padding-right:0.7vw"></i>My Profile</li>
@@ -104,7 +104,7 @@ if(isset($_POST['addprod'])){
   <form method="post" action="profil.php" class="form-edit-profile">
   <div class="form-group">
                     <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="id_user"   name="id_user"  value="<?php echo '  '.$_SESSION["id_user"].' ';?>">
-                  </div>
+                    </div>
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama"   name="nama"  value="<?php echo '  '.$_SESSION["name"].' ';?>">
                   </div>
@@ -114,6 +114,10 @@ if(isset($_POST['addprod'])){
                   <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email" value="<?php echo '  '.$_SESSION["emaill"].' ';?>">
                     </div>
+                    <div class="form-group">
+                        <label>Gambar</label>
+                        <input name="uploadgambar" type="file" class="form-control">
+                    </div>   
                   <hr>
     <button type="submit" name="adduser" class="btn btn-success form-control">Edit</button>
                 </form>

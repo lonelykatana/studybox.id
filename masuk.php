@@ -27,6 +27,7 @@ else if( password_verify($pass, $cariuser['password']) ) {
       $_SESSION['name'] = $cariuser['nama'];
       $_SESSION['usern'] = $cariuser['username'];
       $_SESSION['emaill'] = $cariuser['email'];
+      $_SESSION['gambar_user'] = $cariuser['gambar_user'];
       $_SESSION['log'] = "Logged";  
 
 			header('location:/StudyBoxWebsite/index.php');
