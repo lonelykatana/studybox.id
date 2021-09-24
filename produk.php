@@ -49,7 +49,7 @@ if(isset($_POST['addpeserta1']))
 				?>
       <div  class="produk-detail col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
      
-        <img src="<?php echo $p['gambar_user']?>" class="img_content" style="border-radius:25px;" alt=""   >  
+        <img src="<?php echo $p['gambar']?>" class="img_content" style="border-radius:25px;" alt=""   >  
         <div class="product-content">
      
           <h2><?php echo $p['nama_kelas'] ?></h2>
