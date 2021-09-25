@@ -120,7 +120,7 @@ while($p=mysqli_fetch_array($brgs)){
       <div class="cardleft1">
         <ul class="profil">
           <li> <img style="width:6%; padding-bottom:4px;" src="Assets/user.png"> <a href="profil">Profil</a></li>
-          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/notification1.svg"> <a href="#">Status Kelas</a></li>
+          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/notification1.svg"> <a href="status">Status Kelas</a></li>
         </ul>
 
       </div>
@@ -186,19 +186,19 @@ while($p=mysqli_fetch_array($brgs)){
                     <input type="text" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Nama" name="nama" value="<?php echo $p['nama']  ?>">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Username" name="username" value="<?php echo $p['username']  ?>">
+                    <input type="text" id=username1 class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Username" name="username" value="<?php echo $p['username']  ?>">
                   </div>
                   <div class="form-group">
-                      <input type="email" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Email" name="email" value="<?php echo $p['email']  ?>">
+                      <input type="email" id="email1" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Email" name="email" value="<?php echo $p['email']  ?>">
                     </div>
                   <div class="form-group">                    
-                      <input type="text" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
+                      <input type="text" id="noWA" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
                   </div>
                   <div class="form-group">                    
-                      <input type="text" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umur']  ?>">
+                      <input type="text" id="umur1" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umur']  ?>">
                   </div>
                   <div class="form-group">                    
-                      <input type="text" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo $p['pekerjaan']  ?>">
+                      <input type="text" id="pekerjaan1" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo $p['pekerjaan']  ?>">
                   </div>
                         
 
