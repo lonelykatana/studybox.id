@@ -131,7 +131,7 @@ if(isset($_POST['addpeserta1']))
   <div class="faqs">
     <div class="panel_title"><h4>Kurikulum</h4></div>
     <div class="accordions">
-            
+            W
       <div class="elements_accordions">
 
         <div class="accordion_container">
