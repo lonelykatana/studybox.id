@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION['log'])){
 	
 } else {
-	header('location:index.php');
+	header('location:index');
 };
 
 include 'dbconnect.php';
@@ -30,7 +30,7 @@ else if( password_verify($pass, $cariuser['password']) ) {
       $_SESSION['gambar_user'] = $cariuser['gambar_user'];
       $_SESSION['log'] = "Logged";  
 
-			header('location:/StudyBoxWebsite/index.php');
+			header('location:/StudyBoxWebsite/index');
       echo 'berhasil!';
 		} else if ($email=='' || $pass=='') {
       
@@ -82,7 +82,7 @@ else if( password_verify($pass, $cariuser['password']) ) {
                   <div class="form-group">
                     <input type="password" class="form-control form-control-user" id="exampleInputPassword"
                       placeholder="Password" name="password">
-                    <a class="small" href="forgot_pass.php" style="padding-left: 2%;">Lupa Password </a>
+                    <a class="small" href="forgot_pass" style="padding-left: 2%;">Lupa Password </a>
                   </div>
                   <hr>
 
@@ -93,7 +93,7 @@ else if( password_verify($pass, $cariuser['password']) ) {
 
                 <div class="text-center">
 
-                  <a class="small">Belum punya Akun? </a><a class="small" href="daftar.php"><b>Daftar
+                  <a class="small">Belum punya Akun? </a><a class="small" href="daftar"><b>Daftar
                       Sekarang</b></a><br>
 
                 </div>

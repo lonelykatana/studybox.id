@@ -1,0 +1,204 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+ 
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 18%;
+ 
+}
+
+/* Right column */
+.rightcolumn {
+
+  width: 60%;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.cardright {
+   background-color: white;
+  
+   margin-top: 20px;
+
+
+}
+.cardleft {
+   background-color: white;
+   padding: 20px;
+   border: 1px solid rgba(0,0,0,.125);
+   text-align: center;
+  
+}
+.cardleft1 {
+  background-color: white;
+  padding-left: 70px;
+  padding-top:20px;
+  border: 1px solid rgba(0,0,0,.125); 
+ 
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;;
+}
+
+.avatar1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+ 
+}
+ul.profil{
+  cursor:pointer;
+  line-height: 2;
+  font-size: 17px;
+  text-decoration: none;
+ 
+}
+ul.profil li a{
+  cursor:pointer;
+  line-height: 2;
+  font-size: 17px;
+  text-decoration: none;
+  color:black;
+ 
+}
+ul.profil2{
+ 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
+}
+li.profil2{
+  float: left;
+}
+li.profil2 a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.form-group{
+ width: 80%;
+
+}
+.btn-success{
+  width: 20% !important;
+ 
+ 
+}
+.btn-foto{
+  border-radius: 6px;
+  border:none;
+  background-color: #0AADA8;
+  padding: 6px 16px;
+  color:white;
+  cursor:pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+
+}
+.btn-foto:hover{
+  background-color: #0d8d89;
+}
+
+.btn-foto1{
+  border-radius: 6px;
+  border:none;
+  background-color: #0AADA8;
+  padding: 6px 16px;
+  color:white;
+  cursor:pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+ 
+  margin-top: 5%;
+
+}
+.btn-foto1:hover{
+  background-color: #0d8d89;
+}
+form{
+  text-align: center;
+}
+.form-group{
+  margin-left:25%;
+  width: 50%;
+}
+
+ul.profil li a:hover{
+  -webkit-transition:.3s;
+ -o-transition:.3s;
+ transition:.3s
+}
+ul.profil li a:hover{
+  color:#0AADA8;
+}
+
+input[type=text]{
+
+  outline: none !important;
+ 
+}
+input[type=text]:focus{
+ 
+  outline: none !important;
+  border-color: #0AADA8;
+}
+input[type=email]:focus{
+ 
+  outline: none !important;
+  border-color: #0AADA8;
+}

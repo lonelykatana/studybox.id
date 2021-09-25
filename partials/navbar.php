@@ -49,7 +49,7 @@
             echo '
 
             <li class="nav-item dropdownn" >
-          <a  class="nav-link"> <h6>Halo, '.$_SESSION["usern"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
+          <a  class="nav-link"> <h6>Halo, '.$_SESSION["name"].'<i class="fa fa-caret-down" style="margin-left:8px"></i></h6></a>
             <div class="dropdown-contentt">
 
             <a style="font-size:1rem;"href="profil">Profil Saya</a>

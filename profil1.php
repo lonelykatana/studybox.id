@@ -119,24 +119,24 @@ while($p=mysqli_fetch_array($brgs)){
 
       <div class="cardleft1">
         <ul class="profil">
-          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/user.png"> <a href="profil">Profil</a></li>
-          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/notification1.svg"> <a href="#">Status Kelas</a></li>
+          <li> <a href="profil1">Profil</a></li>
+          <li>Status Kelas</li>
         </ul>
 
       </div>
       
   </div>
   <div class="rightcolumn">
-      <h2 style="padding-left:20px;">Profil</h2>
+      <h2>Profil</h2>
     <div class="cardright">
       <div class="card-header" style="background-color:white;">      
         <h5>Kamu</h5>
       </div> 
        <div class="card-body">
-       <div class=row style="text-align:center">
+       <div class=row>
       
      
-         <div class="col-xs-12 col-md-6" >
+         <div class="col-xs-12 col-md-6" style="text-align:right;" >
                       
          <?php 
 
@@ -148,7 +148,7 @@ while($p=mysqli_fetch_array($brgs)){
                         $image_src = "upload/".$image;
 												?>
                         
-												<img src="<?php echo $image_src; ?>" alt="John Doe" class="avatar1">																					
+												<img src="<?php echo $image_src; ?>" alt="John Doe" class="avatar">																					
 												<?php 
 											}
 													
@@ -157,10 +157,14 @@ while($p=mysqli_fetch_array($brgs)){
 
         
           </div>
-          <div class="col-xs-12 col-md-6" >
+          <div class="col-xs-12 col-md-6"  >
           <form class='formUpload' name='formUpload' id='formUpload' action="profil1" method="POST" enctype="multipart/form-data">
 		<input value="Upload Image" class="ToUpload" name="fileToUpload" id="fileToUpload" type="file"style="display: none;">
-  <input type="button" class="btn-foto1" value="Unggah" onclick="document.getElementById('fileToUpload').click();" />
+  <input type="button" class="btn-foto" value="Unggah" style="margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);" onclick="document.getElementById('fileToUpload').click();" />
 	</form>
     
 
@@ -174,7 +178,8 @@ while($p=mysqli_fetch_array($brgs)){
 
        </div>
        <div class="card-footer" style="background-color:white;">
-       <form method="post"  >
+       <form method="post" style=" margin-left:10vw;   
+      ">
 
 <?php 
 											$brgs=mysqli_query($conn,"SELECT * from login WHERE id_user=$cek ");										
@@ -182,23 +187,23 @@ while($p=mysqli_fetch_array($brgs)){
 
 												?>
   
-                   <div class="form-group" action="profil1.php" method="post">
-                    <input type="text" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Nama" name="nama" value="<?php echo $p['nama']  ?>">
+                   <div class="form-group" action="profil1.php" method="post" >
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama" name="nama" value="<?php echo $p['nama']  ?>">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Username" name="username" value="<?php echo $p['username']  ?>">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Username" name="username" value="<?php echo $p['username']  ?>">
                   </div>
                   <div class="form-group">
-                      <input type="email" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Email" name="email" value="<?php echo $p['email']  ?>">
+                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="email" value="<?php echo $p['email']  ?>">
                     </div>
                   <div class="form-group">                    
-                      <input type="text" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
+                      <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
                   </div>
                   <div class="form-group">                    
-                      <input type="text" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umur']  ?>">
+                      <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umur']  ?>">
                   </div>
                   <div class="form-group">                    
-                      <input type="text" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo $p['pekerjaan']  ?>">
+                      <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo $p['pekerjaan']  ?>">
                   </div>
                         
 
@@ -207,7 +212,7 @@ while($p=mysqli_fetch_array($brgs)){
 													
 											?>
                  
-                  <button type="submit" name="adduser" class="btn btn-success form-control" >Simpan</button>
+                  <button type="submit" name="adduser" class="btn btn-success form-control" style="margin-left:15vw">Simpan</button>
                 </form>
        </div>
       </div>
