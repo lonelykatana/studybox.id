@@ -46,8 +46,6 @@
 														while($p=mysqli_fetch_array($kat)){
                                 
 															?>
-             
-             
                       <li>
                       <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
                       </li>
@@ -77,6 +75,22 @@
                   <!-- end /.footer-menu -->
                 </div>
                 <!-- Ends: .footer-widget -->
+                
+              </div>
+              
+              <div class="col-xs-12 col-sm-6 col-md-5">
+                <div class="footer-widget">
+                  <div class="footer-menu no-padding">
+                    <h4 class="footer-widget-title">Offices</h4>
+                    <ul>
+          <li>Perumahan Taman Setiabudi Indah Blok FF no 8, Medan Sunggal, Medan 20122</i></a></li>
+         
+        </ul>
+                  </div>
+                  <!-- end /.footer-menu -->
+                </div>
+                <!-- Ends: .footer-widget -->
+                
               </div>
               <!-- Ends: .col-lg-3 -->
       

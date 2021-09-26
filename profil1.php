@@ -47,12 +47,12 @@ $cek=$cariuser['id_user'];
       $username = $_POST['username'];
       $email = $_POST['email'];
       $no_wa = $_POST['no_wa'];
-      $umur = $_POST['umur'];
+      $umur = $_POST['umut'];
       $pekerjaan = $_POST['pekerjaan'];
 
 
 
-      $tambahuser = mysqli_query($conn,"UPDATE login SET nama='$nama', username='$username', email='$email', no_wa='$no_wa', umur='$umur', pekerjaan='$pekerjaan'
+      $tambahuser = mysqli_query($conn,"UPDATE login SET nama='$nama', username='$username', email='$email', no_wa='$no_wa', umut='$umur', pekerjaan='$pekerjaan'
       where id_user=$cek  ");
 
 
@@ -200,7 +200,7 @@ while($p=mysqli_fetch_array($brgs)){
                       <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
                   </div>
                   <div class="form-group">                    
-                      <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umur']  ?>">
+                      <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umut']  ?>">
                   </div>
                   <div class="form-group">                    
                       <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo $p['pekerjaan']  ?>">
