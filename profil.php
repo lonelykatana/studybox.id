@@ -195,11 +195,10 @@ while($p=mysqli_fetch_array($brgs)){
                       <input type="text" id="noWA" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
                   </div>
                   <div class="form-group">                    
-<<<<<<< HEAD
+
                       <input type="text" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umut']  ?>">
-=======
-                      <input type="text" id="umur1" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umur']  ?>">
->>>>>>> 7111ee0573359580aba5feb7a1a90bd1fd002fe3
+
+                    
                   </div>
                   <div class="form-group">                    
                       <input type="text" id="pekerjaan1" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo $p['pekerjaan']  ?>">
