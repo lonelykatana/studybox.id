@@ -190,12 +190,57 @@ ul.profil li a:hover{
 input[type=text]{
 
   outline: none !important;
- 
+  background-image: url('Assets/user.svg');
+  background-position: 390px 10px; 
+  background-size: 4%;
+  background-repeat: no-repeat;
 }
+input[type=text]#username1{
+
+  outline: none !important;
+  background-image: url('Assets/id-card.svg');
+  background-position: 390px 10px; 
+  background-size: 4%;
+  background-repeat: no-repeat;
+}
+input[type=email]#email1{
+
+  outline: none !important;
+  background-image: url('Assets/envelope.svg');
+  background-position: 390px 10px; 
+  background-size: 4%;
+  background-repeat: no-repeat;
+}
+input[type=text]#noWA1{
+
+  outline: none !important;
+  background-image: url('Assets/phone-call.svg');
+  background-position: 390px 10px; 
+  background-size: 4%;
+  background-repeat: no-repeat;
+}
+input[type=text]#umur1{
+
+  outline: none !important;
+  background-image: url('Assets/birthday-cake.svg');
+  background-position: 390px 10px; 
+  background-size: 4%;
+  background-repeat: no-repeat;
+}
+input[type=text]#pekerjaan1{
+
+  outline: none !important;
+  background-image: url('Assets/suitcase1.svg');
+  background-position: 390px 10px; 
+  background-size: 4%;
+  background-repeat: no-repeat;
+}
+
 input[type=text]:focus{
  
   outline: none !important;
   border-color: #0AADA8;
+
 }
 input[type=email]:focus{
  
