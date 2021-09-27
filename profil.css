@@ -22,7 +22,7 @@ body {
 /* Left column */
 .leftcolumn {   
   float: left;
-  width: 18%;
+  width: 15%;
  
 }
 
@@ -58,7 +58,7 @@ body {
 }
 .cardleft1 {
   background-color: white;
-  padding-left: 70px;
+  padding-left: 75px;
   padding-top:20px;
   border: 1px solid rgba(0,0,0,.125); 
  

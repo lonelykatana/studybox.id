@@ -5,6 +5,13 @@ include 'dbconnect.php';
 $id_kelas = $_GET['id_kelas'];
 $cariuser['id_user']=$_SESSION['id_user'];
 $cek=$cariuser['id_user'];
+if(isset($_POST['buyclass'])){
+    echo " <div class='alert alert-success'>
+    <script>alert('Berhasil mendaftar, Selanjutnya akan kami hubungi melalui whatsapp ya. Terima Kasih')</script>	
+      </div>
+    <meta http-equiv='refresh' content='1; url= index.php'/>  ";
+
+}
 
 ?>
 
@@ -164,7 +171,7 @@ $cek=$cariuser['id_user'];
 												?>
         <div class="col-12 col-md-7 order-md-1">
             <h4>Checkout</h4>
-            <form   novalidate>
+            <form method = "post" novalidate>
 
                 <div class="card">
                     <div class="card-body">
@@ -201,16 +208,15 @@ $cek=$cariuser['id_user'];
                                 </div>
                                 <div class="mb-3">
                                     <label for="pekerjaan">Pekerjaan</label>
-                                    <input type="text" class="form-control dk-text-input" id="address"
+                                    <input type="text" class="form-control " id="address"
                                            placeholder="Website Developer" 
                                            value="<?php echo $p['pekerjaan']  ?>" required>
                                   
                                 </div>
                                 <?php 
-											}
-													
+											}	
 											?>
-                                <button class="btn btn-primary ">Purchase</button>
+                                <button name="buyclass" class="btn btn-primary">Purchase</button>
                             </div>
                           
                         </div>

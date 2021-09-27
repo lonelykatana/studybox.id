@@ -155,7 +155,7 @@ if(isset($_POST['addprod'])){
       <div class="blog-slider__content">
         <span class="blog-slider__code">Alumni angkatan 1</span>
         <div class="blog-slider__title">Erick Gultom</div>
-        <div class="blog-slider__text">" Dulu saya susah tidur, setelah join Study Box saya tidak bisa bangun "</div>
+        <div class="blog-slider__text">"Kurikulum kelas di Study Box ini sangat gampang dipahami dan cocok diterapkan di perusahaan"</div>
        
       </div>
     </div>
@@ -166,7 +166,7 @@ if(isset($_POST['addprod'])){
       <div class="blog-slider__content">
         <span class="blog-slider__code">Alumni angkatan 1</span>
         <div class="blog-slider__title">Ricky</div>
-        <div class="blog-slider__text">"Seperti kata pepatah thailand.. palai kakakpakatumahterfdfs ye"</div>
+        <div class="blog-slider__text">"Sebelumnya saya tidak ada background IT tetapi saya bisa menjadi seorang developer"</div>
        
       </div>
     </div>
@@ -178,7 +178,7 @@ if(isset($_POST['addprod'])){
       <div class="blog-slider__content">
         <span class="blog-slider__code">Alumni angkatan 1</span>
         <div class="blog-slider__title">Eric</div>
-        <div class="blog-slider__text">" Saya gak tau kok bisa ada di halaman testimoni"</div>
+        <div class="blog-slider__text">"Tidak hanya teori, didalam kelas juga banyak praktek sehingga bisa langsung dipahami"</div>
         
       </div>
     </div>
