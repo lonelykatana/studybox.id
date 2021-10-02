@@ -487,7 +487,11 @@
     }
     .product-content{
       width: 100%;
-      margin-left: -100px;
+     
+    }
+    .img_content{
+      width: 18vh;
+      height: 18vh;
     }
     
     #product{

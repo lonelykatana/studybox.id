@@ -3,26 +3,19 @@ session_start();
 
 include 'dbconnect.php';
 $idk = $_GET['id_kelas'];
-if(isset($_POST['addpeserta1']))
+if(isset($_POST['addpeserta']))
 	{
-	    	echo " 
-		<script>alert('Maaf Pendaftaran Batch 1 sudah selesai,silahkan Tunggu dan ikuti Bootcamp Batch 2 kami')</script> 	";
-	};
-	    /*
 		$nama = $_POST['nama'];
 		$email = $_POST['email'];
     $umur = $_POST['umur'];
     $nowa = $_POST['nowa'];
-    $nama_kelas = $_POST['nama_kelas2'];
-    $motivation_letter = $_POST['motivation_letter'];
-
    
-		$tambahuser = mysqli_query($conn,"insert into data_peserta (nama, email, umur, no_wa, nama_kelas2, motivation_letter) 
-		values('$nama','$email','$umur','$nowa','$nama_kelas','$motivation_letter')");
+		$tambahuser = mysqli_query($conn,"insert into data_peserta (nama, email, umur, no_wa) 
+		values('$nama','$email','$umur','$nowa')");
     
 		if ($tambahuser){
 		echo " <div class='alert alert-success'>
-		<script>alert('Terima Kasih sudah Mendaftar Kelas di Study Box.')</script>	
+		<script>alert('Berhasil mendaftar, silakan masuk.')</script>	
 		  </div>
 		<meta http-equiv='refresh' content='1; url= index.php'/>  ";
 		} else { echo "<div class='alert alert-warning'>
@@ -30,10 +23,7 @@ if(isset($_POST['addpeserta1']))
 		  </div>
 		 <meta http-equiv='refresh' content='1; url= produk.php'/> ";
 		}
-		
 	};
-	*/
-
 ?>
 <?php include("partials/headerproduk.php"); ?>
 <?php include("partials/navbar.php") ;?>
@@ -47,11 +37,10 @@ if(isset($_POST['addpeserta1']))
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
 
 				?>
-      <div  class="produk-detail col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div class="produk-detail col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
      
         <img src="<?php echo $p['gambar']?>" class="img_content" style="border-radius:25px;" alt=""   >  
         <div class="product-content">
-     
           <h2><?php echo $p['nama_kelas'] ?></h2>
           <p class="product-description">
           <?php echo $p['deskripsi'] ?>
@@ -63,18 +52,19 @@ if(isset($_POST['addpeserta1']))
                       <h6 class="harga2" style="padding-left: 2vh; "><b>Rp <?php echo $p['harga_after'] ?></b> </h6>
               </div>
           
-              <form method="post">
-           
-                <?php
+              <?php
           
           if(!isset($_SESSION['log']))
             {	
-              echo "<a href='masuk.php'><input type='submit' value='Daftar Kelas'  class='btn_product'style='margin-top:7%' data-toggle='modal' data-target='#myModal' ></a>";
+              echo "<a href='masuk.php'><input type='submit' value='Daftar Kelas'  class='btn_product'style='margin-top:7%' data-toggle='modal'  ></a>";
             }
             else{
-              echo "<input type='submit' value='Daftar Kelas'  class='btn_product'style='margin-top:7%' data-toggle='modal' name='addpeserta1'>";
+              echo "<a href='checkout.php?id_kelas=$p[id_kelas]'><input type='submit' value='Daftar Kelas'  class='btn_product'style='margin-top:7%' data-toggle='modal'data-target='#myModal' name='addpeserta1'></a>";
             }
                     ?>
+                    <!--
+              <form method="post">
+           
               </form>
               <div id="myModal" class="modal fade">
                 <div class="modal-dialog">
@@ -119,6 +109,7 @@ if(isset($_POST['addpeserta1']))
                     </div>
                 </div>
                 </div>
+          -->
           </div>
         </div>
       </div>
@@ -131,7 +122,7 @@ if(isset($_POST['addpeserta1']))
   <div class="faqs">
     <div class="panel_title"><h4>Kurikulum</h4></div>
     <div class="accordions">
-            W
+          
       <div class="elements_accordions">
 
         <div class="accordion_container">
