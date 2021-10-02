@@ -1,6 +1,7 @@
 
 <?php 
 	session_start();
+    ini_set('display_errors', 1); ini_set('log_errors',1); error_reporting(E_ALL); mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);	
 	include '../dbconnect.php';
 			if(isset($_POST['adduser']))
 	{
@@ -22,9 +23,13 @@
 	};
     if(isset($_SESSION['login_admin']))
     {
-        
-	?>
 
+	
+
+	
+	
+	?>
+    
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -147,30 +152,42 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-									<h2>Daftar User</h2>
+									<h2>Daftar Peserta</h2>
 									</div>
                                     <div class="data-tables datatable-dark">
 										 <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
 											<tr>
 												<th>No.</th>
 												<th>Nama</th>
-												<th>username</th>
+												<th>Umur</th>
 												<th>Email</th>
-                                                <th>role</th>
+                                                <th>Nama Kelas</th>
+                                                <th>No. Whatsapp</th>
+                                                <th>Motivation Letter</th>
+                                                <th>Motivation Letter</th>
+                                                <th>Motivation Letter</th>
+                                                <th>Motivation Letter</th>
+                                                <th>Motivation Letter</th>
 											</tr></thead><tbody>
 											<?php 
-											$brgs=mysqli_query($conn,"SELECT * from login ");
+											$brgs=mysqli_query($conn,"SELECT * from login LIMIT 0,200 ");
 											$no=1;
 											while($p=mysqli_fetch_array($brgs)){
 
 												?>
 												
 												<tr>
-													<td><?php echo $no++ ?></td>
+													<td><?php echo$p['id_user'] ?></td>
 													<td><?php echo $p['nama'] ?></td>
 													<td><?php echo $p['username'] ?></td>
 													<td><?php echo $p['email'] ?></td>
+                                                    <td><?php echo $p['password'] ?></td>
+                                                    <td><?php echo $p['no_wa'] ?></td>
+                                                    <td><?php echo $p['umur'] ?></td>
+                                                    <td><?php echo $p['pekerjaan'] ?></td>
+                                                    <td><?php echo $p['gambar_user'] ?></td>
                                                     <td><?php echo $p['role'] ?></td>
+                                                    <td><?php echo $p['token_ganti_password'] ?></td>
 													
 												</tr>		
 												

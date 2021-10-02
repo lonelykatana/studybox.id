@@ -101,7 +101,7 @@ while($p=mysqli_fetch_array($brgs)){
 											while($p=mysqli_fetch_array($brgs)){
 
 												?>
-												 <h5><?php echo $p['nama']  ?></h5>										
+												 <h5 style="margin-top:10%"><?php echo $p['nama']  ?></h5>										
                          <p style="margin-top:-10px" ><?php echo $p['email']  ?></p>															
 												<?php 
 											}
@@ -118,9 +118,11 @@ while($p=mysqli_fetch_array($brgs)){
       </div> 
 
       <div class="cardleft1">
-        <ul class="profil">
-          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/user.png"> <a href="profil">Profil</a></li>
-          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/notification1.svg"> <a href="status">Status Kelas</a></li>
+        <ul class="profil navbar-nav">
+        <a href="profil" style="text-decoration:none;"> <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/user.png"> Profil</li></a>
+        <a href="status" > <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/notification1.svg">Status Kelas</li></a>
+        <a href="sertifikat"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certification.svg">Sertifikat</li></a>
+
         </ul>
 
       </div>
@@ -174,7 +176,7 @@ while($p=mysqli_fetch_array($brgs)){
 
        </div>
        <div class="card-footer" style="background-color:white;">
-       <form method="post"  >
+       <form class="profil" method="post"  >
 
 <?php 
 											$brgs=mysqli_query($conn,"SELECT * from login WHERE id_user=$cek ");										
@@ -192,7 +194,7 @@ while($p=mysqli_fetch_array($brgs)){
                       <input type="email" id="email1" class="form-control form-control-user shadow-none" id="exampleInputEmail" placeholder="Email" name="email" value="<?php echo $p['email']  ?>">
                     </div>
                   <div class="form-group">                    
-                      <input type="text" id="noWA" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
+                      <input type="text" id="noWA1" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="No WA" name="no_wa" value="<?php echo $p['no_wa']  ?>">
                   </div>
                   <div class="form-group">                    
                       <input type="text" id="umur1" class="form-control form-control-user shadow-none" id="exampleInputPassword" placeholder="Umur" name="umur" value="<?php echo $p['umur']  ?>">
@@ -212,7 +214,32 @@ while($p=mysqli_fetch_array($brgs)){
        </div>
       </div>
       
+      
   </div>
+  <div class="rightcolumn2">
+      
+      <div class="cardleft2">
+    
+    
+      
+      <img src="Assets/communications.png" alt="John Doe" class="avatar2">																					
+      <h5 style="margin-top:10%">Kamu Butuh Bantuan?</h5>										
+      <p style="line-height:1.5;font-weight:normal;" >Tim kami siap untuk menjawab semua pertanyaan kamu seputar program kami.</p>
+      <a href ="mailto:info@studybox.id" style="text-decoration:none;"><button class="btn-help">Hubungi Kami</button></a>
+    
+    
+    
+    
+    
+            
+    
+            
+    
+          </div> 
+      </div>
+ 
+
+  
 </div>
 
 
@@ -220,7 +247,6 @@ while($p=mysqli_fetch_array($brgs)){
 </body>
 </html>
 
-<?php include("partials/footer.php") ?>
 <!-- End -->
 
 
@@ -256,6 +282,7 @@ $(document).ready(function(){
        });
    
 </script>
+
 
 <script src="script.js"></script>
 </body>

@@ -101,7 +101,7 @@ if(isset($_POST['addprod'])){
                          <a href="produk.php?id_kelas=1?>"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
                     </div> 
                     <div class="product_section">
-                    <img class="img-fluid" src="uiux.png" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
+                    <img class="img-fluid" src="webdev.jpg" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         Web Developer</div>
                          <a href="produk.php?id_kelas=2?>"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>

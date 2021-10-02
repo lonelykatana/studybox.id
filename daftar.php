@@ -5,7 +5,10 @@ include 'dbconnect.php';
 
     if(isset($_POST['adduser']))
 	{
-    if($_POST['password']==$_POST['password1']){
+    if ( $_POST['nama'] =="" ||  $_POST['username'] =="" ||$_POST['email'] =="" ||  $_POST['password'] =="") {
+      header('location:daftar.php?pesan=kosong');
+    }
+    elseif($_POST['password']==$_POST['password1']){
 		$nama = $_POST['nama'];
 		$username = $_POST['username'];
 		$email = $_POST['email'];
@@ -13,10 +16,7 @@ include 'dbconnect.php';
 		$tambahuser = mysqli_query($conn,"insert into login (nama, username, email, password) 
 		values('$nama','$username','$email','$password')");
 
-    if ( $_POST['nama'] =="" ||  $_POST['username'] =="" ||$_POST['email'] =="" ||  $_POST['password'] =="") {
-      header('location:daftar.php?pesan=kosong');
-    }
-		elseif ($tambahuser){
+		if ($tambahuser){
       header('location:masuk.php');
 
 		} else { echo "<div class='alert alert-warning'>

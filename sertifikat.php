@@ -15,10 +15,59 @@ $cek=$cariuser['id_user'];
 		}
    
 
-        
+        if(isset($_FILES['fileToUpload'])){
+            $name = $_FILES['fileToUpload']['name'];
+            $target_dir = "upload/";
+            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+          
+            // Select file type
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+          
+            // Valid file extensions
+            $extensions_arr = array("jpg","jpeg","png","gif");
+          
+            // Check extension
+            if( in_array($imageFileType,$extensions_arr) ){
+               // Upload file
+               if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'],$target_dir.$name)){
+                  // Insert record
+                  $query = "UPDATE login SET gambar_user='".$name."' where id_user=$cek";
+                  mysqli_query($conn,$query);
+               }
+          
+            }
+           
+          }
     
 
 
+  if(isset($_POST['adduser']))
+    {
+      $nama = $_POST['nama'];
+      $username = $_POST['username'];
+      $email = $_POST['email'];
+      $no_wa = $_POST['no_wa'];
+      $umur = $_POST['umur'];
+      $pekerjaan = $_POST['pekerjaan'];
+
+
+
+      $tambahuser = mysqli_query($conn,"UPDATE login SET nama='$nama', username='$username', email='$email', no_wa='$no_wa', umur='$umur', pekerjaan='$pekerjaan'
+      where id_user=$cek  ");
+
+
+      if ($tambahuser){  
+      echo " <div class='alert alert-success'>
+      <script>alert('Berhasil')</script>	
+        </div> ";
+        header('profil1');
+      } else { echo "<div class='alert alert-warning'>
+        Gagal mendaftar, silakan coba lagi.
+        </div>
+       <meta http-equiv='refresh' content='1; url= produk.php'/> ";
+      }
+      
+    };
    
   
 
@@ -30,7 +79,7 @@ $cek=$cariuser['id_user'];
 
 <body>
 <div class="row">
-<div class="leftcolumn">
+  <div class="leftcolumn">
     <div class="cardleft"> <?php 
 
 $brgs=mysqli_query($conn,"SELECT gambar_user from login WHERE id_user=$cek ");										
@@ -71,49 +120,35 @@ while($p=mysqli_fetch_array($brgs)){
       <div class="cardleft1">
       <ul class="profil navbar-nav">
       <a href="profil"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/user.png"> Profil</li></a>
-        <a href="status" > <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/notification1.svg">Status Kelas</li></a>
-        <a href="sertifikat"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certification.svg">Sertifikat</li></a>
-
+        <a href="status" > <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/notification1.svg">Status Kelas</li></a>
+        <a href="sertifikat"> <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certification.svg">Sertifikat</li></a>
 
         </ul>
 
       </div>
       
   </div>
-  <div class="rightcolumn3">
-      <h2 style="padding-left:20px;">Status</h2>
-    <div class="cardright3">
-       <div class="card-body" style="height:250px">
-       <table class="table table-bordered">
-           <thead>
-               <tr>
-                   <th>No. Order</th>
-                   <th>Nama Kelas</th>
-                   <th>Tanggal Pembayaran</th>
-                   <th>Status Pembayaran</th>
-
-               </tr>
-           </thead>
-           <tbody>
-               <td>1</td>
-               <td>UI/UX</td>
-               <td>30 September 1965</td>
-               <td>Bayard dulu oi!</td>
-           </tbody>
-                                        </table>
+  <div class="rightcolumn">
+      <h2 style="padding-left:20px;">Selamat anda telah menyelesaikan langkah pertama.</h2>
+    <div class="cardright1">
+        <h1>lagi dibuat!!!</h1>
+        <h1>lagi dibuat!!!</h1>
+        <h1>lagi dibuat!!!</h1>
+        <h1>lagi dibuat!!!</h1>
+        
       
-
-       </div>
-      </div>
       
   </div>
+  
+ 
+
+  
 </div>
 
 
 
 </body>
 </html>
-
 
 <!-- End -->
 
