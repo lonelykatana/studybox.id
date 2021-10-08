@@ -119,9 +119,9 @@ while($p=mysqli_fetch_array($brgs)){
 
       <div class="cardleft1">
       <ul class="profil navbar-nav">
-      <a href="profil"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/user.png"> Profil</li></a>
-        <a href="status" > <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/notification1.svg">Status Kelas</li></a>
-        <a href="sertifikat"> <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certification.svg">Sertifikat</li></a>
+      <a href="profil"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/bx_bxs-user.svg" class="filter-green"/> Profil</li></a>
+        <a href="status" > <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/vector.svg" class="filter-green"/>Status Kelas</li></a>
+        <a href="sertifikat"> <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certificate.svg" class="filter-white"/>Sertifikat</li></a>
 
         </ul>
 

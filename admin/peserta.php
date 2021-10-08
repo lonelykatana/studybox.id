@@ -161,8 +161,8 @@
 												<th>Nama</th>
 												<th>Umur</th>
 												<th>Email</th>
-                                                <th>Nama Kelas</th>
                                                 <th>No. Whatsapp</th>
+                                                <th>Nama Kelas</th>
                                                 <th>Motivation Letter</th>
 											</tr></thead><tbody>
 											<?php 

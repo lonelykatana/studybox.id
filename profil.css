@@ -31,8 +31,8 @@ body {
 
   width: 56.5%;
   float: left;
-  padding-left: 2.5%;
-  padding-top: 20px;
+  padding-left: 1%;
+  padding-top: 1.3%;
 }
 .rightcolumn3 {
 
@@ -45,7 +45,7 @@ body {
   float: left;
   width: 23%;
   padding-left: 1.5%;
-  padding-top: 20px;
+  padding-top: 5.4%;
 }
 
 /* Fake image */
@@ -58,8 +58,9 @@ body {
 /* Add a card effect for articles */
 .cardright {
    background-color: white;
-  
    margin-top: 3%;
+  margin-left:3%;
+   
    border: 1px solid rgba(0,0,0,.125);
 
 
@@ -81,6 +82,7 @@ body {
   margin-top: 3%;
   border: 1px solid rgba(0,0,0,.125);
   height: 100vh;
+  
 
 
 }
@@ -136,12 +138,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 18px;;
+  border: 3px solid rgba(0,0,0,.125);
 }
 
 .avatar1 {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  border: 3px solid rgba(0,0,0,.125);
  
 }
 .avatar2 {
@@ -221,10 +225,10 @@ li.profil2 a{
 
 .btn-foto1{
   border-radius: 6px;
-  border:none;
-  background-color: #0AADA8;
+  border:2px solid #0AADA8;
+  background-color: white;
   padding: 6px 16px;
-  color:white;
+  color:#0AADA8;
   cursor:pointer;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
  
@@ -233,6 +237,7 @@ li.profil2 a{
 }
 .btn-foto1:hover{
   background-color: #0d8d89;
+  color:white;
 }
 form.profil{
   text-align: center;
@@ -256,9 +261,9 @@ ul.profil li a:hover{
 input[type=text]{
 
   outline: none !important;
-  background-image: url('Assets/user.svg');
+  background-image: url('Assets/user3.svg');
   background-position: 96% 50%; 
-  background-size: 4%;
+  background-size: 3%;
   background-repeat: no-repeat;
   background-color: #f9f9f9;
   height: 50px; 
@@ -266,16 +271,16 @@ input[type=text]{
 input[type=text]#username1{
 
   outline: none !important;
-  background-image: url('Assets/id-card.svg');
+  background-image: url('Assets/group.svg');
   background-position: 96% 50%; 
-  background-size: 4%;
+  background-size: 3.5%;
   background-repeat: no-repeat;
   background-color: #f9f9f9;
 }
 input[type=email]#email1{
 
   outline: none !important;
-  background-image: url('Assets/envelope.svg');
+  background-image: url('Assets/mail.svg');
   background-position:96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
@@ -284,7 +289,7 @@ input[type=email]#email1{
 input[type=text]#noWA1{
 
   outline: none !important;
-  background-image: url('Assets/phone-call.svg');
+  background-image: url('Assets/wa.svg');
   background-position: 96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
@@ -293,7 +298,7 @@ input[type=text]#noWA1{
 input[type=text]#umur1{
 
   outline: none !important;
-  background-image: url('Assets/birthday-cake.svg');
+  background-image: url('Assets/birthday.svg');
   background-position:96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
@@ -302,7 +307,7 @@ input[type=text]#umur1{
 input[type=text]#pekerjaan1{
 
   outline: none !important;
-  background-image: url('Assets/suitcase1.svg');
+  background-image: url('Assets/suitcase2.svg');
   background-position: 96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
@@ -322,9 +327,7 @@ input[type=email]:focus{
 }
 li.nav-item1{
   color:black !important;
-  -webkit-transition:.3s;
-  -o-transition:.3s;
-  transition:.3s;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   width:95%;
   padding-left:10px;
 
@@ -335,6 +338,10 @@ li.nav-item1{
 li.nav-item1:hover{
   color:#0AADA8 !important;
   
+  
+}
+li.nav-item1:hover>.filter-white{
+  filter: invert(58%) sepia(30%) saturate(1078%) hue-rotate(129deg) brightness(88%) contrast(102%);
 }
 .nav-item1.active{
   background-color: #0aada785;
@@ -344,4 +351,11 @@ li.nav-item1:hover{
     color:white !important;
     border-radius: 6px;
     
+    
+}
+.filter-white{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(263deg) brightness(106%) contrast(102%);
+}
+.filter-green{
+  filter: invert(58%) sepia(30%) saturate(1078%) hue-rotate(129deg) brightness(88%) contrast(102%);
 }
