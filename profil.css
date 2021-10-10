@@ -22,16 +22,30 @@ body {
 /* Left column */
 .leftcolumn {   
   float: left;
-  width: 15%;
+  width: 16.5%;
  
 }
 
 /* Right column */
 .rightcolumn {
 
-  width: 60%;
+  width: 56.5%;
+  float: left;
+  padding-left: 1%;
+  padding-top: 1.3%;
+}
+.rightcolumn3 {
+
+  width: 80%;
+  float: left;
   padding-left: 20px;
   padding-top: 20px;
+}
+.rightcolumn2{
+  float: left;
+  width: 23%;
+  padding-left: 1.5%;
+  padding-top: 5.4%;
 }
 
 /* Fake image */
@@ -44,23 +58,58 @@ body {
 /* Add a card effect for articles */
 .cardright {
    background-color: white;
+   margin-top: 3%;
+  margin-left:3%;
+   
+   border: 1px solid rgba(0,0,0,.125);
+
+
+}
+.cardright3 {
+  background-color: white;
+ 
+  margin-top: 3%;
+  border: 1px solid rgba(0,0,0,.125);
+  height: 100vh;
+
+
+}
+
+
+.cardright1 {
+  background-color: white;
+ 
+  margin-top: 3%;
+  border: 1px solid rgba(0,0,0,.125);
+  height: 100vh;
   
-   margin-top: 20px;
 
 
 }
 .cardleft {
    background-color: white;
    padding: 20px;
+   padding-bottom: 10px;
    border: 1px solid rgba(0,0,0,.125);
    text-align: center;
+   
   
 }
 .cardleft1 {
   background-color: white;
-  padding-left: 75px;
+  padding-left: 18%;
   padding-top:20px;
   border: 1px solid rgba(0,0,0,.125); 
+  height:100%;
+ 
+}
+.cardleft2 {
+  background-color: white;
+  padding: 20px;
+  padding-bottom: 30px;
+  border: 1px solid rgba(0,0,0,.125);
+  text-align: center;
+  
  
 }
 
@@ -76,7 +125,7 @@ body {
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+  .leftcolumn, .rightcolumn, .rightcolumn2, .rightcolumn3 {   
     width: 100%;
     padding: 0;
   }
@@ -89,19 +138,28 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 18px;;
+  border: 3px solid rgba(0,0,0,.125);
 }
 
 .avatar1 {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  border: 3px solid rgba(0,0,0,.125);
+ 
+}
+.avatar2 {
+  width: 80px;
+  
+  
  
 }
 ul.profil{
   cursor:pointer;
-  line-height: 2;
+  line-height: 3;
   font-size: 17px;
   text-decoration: none;
+ 
  
 }
 ul.profil li a{
@@ -131,14 +189,24 @@ li.profil2 a{
   text-decoration: none;
 }
 
-.form-group{
- width: 80%;
 
-}
 .btn-success{
   width: 20% !important;
  
  
+}
+.btn-help{
+  border-radius: 6px;
+  border:none;
+  background-color: #0AADA8;
+  padding: 6px 16px;
+  width:100%;
+  color:white;
+  cursor:pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-help:hover{
+  background-color: #0d8d89;
 }
 .btn-foto{
   border-radius: 6px;
@@ -157,10 +225,10 @@ li.profil2 a{
 
 .btn-foto1{
   border-radius: 6px;
-  border:none;
-  background-color: #0AADA8;
+  border:2px solid #0AADA8;
+  background-color: white;
   padding: 6px 16px;
-  color:white;
+  color:#0AADA8;
   cursor:pointer;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
  
@@ -169,13 +237,16 @@ li.profil2 a{
 }
 .btn-foto1:hover{
   background-color: #0d8d89;
+  color:white;
 }
-form{
+form.profil{
   text-align: center;
+  padding-top:3%;
+  padding-bottom:3%;
 }
 .form-group{
-  margin-left:25%;
-  width: 50%;
+  margin-left:11.5%;
+  width: 77%;
 }
 
 ul.profil li a:hover{
@@ -190,50 +261,57 @@ ul.profil li a:hover{
 input[type=text]{
 
   outline: none !important;
-  background-image: url('Assets/user.svg');
-  background-position: 390px 10px; 
-  background-size: 4%;
+  background-image: url('Assets/user3.svg');
+  background-position: 96% 50%; 
+  background-size: 3%;
   background-repeat: no-repeat;
+  background-color: #f9f9f9;
+  height: 50px; 
 }
 input[type=text]#username1{
 
   outline: none !important;
-  background-image: url('Assets/id-card.svg');
-  background-position: 390px 10px; 
-  background-size: 4%;
+  background-image: url('Assets/group.svg');
+  background-position: 96% 50%; 
+  background-size: 3.5%;
   background-repeat: no-repeat;
+  background-color: #f9f9f9;
 }
 input[type=email]#email1{
 
   outline: none !important;
-  background-image: url('Assets/envelope.svg');
-  background-position: 390px 10px; 
+  background-image: url('Assets/mail.svg');
+  background-position:96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
+  background-color: #f9f9f9;
 }
 input[type=text]#noWA1{
 
   outline: none !important;
-  background-image: url('Assets/phone-call.svg');
-  background-position: 390px 10px; 
+  background-image: url('Assets/wa.svg');
+  background-position: 96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
+  background-color: #f9f9f9;
 }
 input[type=text]#umur1{
 
   outline: none !important;
-  background-image: url('Assets/birthday-cake.svg');
-  background-position: 390px 10px; 
+  background-image: url('Assets/birthday.svg');
+  background-position:96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
+  background-color: #f9f9f9;
 }
 input[type=text]#pekerjaan1{
 
   outline: none !important;
-  background-image: url('Assets/suitcase1.svg');
-  background-position: 390px 10px; 
+  background-image: url('Assets/suitcase2.svg');
+  background-position: 96% 50%; 
   background-size: 4%;
   background-repeat: no-repeat;
+  background-color: #f9f9f9;
 }
 
 input[type=text]:focus{
@@ -246,4 +324,38 @@ input[type=email]:focus{
  
   outline: none !important;
   border-color: #0AADA8;
+}
+li.nav-item1{
+  color:black !important;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width:95%;
+  padding-left:10px;
+
+
+  
+  
+}
+li.nav-item1:hover{
+  color:#0AADA8 !important;
+  
+  
+}
+li.nav-item1:hover>.filter-white{
+  filter: invert(58%) sepia(30%) saturate(1078%) hue-rotate(129deg) brightness(88%) contrast(102%);
+}
+.nav-item1.active{
+  background-color: #0aada785;
+  -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    color:white !important;
+    border-radius: 6px;
+    
+    
+}
+.filter-white{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(263deg) brightness(106%) contrast(102%);
+}
+.filter-green{
+  filter: invert(58%) sepia(30%) saturate(1078%) hue-rotate(129deg) brightness(88%) contrast(102%);
 }

@@ -105,6 +105,7 @@ $snapToken = Snap::getSnapToken($transaction);
 ?>
 
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,6 +208,10 @@ $snapToken = Snap::getSnapToken($transaction);
     </ul>
   </div>  
 </nav>
+=======
+<?php include("partials/headerproduk.php"); ?>
+<?php include("partials/navbar.php") ;?>
+>>>>>>> b641b5588c5d3dc813fd9c94402a5469b70369b0
 <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$id_kelas'"));
 

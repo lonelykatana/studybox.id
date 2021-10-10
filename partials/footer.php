@@ -66,10 +66,10 @@
                   <div class="footer-menu no-padding">
                     <h4 class="footer-widget-title">Hubungi Kami</h4>
                     <ul>
-          <li><a href="mailto:info@studybox.id"><i class="fa fa-envelope" style="padding-right:0.3vw"></i>Email</a></li>
-          <li><a href="https://www.linkedin.com/company/studybox-id/"><i class="fa fa-linkedin"style="padding-right:0.3vw"></i>LinkedIn</a></li>
-          <li><a href="https://wa.me/6281260648147"><i class="fa fa-whatsapp"style="padding-right:0.3vw"></i>Whatsapp</a></li>
-          <li><a href="https://www.instagram.com/studybox.id/"><i class="fa fa-instagram"style="padding-right:0.3vw"></i>Instagram</a></li>
+          <li><a href="mailto:info@studybox.id"><i class="fa fa-envelope" style="padding-right:0.7vw"></i>Email</a></li>
+          <li><a href="https://www.linkedin.com/company/studybox-id/"><i class="fa fa-linkedin"style="padding-right:0.7vw"></i>LinkedIn</a></li>
+          <li><a href="https://wa.me/6281260648147"><i class="fa fa-whatsapp"style="padding-right:0.7vw"></i>Whatsapp</a></li>
+          <li><a href="https://www.instagram.com/studybox.id/"><i class="fa fa-instagram"style="padding-right:0.7vw"></i>Instagram</a></li>
         </ul>
                   </div>
                   <!-- end /.footer-menu -->

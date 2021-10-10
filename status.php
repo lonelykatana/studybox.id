@@ -30,7 +30,7 @@ $cek=$cariuser['id_user'];
 
 <body>
 <div class="row">
-  <div class="leftcolumn">
+<div class="leftcolumn">
     <div class="cardleft"> <?php 
 
 $brgs=mysqli_query($conn,"SELECT gambar_user from login WHERE id_user=$cek ");										
@@ -52,7 +52,7 @@ while($p=mysqli_fetch_array($brgs)){
 											while($p=mysqli_fetch_array($brgs)){
 
 												?>
-												 <h5><?php echo $p['nama']  ?></h5>										
+												 <h5 style="margin-top:10%"><?php echo $p['nama']  ?></h5>										
                          <p style="margin-top:-10px" ><?php echo $p['email']  ?></p>															
 												<?php 
 											}
@@ -69,17 +69,20 @@ while($p=mysqli_fetch_array($brgs)){
       </div> 
 
       <div class="cardleft1">
-        <ul class="profil">
-          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/user.png"> <a href="profil">Profil</a></li>
-          <li> <img style="width:6%; padding-bottom:4px;" src="Assets/notification1.svg"> <a href="status">Status Kelas</a></li>
+      <ul class="profil navbar-nav">
+      <a href="profil"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/bx_bxs-user.svg" class="filter-green"/> Profil</li></a>
+        <a href="status" > <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/vector.svg" class="filter-white"/>Status Kelas</li></a>
+        <a href="sertifikat"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certificate.svg" class="filter-green"/>Sertifikat</li></a>
+
+
         </ul>
 
       </div>
       
   </div>
-  <div class="rightcolumn">
+  <div class="rightcolumn3">
       <h2 style="padding-left:20px;">Status</h2>
-    <div class="cardright">
+    <div class="cardright3">
        <div class="card-body" style="height:250px">
        <table class="table table-bordered">
            <thead>
@@ -111,7 +114,7 @@ while($p=mysqli_fetch_array($brgs)){
 </body>
 </html>
 
-<?php include("partials/footer.php") ?>
+
 <!-- End -->
 
 
@@ -147,6 +150,17 @@ $(document).ready(function(){
        });
    
 </script>
+<script>
+        $(document).ready(function () {
+  
+            $('ul.navbar-nav > li')
+                    .click(function (e) {
+                $('ul.navbar-nav > li')
+                    .removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
 
 <script src="script.js"></script>
 </body>

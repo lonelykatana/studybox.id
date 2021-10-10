@@ -57,9 +57,9 @@ if(isset($_POST['addprod'])){
     </div>
       <div class="container" data-aos="fade-up">
         
-        <div class="row gx-0">
+        <div class="row">
 
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" style="margin-bottom:10%;" data-aos="fade-up" data-aos-delay="200">
             <div class="content"style="margin-top:6%">
          
               <h3 >Study Box</h3>
@@ -94,14 +94,14 @@ if(isset($_POST['addprod'])){
         </div>
                 <div class="product-box">
                    
-                    <div class="product_section">
+                    <div class="product_section" style="margin-bottom:10%">
                     <img class="img-fluid" src="uiux.png" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         UI/UX</div>
                          <a href="produk.php?id_kelas=1"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
                     </div> 
                     <div class="product_section">
-                    <img class="img-fluid" src="uiux.png" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
+                    <img class="img-fluid" src="webdev.jpg" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         Web Developer</div>
                          <a href="produk.php?id_kelas=2"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
