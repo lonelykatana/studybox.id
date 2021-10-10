@@ -1,24 +1,112 @@
 <?php
+namespace Midtrans;
 session_start();
-
 include 'dbconnect.php';
 $id_kelas = $_GET['id_kelas'];
 $cariuser['id_user']=$_SESSION['id_user'];
 $cek=$cariuser['id_user'];
-if(isset($_POST['buyclass'])){
+/*if(isset($_POST['buyclass'])){
     echo " <div class='alert alert-success'>
     <script>alert('Berhasil mendaftar, Selanjutnya akan kami hubungi melalui whatsapp ya. Terima Kasih')</script>	
       </div>
     <meta http-equiv='refresh' content='1; url= index.php'/>  ";
 
 }
+*/
+$base = $_SERVER['REQUEST_URI'];
+
+require_once dirname(__FILE__) . '/Midtrans.php';
+
+//Set Your server key
+Config::$serverKey = "SB-Mid-server-QCHlBPnXYgcA2_f_yJuVHL9w";
+
+// Uncomment for production environment
+// Config::$isProduction = true;
+
+// Enable sanitization
+Config::$isSanitized = true;
+
+// Enable 3D-Secure
+Config::$is3ds = true;
+$id_kelas = $_GET['id_kelas'];
+$cariuser['id_user']=$_SESSION['id_user'];
+$cek=$cariuser['id_user'];
+// Uncomment for append and override notification URL
+// Config::$appendNotifUrl = "https://example.com";
+// Config::$overrideNotifUrl = "https://example.com";
+$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$id_kelas'"));
+$idusr = mysqli_fetch_array(mysqli_query($conn,"Select * from login where id_user='$cek'"));
+// Required
+$transaction_details = array(
+    'order_id' => rand(),
+    'gross_amount' => 1000, // no decimal allowed for creditcard
+);
+
+// Optional
+$item1_details = array(
+    'id' => $p['id_kelas'],
+    'price' => $p['harga_before'],
+    'quantity' => 1,
+    'name' => $p['nama_kelas']
+);
+
+// Optional
+
+
+// Optional
+$item_details = array ($item1_details);
+
+// Optional
+$billing_address = array(
+    'first_name'    => $idusr['username'],
+    'last_name'     => "",
+    'address'       => "Mangga 20",
+    'city'          => "Jakarta",
+    'postal_code'   => "16602",
+    'phone'         => $idusr['no_wa'],
+    'country_code'  => 'IDN'
+);
+
+// Optional
+$shipping_address = array(
+    'first_name'    => "Obet",
+    'last_name'     => "Supriadi",
+    'address'       => "Manggis 90",
+    'city'          => "Jakarta",
+    'postal_code'   => "16601",
+    'phone'         => "08113366345",
+    'country_code'  => 'IDN'
+);
+
+// Optional
+$customer_details = array(
+    'first_name'    => $idusr['username'],
+    'last_name'     => "",
+    'email'         => $idusr['email'],
+    'phone'         => $idusr['no_wa'],
+    'billing_address'  => $billing_address,
+    'shipping_address' => $shipping_address
+);
+
+// Optional, remove this to display all available payment methods
+$enable_payments = array('credit_card','cimb_clicks','mandiri_clickpay','echannel');
+
+// Fill transaction details
+$transaction = array(
+    'enabled_payments' => $enable_payments,
+    'transaction_details' => $transaction_details,
+    'customer_details' => $customer_details,
+    'item_details' => $item_details,
+);
+
+$snapToken = Snap::getSnapToken($transaction);
+
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,13 +129,7 @@ if(isset($_POST['buyclass'])){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
- 
-
-    <!-- Load Jokul Checkout JS script -->
-  
-
-    
+    <!-- Load Jokul Checkout JS script -->  
 </head>
 
 <body  style="background-color:rgb(247,247,247)">
@@ -71,7 +153,6 @@ if(isset($_POST['buyclass'])){
             <?php 
 														$kat=mysqli_query($conn,"SELECT * from kelas order by id_kelas ASC");
 														while($p=mysqli_fetch_array($kat)){
-
 															?>
               <a style="font-size:1rem;"href="produk.php?id_kelas=<?php echo $p['id_kelas'] ?>"><?php echo $p['nama_kelas'] ?></a>
               <?php
@@ -79,8 +160,6 @@ if(isset($_POST['buyclass'])){
 														?>
             </div>
           </li>
-
-
 <li class="nav-item dropdown">
 <?php
 								if(!isset($_SESSION['log'])){
@@ -160,9 +239,7 @@ if(isset($_POST['buyclass'])){
                     </div>
 
                 </li>
-            </ul>
-
-           
+            </ul>   
         </div>
         <?php 
 											$brgs=mysqli_query($conn,"SELECT * from login WHERE id_user=$cek ");										
@@ -171,8 +248,7 @@ if(isset($_POST['buyclass'])){
 												?>
         <div class="col-12 col-md-7 order-md-1">
             <h4>Checkout</h4>
-            <form method = "post" novalidate>
-
+            <form action="<?php echo $base ?>checkout-process.php" method="POST" novalidate>
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -211,14 +287,20 @@ if(isset($_POST['buyclass'])){
                                     <input type="text" class="form-control " id="address"
                                            placeholder="Website Developer" 
                                            value="<?php echo $p['pekerjaan']  ?>" required>
-                                  
+
                                 </div>
                                 <?php 
 											}	
 											?>
-                                <button name="buyclass" class="btn btn-primary">Purchase</button>
+                                             <?php 
+														$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$id_kelas'"));
+
+                                            
+															?>
+                                            <input type="hidden" name="amount" value="<?php echo $p['harga_before'] ?>"/>  
+                                            <p id="pay-button">Pay!</p>
                             </div>
-                          
+                           
                         </div>
                     </div>
                 </div>
@@ -226,12 +308,33 @@ if(isset($_POST['buyclass'])){
         </div>
     </div>
 
-   
 </div>
-    
     <?php include("partials/footer.php") ?>
 
 <!-- End -->
+<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-iITLWt3JRNfx6Qvu"></script>
+        <script type="text/javascript">
+            document.getElementById('pay-button').onclick = function(){
+                // SnapToken acquired from previous step
+                snap.pay('<?php echo $snapToken?>', {
+                    // Optional
+                    onSuccess: function(result){
+                        <?php 
+                        window.location.replace("http://cisti.studybox.id/examples/snap/sukses.php")
+                        <?php ?>
+                    },  
+                    // Optional
+                    onPending: function(result){
+                        
+                        window.location.replace("http://cisti.studybox.id/examples/snap/pending.php");
+                    },
+                    // Optional
+                    onError: function(result){
+                        window.location.replace("http://cisti.studybox.id/examples/snap/error.php");
+                    }
+            });
+        }
+        </script>
 <script src="js/product.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="script.js"></script>
