@@ -14,15 +14,6 @@ $cek=$cariuser['id_user'];
 			header('location:masuk');
 		}
    
-
-        
-    
-
-
-   
-  
-
-  
 ?>
 <?php include("partials/headerindex.php") ?>
 <?php include("partials/navbar.php") ?>
@@ -94,13 +85,30 @@ while($p=mysqli_fetch_array($brgs)){
 
                </tr>
            </thead>
+           <?php 
+                       $sql = "SELECT transaksi.nama_kelas ,order_list.transaction_time ,order_list.transaction_status\n"
+                      . "FROM ((transaksi\n"
+                      . "INNER JOIN login ON transaksi.id_user = login.id_user)\n" 
+                      . "INNER JOIN order_list ON transaksi.order_id = order_list.order_id) WHERE transaksi.id_user = $cek";
+											$la=mysqli_query($conn,$sql);
+											$no=1;
+											while($a=mysqli_fetch_array($la)){
+
+												?>
            <tbody>
-               <td>1</td>
-               <td>UI/UX</td>
-               <td>30 September 1965</td>
-               <td>Bayard dulu oi!</td>
+               <tr>
+           <td><?php echo $no++ ?></td>
+           <td><?php echo $a['nama_kelas'] ?></td>
+           <td><?php echo $a['transaction_time'] ?></td>
+           <td><?php echo $a['transaction_status'] ?></td>
+           </tr>
+            <?php
+											}
+											?>
            </tbody>
                                         </table>
+                                       
+                                        
       
 
        </div>

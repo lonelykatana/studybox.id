@@ -56,27 +56,9 @@ $item1_details = array(
 // Optional
 $item_details = array ($item1_details);
 
-// Optional
-$billing_address = array(
-    'first_name'    => $idusr['username'],
-    'last_name'     => "",
-    'address'       => "Mangga 20",
-    'city'          => "Jakarta",
-    'postal_code'   => "16602",
-    'phone'         => $idusr['no_wa'],
-    'country_code'  => 'IDN'
-);
 
-// Optional
-$shipping_address = array(
-    'first_name'    => "Obet",
-    'last_name'     => "Supriadi",
-    'address'       => "Manggis 90",
-    'city'          => "Jakarta",
-    'postal_code'   => "16601",
-    'phone'         => "08113366345",
-    'country_code'  => 'IDN'
-);
+
+
 
 // Optional
 $customer_details = array(
@@ -88,12 +70,10 @@ $customer_details = array(
     'shipping_address' => $shipping_address
 );
 
-// Optional, remove this to display all available payment methods
-$enable_payments = array('credit_card','cimb_clicks','mandiri_clickpay','echannel');
 
 // Fill transaction details
 $transaction = array(
-    'enabled_payments' => $enable_payments,
+    
     'transaction_details' => $transaction_details,
     'customer_details' => $customer_details,
     'item_details' => $item_details,
@@ -101,11 +81,19 @@ $transaction = array(
 
 $snapToken = Snap::getSnapToken($transaction);
 
-
+if(isset($_POST["addData"])){
+    $orderid = $_POST['order_id'];
+    $iduser = $_POST['id_user'];
+    $nama = $_POST['nama'];
+    $nama_kelas = $_POST['nama_kelas'];
+    $trs_status = $_POST['trs_status'];
+    $queri = "INSERT INTO transaksi (order_id, id_user,nama_kelas) values('$orderid','$iduser','$nama_kelas')";
+    
+    $sql = mysqli_query($conn,$queri);
+}
 ?>
 
 
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,6 +109,9 @@ $snapToken = Snap::getSnapToken($transaction);
     <link rel="stylesheet" href="produk.css"/>
     <link rel="stylesheet" href="style2.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -128,6 +119,7 @@ $snapToken = Snap::getSnapToken($transaction);
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- Load Jokul Checkout JS script -->  
@@ -208,10 +200,6 @@ $snapToken = Snap::getSnapToken($transaction);
     </ul>
   </div>  
 </nav>
-=======
-<?php include("partials/headerproduk.php"); ?>
-<?php include("partials/navbar.php") ;?>
->>>>>>> b641b5588c5d3dc813fd9c94402a5469b70369b0
 <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$id_kelas'"));
 
@@ -237,7 +225,7 @@ $snapToken = Snap::getSnapToken($transaction);
                                     <span class="input-group-text dk-span-group">IDR</span>
                                 </div>
                                 <input type="number" class="form-control" id="amount" placeholder="120000"
-                                       value="<?php echo $p['harga_before'] ?>">
+                                       value="<?php echo $p['harga_before'] ?>" disabled>
                             </div>
                         </div>
 
@@ -253,7 +241,7 @@ $snapToken = Snap::getSnapToken($transaction);
 												?>
         <div class="col-12 col-md-7 order-md-1">
             <h4>Checkout</h4>
-            <form action="<?php echo $base ?>checkout-process.php" method="POST" novalidate>
+            <form  method="POST" novalidate>
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -297,13 +285,14 @@ $snapToken = Snap::getSnapToken($transaction);
                                 <?php 
 											}	
 											?>
-                                             <?php 
-														$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$id_kelas'"));
-
                                             
-															?>
                                             <input type="hidden" name="amount" value="<?php echo $p['harga_before'] ?>"/>  
                                             <p id="pay-button">Pay!</p>
+                                         
+                                             
+                                         
+											
+                                              
                             </div>
                            
                         </div>
@@ -314,32 +303,95 @@ $snapToken = Snap::getSnapToken($transaction);
     </div>
 
 </div>
+
     <?php include("partials/footer.php") ?>
 
+<div id="myModal2" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                
+            </div>
+            <div class="modal-body">
+				<p>Subscribe to our mailing list</p>
+				    <?php 
+											$brgs=mysqli_query($conn,"SELECT * from login WHERE id_user=$cek ");										
+											while($q=mysqli_fetch_array($brgs)){
+
+												?>
+									<form  method="POST" action="" >
+									     <label>Order</label>
+                            <div class="form-group">
+                                <input type="hidden" class="form-control"id="myData2" name="order_id" value="">
+                                </div>
+                                      <div class="form-group">
+                                        <input  type="hidden"class="form-control" type="hidden" name="id_user" value="<?php echo $q['id_user']  ?>">
+                                      </div>
+                                   <div class="form-group">
+                                       <label>Nama</label>
+                                         <input  class="form-control" name="nama" value="<?php echo $q['nama']  ?>">
+                                      </div>
+                                      <div class="form-group">
+                                             <label>Transaksi Status</label>
+                                         <input  class="form-control" id="data_trs" name="trs_status" value="">
+                                      </div>
+                                    
+                                                                                  <?php 
+											}	
+											?>
+											<?php 
+				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$id_kelas'"));
+
+				?>
+				                      <div class="form-group">
+                                     	<input class="form-control" name="nama_kelas" value="<?php echo $p['nama_kelas']  ?>">	
+                                      </div>
+									   <div class="form-group">
+									   <button name="addData"  class="btn btn-primary">Ok</button>
+                                      </div>
+                                   
+                                              </form>
+                                              
+
+		
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+       
+   </script>
 <!-- End -->
 <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-iITLWt3JRNfx6Qvu"></script>
         <script type="text/javascript">
             document.getElementById('pay-button').onclick = function(){
                 // SnapToken acquired from previous step
                 snap.pay('<?php echo $snapToken?>', {
-                    // Optional
-                    onSuccess: function(result){
-                        <?php 
-                        window.location.replace("http://cisti.studybox.id/examples/snap/sukses.php")
-                        <?php ?>
-                    },  
-                    // Optional
-                    onPending: function(result){
-                        
-                        window.location.replace("http://cisti.studybox.id/examples/snap/pending.php");
-                    },
-                    // Optional
-                    onError: function(result){
-                        window.location.replace("http://cisti.studybox.id/examples/snap/error.php");
-                    }
-            });
+               onSuccess: function(result)
+               {console.log('success');
+               console.log(result.order_id);},
+                onPending: function(result){
+            
+	          jQuery.noConflict();
+              $('#myModal2').modal('show');
+       
+              
+	       document.getElementById("myData2").value = result.order_id;
+	       document.getElementById("data_trs").value = result.transaction_status;
+	     
+                },
+                     
+                onError: function(result){
+                    console.log('error');
+                    console.log(result);},
+                onClose: function(){
+                    console.log('customer closed the popup without finishing the payment');}
+               });
         }
         </script>
+   
 <script src="js/product.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="script.js"></script>
