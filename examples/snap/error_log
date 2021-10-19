@@ -1,0 +1,192 @@
+[03-Oct-2021 15:54:27 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/stus9859/public_html/cisti/examples/snap/dbconnect.php on line 5
+[03-Oct-2021 15:54:31 Asia/Jakarta] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/stus9859/public_html/cisti/examples/snap/dbconnect.php on line 5
+[07-Oct-2021 00:02:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 18
+[07-Oct-2021 00:02:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 18
+[07-Oct-2021 16:21:04 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:21:04 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:21:07 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:21:07 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:21:44 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:21:44 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:22:33 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:22:33 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:28:14 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:28:14 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:37:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Config' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 9
+[07-Oct-2021 16:40:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Notification' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 10
+[07-Oct-2021 17:27:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Snap' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[07-Oct-2021 17:29:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Snap' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[07-Oct-2021 17:30:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[07-Oct-2021 17:43:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[07-Oct-2021 17:52:13 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[07-Oct-2021 17:52:14 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[07-Oct-2021 17:55:29 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[07-Oct-2021 17:55:29 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[07-Oct-2021 17:57:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 21
+[08-Oct-2021 00:24:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[08-Oct-2021 00:24:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[08-Oct-2021 00:39:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[08-Oct-2021 22:39:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[08-Oct-2021 22:40:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[08-Oct-2021 23:09:29 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Midtrans API is returning API error. HTTP status code: 404 API response: <!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Cross compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Midtrans</title>
+    <meta name="description" content=""/>
+
+    <link rel="stylesheet" href="//v2/assets/css/all.css"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="center desc"><p>404</p></div>
+    <div class="center click"><h3>
+        <a href="#">&#45; Ups &#45;</a>
+    </h3></div>
+</div>
+<footer>
+    <p class="center">&copy; <script>document.write(new Date().getFullYear())</script> PT Midtrans. All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+ in /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php:167
+Stack trace:
+#0 /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php(25): Midtrans\ApiRe in /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php on line 167
+[08-Oct-2021 23:10:23 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Midtrans API is returning API error. HTTP status code: 404 API response: <!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Cross compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Midtrans</title>
+    <meta name="description" content=""/>
+
+    <link rel="stylesheet" href="//v2/assets/css/all.css"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="center desc"><p>404</p></div>
+    <div class="center click"><h3>
+        <a href="#">&#45; Ups &#45;</a>
+    </h3></div>
+</div>
+<footer>
+    <p class="center">&copy; <script>document.write(new Date().getFullYear())</script> PT Midtrans. All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+ in /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php:167
+Stack trace:
+#0 /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php(25): Midtrans\ApiRe in /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php on line 167
+[09-Oct-2021 01:48:36 Asia/Jakarta] PHP Fatal error:  Uncaught Exception: Midtrans API is returning API error. HTTP status code: 404 API response: <!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Cross compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Midtrans</title>
+    <meta name="description" content=""/>
+
+    <link rel="stylesheet" href="//v2/assets/css/all.css"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="center desc"><p>404</p></div>
+    <div class="center click"><h3>
+        <a href="#">&#45; Ups &#45;</a>
+    </h3></div>
+</div>
+<footer>
+    <p class="center">&copy; <script>document.write(new Date().getFullYear())</script> PT Midtrans. All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+ in /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php:167
+Stack trace:
+#0 /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php(25): Midtrans\ApiRe in /home/stus9859/public_html/cisti/Midtrans/ApiRequestor.php on line 167
+[09-Oct-2021 03:21:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Transaction' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 7
+[09-Oct-2021 03:32:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Notification' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[09-Oct-2021 03:33:27 Asia/Jakarta] PHP Warning:  require_once(/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php): failed to open stream: No such file or directory in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[09-Oct-2021 03:33:27 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/stus9859/public_html/cisti/examples/snap/../Midtrans.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[09-Oct-2021 03:38:44 Asia/Jakarta] PHP Warning:  file_get_contents(http://cisti.studybox.id/examples/notification-handler.php): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[09-Oct-2021 03:40:11 Asia/Jakarta] PHP Warning:  file_get_contents(http://cisti.studybox.id/examples/notification-handler.php): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[09-Oct-2021 03:40:15 Asia/Jakarta] PHP Warning:  file_get_contents(http://cisti.studybox.id/examples/notification-handler.php): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[09-Oct-2021 03:44:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Notification' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6
+[09-Oct-2021 03:44:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Midtrans\Notification' not found in /home/stus9859/public_html/cisti/examples/snap/sukses.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/stus9859/public_html/cisti/examples/snap/sukses.php on line 6

@@ -146,13 +146,13 @@ if(isset($_POST['addprod'])){
    </div>
  
    <div class="blog-slider">
-  <div class="blog-slider__wrp swiper-wrapper">
+  <div class="blog-slider__wrp swiper-wrapper" >
     <div class="blog-slider__item swiper-slide">
       <div class="blog-slider__img">
         
         <img src="foto1.JPG" alt="">
       </div>
-      <div class="blog-slider__content">
+      <div class="blog-slider__content"style ="padding-right:30px">
         <span class="blog-slider__code">Alumni angkatan 1</span>
         <div class="blog-slider__title">Erick Gultom</div>
         <div class="blog-slider__text">"Kurikulum kelas di Study Box ini sangat gampang dipahami dan cocok diterapkan di perusahaan"</div>
@@ -186,13 +186,10 @@ if(isset($_POST['addprod'])){
   </div>
   <div class="blog-slider__pagination"></div>
 </div>
-       
-      
-
 </section>
     <!-- Footer -->
     <?php include("partials/footer.php") ?>
-  <!-- End -->
+  <!-- End -->  
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script><script  src="./script_testimoni.js"></script>
 

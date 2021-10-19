@@ -9,6 +9,7 @@ if(!$conn){
 } else {
 	
 };
+
 function query($query){
     global $conn;
     $result = mysqli_query($conn,$query);

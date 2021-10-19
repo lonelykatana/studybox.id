@@ -434,6 +434,13 @@
   .form-edit-profile{
     width: 60%;
   }
+  #pay-button{
+    display: block;
+    width: 150px;
+    height: 80px;
+    background-color: #0aada8;
+    color: white;
+  }
 
 
 

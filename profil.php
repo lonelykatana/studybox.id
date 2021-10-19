@@ -222,33 +222,17 @@ while($p=mysqli_fetch_array($brgs)){
       <h5 style="margin-top:10%">Kamu Butuh Bantuan?</h5>										
       <p style="line-height:1.5;font-weight:normal;" >Tim kami siap untuk menjawab semua pertanyaan kamu seputar program kami.</p>
       <a href ="https://wa.me/6281260648147" style="text-decoration:none;"><button class="btn-help">Hubungi Kami</button></a>
-    
-    
-    
-    
-    
-            
-    
-            
-    
+
           </div> 
       </div>
- 
 
-  
 </div>
-
-
 
 </body>
 
 </html>
 
 <!-- End -->
-
-
-
-
 
 <script type="text/javascript">
   $(window).scroll(function () {
