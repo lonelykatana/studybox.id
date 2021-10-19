@@ -94,7 +94,7 @@ if(isset($_POST['addprod'])){
         </div>
                 <div class="product-box">
                    
-                    <div class="product_section" style="margin-bottom:10%">
+                    <div class="product_section" style="margin-bottom:20%">
                     <img class="img-fluid" src="uiux.png" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         UI/UX</div>

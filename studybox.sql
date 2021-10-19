@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 20, 2021 at 04:39 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.8
+-- Host: localhost:3306
+-- Generation Time: Oct 19, 2021 at 01:19 AM
+-- Server version: 10.2.40-MariaDB-cll-lve
+-- PHP Version: 7.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `studybox`
+-- Database: `stus9859_studybox`
 --
 
 -- --------------------------------------------------------
@@ -242,8 +243,8 @@ CREATE TABLE `kelas` (
 --
 
 INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `deskripsi`, `gambar`, `nama_mentor`, `gambar_mentor`, `cv_mentor`, `harga_before`, `harga_after`, `judul_week1`, `detail_week1`, `judul_week2`, `detail_week2`, `judul_week3`, `detail_week3`, `judul_week4`, `detail_week4`, `judul_week5`, `detail_week5`, `judul_week6`, `detail_week6`, `judul_week7`, `detail_week7`, `judul_week8`, `detail_week8`) VALUES
-(1, 'UI/UX', 'Ingin membuat UI yang menarik dan UX yang nyaman dipakai ? Course inilah solusinya!	Di course ini kamu akan mempelajari fundamental UI Design, fundamental UX Design, fundamental UX Research, serta mempelajari bagaimana cara membuat outstanding portfolio. 	Berdurasi selama 1 bulan, kamu akan dibimbing oleh mentor yang telah berpengalaman di industri digital, mengikuti kurikulum yang telah disusun sedemikian rupa sehingga mudah diikuti bagi pemula maupun pelajar tanpa pendidikan formal di bidang IT sekalipun.', 'produk/16qnXbzSfvrTE.png', 'Samuel Christian Silalahi', 'produk/16rxREUaru0B2.jpg', 'UI/UX Designer at Finance Company', '150000', '0', 'Introduction to UI/UX', 'Pengenalan konseptual mendasar tentang UI UX hubungan nya dan perbedaan nya serta penerapan nya dalam bisnis digital dalam menghasilkan sebuah peluang kerja', 'UX Research', 'Pengenalan konseptual mendasar tentang UI UX hubungan nya dan perbedaan nya serta penerapan nya dalam bisnis digital dalam menghasilkan sebuah peluang kerja', 'Ideating', 'Affinity Diagramming, metode yang digunakan untuk memetakan kumpulan informasi/fakta menjadi kelompok yang lebih spesifik. Mental model adalah sebuah konsep yang awalnya dikembangkan untuk membantu proses pikir sehari-hari model merupakan representasi suatu hal sehingga konsepnya bisa dipahami lebih mudah', 'Designing', 'User Flow adalah langkah langkah yang harus dilakukan oleh user untuk mengerjakan suatu task Wireframing merupakan cara desainer UI/UX membuat rancangan website maupun aplikasi pada level struktural.', 'Designing 2', 'User Interface adalah tampilan visual sebuah produk yang menjembatani sistem dengan pengguna ', 'Designing 3', 'Prototype adalah versi simulasi dari produk akhir yang digunakan dalam pengujian sebelum akhirnya dilakukannya peluncuran. Bisa juga dikatakan sebuah tahap mengubah konsep menjadi wujud yang nyata. Pa', 'Designing 4', 'usability testing adalah metode yang digunakan untuk mengevaluasi user experience dari sebuah produk baik itu di website maupun aplikasi.', 'Build Portfolio', 'pemaparan alasan pentingnya sebuah portofolio dan tata cara pembuatan nya'),
-(2, 'Web Developer', 'Ingin mengembangkan web paket lengkap menggunakan HTML, CSS, JavaScript, dan PHP ? Course ini solusinya!\r\n	Di course ini kamu akan mempelajari fundamental website dan HTML, fundamental CSS, fundamental JavaScript, fundamental PHP dan membuat sistem CRUD dalam website, serta mempelajari cara membuat portfolio yang menarik.\r\n	Berdurasi selama 1 bulan, kamu akan dibimbing oleh mentor yang telah berpengalaman di industri digital, mengikuti kurikulum yang telah disusun sedemikian rupa sehingga mudah diikuti bagi pemula maupun pelajar tanpa pendidikan formal di bidang IT sekalipun.', 'produk/165yPVQiWgZ8Q.jpg', 'Ricky Julpiter', 'produk/16af1Lr1.uucU.jpeg', 'Software Developer PT. Infracom Technology', '150000', '0', 'Introduce HTML', 'HTML adalah suatu Bahasa computer yang merupakan  kerangka dalam halaman website yang ada di internet. pada bagian ini akan dipelajari struktur HTML, mulai dari Tag,Element,Atribut,dll', 'CSS &amp; Bootstrap', 'CSS adalah kepanjangaan dari Cascading Style Sheets yang berguna untuk menyederhanakan proses pembuatan website  dengan mengatur elemen yang tertulis di bahasa markup. Disini kita akan mempelajari bag', 'Introduce Javascript', 'Javascript adalah Bahasa pemrograman yang awalnya dirancang untuk berjalan diatas browser. Secara keseluruhan javascript berguna untuk membuat website menjadi interaktif dan dinamis. Disini akan dipelajari penggunaan javascript dasar pada website.', 'Database dan relasi', 'Database merupakan basis data atau kumpulan informasi yang disimpan didalam komputer secara sistematik sehingga dapat diolah menjadi sebuah informasi. Pada pertemuan ini kita akan mempelajari apa itu ', 'Introduce PHP', 'PHP  adalah sebuah Bahasa pemrograman server side scripting yang bersifat open source dan ampuh untuk membuat halaman Web yang dinamis dan interaktif. Sehingga pada bagian ini kita mempelajari dasar-d', 'PHP-CRUD 1', 'Pada bagian ini kita menghubungkan php dengan database dan menginput data kedalam database melalui PHP didalam website', 'PHP - CRUD 2', 'Pada bagian ini kita melanjutkan pada pertemuan sebelumnya dimana kita akan mengubah dan menghapus data yang sudah kita inputkan.', 'Github &amp; Hosting', 'Github dan Hosting merupakan sesuatu yg sangat dibutuhkan oleh web developer dimana kita bisa menaru');
+(1, 'UI/UX', 'Ingin membuat UI yang menarik dan UX yang nyaman dipakai ? Course inilah solusinya!	Di course ini kamu akan mempelajari fundamental UI Design, fundamental UX Design, fundamental UX Research, serta mempelajari bagaimana cara membuat outstanding portfolio. 	Berdurasi selama 1 bulan, kamu akan dibimbing oleh mentor yang telah berpengalaman di industri digital, mengikuti kurikulum yang telah disusun sedemikian rupa sehingga mudah diikuti bagi pemula maupun pelajar tanpa pendidikan formal di bidang IT sekalipun.', 'Produk/16qnXbzSfvrTE.png', 'Samuel Christian Silalahi', 'produk/16rxREUaru0B2.jpg', 'UI/UX Designer at Finance Company', '150000', '0', 'Introduction to UI/UX', 'Pengenalan konseptual mendasar tentang UI UX hubungan nya dan perbedaan nya serta penerapan nya dalam bisnis digital dalam menghasilkan sebuah peluang kerja', 'UX Research', 'Pengenalan konseptual mendasar tentang UI UX hubungan nya dan perbedaan nya serta penerapan nya dalam bisnis digital dalam menghasilkan sebuah peluang kerja', 'Ideating', 'Affinity Diagramming, metode yang digunakan untuk memetakan kumpulan informasi/fakta menjadi kelompok yang lebih spesifik. Mental model adalah sebuah konsep yang awalnya dikembangkan untuk membantu proses pikir sehari-hari model merupakan representasi suatu hal sehingga konsepnya bisa dipahami lebih mudah', 'Designing', 'User Flow adalah langkah langkah yang harus dilakukan oleh user untuk mengerjakan suatu task Wireframing merupakan cara desainer UI/UX membuat rancangan website maupun aplikasi pada level struktural.', 'Designing 2', 'User Interface adalah tampilan visual sebuah produk yang menjembatani sistem dengan pengguna ', 'Designing 3', 'Prototype adalah versi simulasi dari produk akhir yang digunakan dalam pengujian sebelum akhirnya dilakukannya peluncuran. Bisa juga dikatakan sebuah tahap mengubah konsep menjadi wujud yang nyata. Pa', 'Designing 4', 'usability testing adalah metode yang digunakan untuk mengevaluasi user experience dari sebuah produk baik itu di website maupun aplikasi.', 'Build Portfolio', 'pemaparan alasan pentingnya sebuah portofolio dan tata cara pembuatan nya'),
+(2, 'Web Developer', 'Ingin mengembangkan web paket lengkap menggunakan HTML, CSS, JavaScript, dan PHP ? Course ini solusinya!\r\n	Di course ini kamu akan mempelajari fundamental website dan HTML, fundamental CSS, fundamental JavaScript, fundamental PHP dan membuat sistem CRUD dalam website, serta mempelajari cara membuat portfolio yang menarik.\r\n	Berdurasi selama 1 bulan, kamu akan dibimbing oleh mentor yang telah berpengalaman di industri digital, mengikuti kurikulum yang telah disusun sedemikian rupa sehingga mudah diikuti bagi pemula maupun pelajar tanpa pendidikan formal di bidang IT sekalipun.', 'Produk/165yPVQiWgZ8Q.jpg', 'Ricky Julpiter', 'produk/16af1Lr1.uucU.jpeg', 'Software Developer PT. Infracom Technology', '150000', '0', 'Introduce HTML', 'HTML adalah suatu Bahasa computer yang merupakan  kerangka dalam halaman website yang ada di internet. pada bagian ini akan dipelajari struktur HTML, mulai dari Tag,Element,Atribut,dll', 'CSS &amp; Bootstrap', 'CSS adalah kepanjangaan dari Cascading Style Sheets yang berguna untuk menyederhanakan proses pembuatan website  dengan mengatur elemen yang tertulis di bahasa markup. Disini kita akan mempelajari bag', 'Introduce Javascript', 'Javascript adalah Bahasa pemrograman yang awalnya dirancang untuk berjalan diatas browser. Secara keseluruhan javascript berguna untuk membuat website menjadi interaktif dan dinamis. Disini akan dipelajari penggunaan javascript dasar pada website.', 'Database dan relasi', 'Database merupakan basis data atau kumpulan informasi yang disimpan didalam komputer secara sistematik sehingga dapat diolah menjadi sebuah informasi. Pada pertemuan ini kita akan mempelajari apa itu ', 'Introduce PHP', 'PHP  adalah sebuah Bahasa pemrograman server side scripting yang bersifat open source dan ampuh untuk membuat halaman Web yang dinamis dan interaktif. Sehingga pada bagian ini kita mempelajari dasar-d', 'PHP-CRUD 1', 'Pada bagian ini kita menghubungkan php dengan database dan menginput data kedalam database melalui PHP didalam website', 'PHP - CRUD 2', 'Pada bagian ini kita melanjutkan pada pertemuan sebelumnya dimana kita akan mengubah dan menghapus data yang sudah kita inputkan.', 'Github &amp; Hosting', 'Github dan Hosting merupakan sesuatu yg sangat dibutuhkan oleh web developer dimana kita bisa menaru');
 
 -- --------------------------------------------------------
 
@@ -432,7 +433,7 @@ INSERT INTO `login` (`id_user`, `nama`, `username`, `email`, `password`, `no_wa`
 (148, 'Yessi aloina', 'Yessialoina', 'yessialoina@gmail.com', '$2y$10$22VKSAplkB5xYC3sl50HbeF/xhOZScWoI7ay2XdgOgn4YXAy20UTW', '', '', '', '', 'Member', ''),
 (149, 'Shafiyah', 'Shafiyah07', 'Shafiyahh20@gmail.com', '$2y$10$s3wWAuL/fyMlb5fxEm/lkO5WKgpuZAGdJ0nr3nTwiXZhvaMfy.niS', '', '', '', '', 'Member', ''),
 (150, 'Erick Gultom', 'lonelykatana', 'erickgultom325@gmail.com', '$2y$10$zKLdhzG0Hn1lNMyvqDP7ZOgioyZTAwooO5IjnE5ldJ8/vEi2aSecO', '', '', '', '', 'Admin', ''),
-(151, 'Chrisdio Ebenezer Marbun', 'chrisdio28', 'chrisdiomarbun@gmail.com', '$2y$10$0VCIjGXiOp5uVAjQy09jh.nqiaRHbcIyUBr2jl8OoQEKfFNLb9rhu', '', '', '', '', 'Member', ''),
+(151, 'Chrisdio Ebenezer Marbun', 'chrisdio28', 'chrisdiomarbun@gmail.com', '$2y$10$0VCIjGXiOp5uVAjQy09jh.nqiaRHbcIyUBr2jl8OoQEKfFNLb9rhu', '', '', '', 'C308FE55-7518-4019-9F72-84234FD878FD.jpeg', 'Member', ''),
 (152, 'Yopiando', 'Yopiando', 'yopiandosembiring97@gmail.com', '$2y$10$BCemu6UN4Nb5btgWPuTMGuwiCVVfvXX3cbVchN8J.KWSbrlQltlwC', '', '', '', '', 'Member', ''),
 (153, 'Alya', 'Orang', 'salsaalyahamdani@gmail.com', '$2y$10$Q/m3FzxE1KIqUTN5BKHf0u7mbogHYANWs9oDs3UKvstVX1N6mB7LW', '', '', '', '', 'Member', ''),
 (154, 'Sherina Juliartha Purba', 'Sherina J Purba', 'sherinapurbajuli@gmail.com', '$2y$10$PXQRbDsWxSJpLDWd1GopgewkP4vRLeABlkniHuQ8PPgRzA9kPGpNW', '', '', '', '', 'Member', ''),
@@ -608,7 +609,24 @@ INSERT INTO `login` (`id_user`, `nama`, `username`, `email`, `password`, `no_wa`
 (344, '', '', '', '$2y$10$iprsJcXnvsaRjeoChVNfbuWCdZMQShlRpkpBoT3gC2r0VXEWOdj2e', '', '', '', '', 'Member', ''),
 (345, '', '', '', '$2y$10$/iK5WuGqyzVRyHI4//apJeX7qPjtZG5cxUERAAJcM9B/28H2Fwg6C', '', '', '', '', 'Member', ''),
 (346, 'tesrsr', '32', '123', '$2y$10$gPbNsHMiyeNxpXN2fChXqOK/rgHpxJy9Ww6uxifgPDwjvXj07yyGK', '', '', '', '', 'Member', ''),
-(347, '  ricky b r     ', '  ricky     ', '  kuronekoswag24@gmail.com     ', '$2y$10$SAUIqdpMADPhWcld6i8qs.Xu64h35VMiHssmIpiSsSmuhlEsNN9H2', '', '', '', '/produk/16qOt7zfXGIiU.', 'Member', '');
+(347, '  ricky b r     ', '  ricky     ', '  kuronekoswag24@gmail.com     ', '$2y$10$SAUIqdpMADPhWcld6i8qs.Xu64h35VMiHssmIpiSsSmuhlEsNN9H2', '', '', '', '/produk/16qOt7zfXGIiU.', 'Member', ''),
+(348, 'aaa', 'aaa', 'aaa@gmail.com', '$2y$10$T0fF6KPRUyGsU4.IRGEZaum0mZLRtXIFR6FeCCHrxPFnhZBdEVoIm', '', '', '', 'asas-min.jpg', 'Member', ''),
+(349, 'Achmad', 'AchmadANs', 'achmad1981ansyori@gmail.com', '$2y$10$EYuKKBJvf/QNc0AJhv4UQ.Wrt5BSwU4C70gWzxB9Fywp019M7C5e.', '', '', '', '', 'Member', ''),
+(350, 'paijo', 'paijo', 'paijo_theMighty@yahoo.com', '$2y$10$I5at1A15A9u3gerrWq9C7.Fr.tyVzWvvPclmHVl58j/9tdm6szZIm', '', '', '', '', 'Member', ''),
+(351, 'toto', 'toto', 'toto', '$2y$10$fcslOKgsKU4LBeONrVxrFutDej8B1deq458yuaLaggrkV6JvT52u6', '', '', '', '', 'Member', ''),
+(352, 'Erick test', 'ericktest', 'erick@test', '$2y$10$kWnEP2yjlbBnRbs8BYR5WuxNxnow29y5dEKPbAPE.OdtNSm057Icu', '', '', '', 'DSC_0232__5_-removebg.png', 'Member', ''),
+(353, 'Kirana', 'kiranapaulina', 'kirana.phss@gmail.com', '$2y$10$ERnb4P.IFq8INZkVx65DYe9iu/y8n6JPeuhk2oHpzbGqj9PxvdEVm', '', '', '', '', 'Member', ''),
+(355, 'Ruth Damayanthy Purba', 'Ruthdamay', 'ruthedamayanthy123@gmail.com', '$2y$10$zv67bFaOoXXh9IIMDmK4Fe7GX3x7CqhNfG/m9RAaRpl0GtX1beUwW', '', '', '', '', 'Member', ''),
+(357, 'Erick Test', 'ericktest', 'erick@test', '$2y$10$lKV6QW5F5mk2h94VQyzTXePMRwpo8QXsSo72SfF.m.0e69eMazGQe', '', '', '', '', 'Member', ''),
+(358, 'Christiani Sibarani', 'christybrielle', 'christiani2301ya@gmail.com', '$2y$10$9tU2KDKjHqUSTJjUe1RUNuqRcORWPjf374REorR/BNcGdU/7WSjg.', '', '', '', '', 'Member', ''),
+(359, 'M. Rizki', 'rzk28UIUX', 'm.rizki2807@gmail.com', '$2y$10$KV3GQFtGCGQpiZWPQOtsNuEgLHdjAiM8KYDA0cLb78JWqJjYfuZNG', '085271158911', '', 'Mahasiswa', '3.png', 'Member', ''),
+(360, 'Emy Sonia Sinambela', 'emy_sonia', 'emysonia17@gmail.com', '$2y$10$ZOudBMhC8RGEazv5CN5JGOjgoWctIUfgNyM323pbmMajI5Zez5xWe', '', '', '', '', 'Member', ''),
+(361, 'Dominikus David ', 'David', 'dominikusdavid1@gmail.com', '$2y$10$y13mB5jNCnUFvChdAS5xyOO.DfgQasozyxrXuLYRONu9p59p1wE3S', '', '', '', '', 'Member', ''),
+(362, 'Anindya Candrakanti Yusnida', 'aniindcy', 'acandrakanti@gmail.com', '$2y$10$20ed294SEWZv18Rl5IYVqe3eA6kc1Nu//XNa6KfFiIrDPhUFhK7Cq', '', '', '', '', 'Member', ''),
+(363, 'test', 'test1@test.com', 'test1@test.com', '$2y$10$AHh08GQi0Ns/k1QlMiP9VOLNadCFAE8NwL46NCPK/KnJ3ZOxS4mFG', '', '', '', '', 'Member', ''),
+(364, 'ricky', 'ricky', 'berlandoricky@gmail.com', '$2y$10$NM/yEwZgaiSCG6DCzUzI/uxAKkP55FX5jXWD6Nrmy9sY.N4APSUJu', '', '', '', '', 'Member', ''),
+(365, 'ben', 'ben', 'ben@ben.com', '$2y$10$icX7L6YnhebG2FHkob2wBucL4sOPbn/TL/m6HKoOy7g4De.HckgLq', '', '', '', '', 'Member', ''),
+(366, 'te', 'te', 'te@te.com', '$2y$10$e5expFW.cdOZBUd5xnAUo.h4ukN5zfMGJQK9oQArBwsv6hyruokhu', '', '', '', '', 'Member', '');
 
 -- --------------------------------------------------------
 
@@ -622,6 +640,118 @@ CREATE TABLE `mentor` (
   `cv_mentor` varchar(200) NOT NULL,
   `gambar_mentor` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_list`
+--
+
+CREATE TABLE `order_list` (
+  `order_id` int(20) NOT NULL,
+  `payment_type` char(20) NOT NULL,
+  `transaction_status` char(20) NOT NULL,
+  `transaction_time` varchar(20) NOT NULL,
+  `price` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_list`
+--
+
+INSERT INTO `order_list` (`order_id`, `payment_type`, `transaction_status`, `transaction_time`, `price`) VALUES
+(1261009, 'cstore', 'expire', '2021-10-15 01:54:26', '150000.00'),
+(15864024, 'cstore', 'expire', '2021-10-15 18:00:14', '150000.00'),
+(18198568, 'cstore', 'settlement', '2021-10-15 17:55:47', '150000.00'),
+(18229757, 'cstore', 'expire', '2021-10-17 10:57:04', '150000.00'),
+(34511644, 'gopay', 'pending', '2021-10-10 18:03:30', ''),
+(63368565, 'cstore', 'expire', '2021-10-13 21:55:56', '150000.00'),
+(66632212, 'echannel', 'expire', '2021-10-16 02:52:26', '150000.00'),
+(75310189, 'gopay', 'expire', '2021-10-17 21:21:23', '150000.00'),
+(85256179, 'echannel', 'expire', '2021-10-16 02:46:42', '150000.00'),
+(124180159, 'gopay', 'pending', '2021-10-10 18:57:32', ''),
+(130588952, 'bca_klikpay', 'settlement', '2021-10-10 11:13:48', ''),
+(131308539, 'gopay', 'expire', '2021-10-15 02:04:17', '150000.00'),
+(168202460, 'gopay', 'pending', '2021-10-13 15:51:46', ''),
+(194026481, 'gopay', 'expire', '2021-10-14 17:40:42', '150000.00'),
+(225197154, 'gopay', 'pending', '2021-10-10 18:04:48', ''),
+(240190257, 'bank_transfer', 'expire', '2021-10-17 21:21:52', '150000.00'),
+(282687828, 'bank_transfer', 'pending', '2021-10-16 02:42:36', '150000.00'),
+(295796041, 'bca_klikpay', 'settlement', '2021-10-10 11:17:05', ''),
+(310831121, 'cstore', 'expire', '2021-10-17 10:54:36', '150000.00'),
+(316625809, 'cstore', 'expire', '2021-10-17 02:14:57', '150000.00'),
+(320131610, 'gopay', 'pending', '2021-10-10 17:32:09', ''),
+(395573081, 'bca_klikpay', 'settlement', '2021-10-10 21:12:53', ''),
+(406457067, 'cstore', 'expire', '2021-10-15 18:03:04', '150000.00'),
+(418091573, 'gopay', 'pending', '2021-10-13 08:36:11', ''),
+(432031209, 'cstore', 'settlement', '2021-10-17 21:29:13', '150000.00'),
+(504729759, 'cstore', 'expire', '2021-10-15 18:02:09', '150000.00'),
+(529676359, 'bca_klikpay', 'settlement', '2021-10-10 14:17:11', ''),
+(542057724, 'gopay', 'pending', '2021-10-10 19:11:33', ''),
+(551083533, 'bca_klikpay', 'settlement', '2021-10-10 14:59:10', ''),
+(605894999, 'gopay', 'pending', '2021-10-10 21:23:46', ''),
+(612502887, 'bca_klikpay', 'settlement', '2021-10-10 17:09:11', ''),
+(633062737, 'gopay', 'pending', '2021-10-13 16:38:01', ''),
+(689688608, 'bank_transfer', 'pending', '2021-10-16 02:26:19', '150000.00'),
+(691675133, 'gopay', 'pending', '2021-10-13 09:41:22', ''),
+(707994806, 'bca_klikpay', 'settlement', '2021-10-15 17:59:08', '150000.00'),
+(752100833, 'cstore', 'pending', '2021-10-12 10:39:00', ''),
+(753427577, 'cstore', 'settlement', '2021-10-13 15:53:27', ''),
+(759629402, 'gopay', 'pending', '2021-10-13 08:57:54', ''),
+(789549366, 'gopay', 'pending', '2021-10-10 21:13:06', ''),
+(805439784, 'cstore', 'expire', '2021-10-17 02:18:07', '150000.00'),
+(823841014, 'gopay', 'pending', '2021-10-10 19:16:49', ''),
+(894688612, 'cstore', 'expire', '2021-10-17 11:00:11', '150000.00'),
+(916922660, 'gopay', 'expire', '2021-10-14 22:29:41', '150000.00'),
+(919300782, 'gopay', 'pending', '2021-10-13 15:57:36', ''),
+(937644336, 'gopay', 'pending', '2021-10-13 00:33:42', ''),
+(949563085, 'gopay', 'pending', '2021-10-12 23:24:42', ''),
+(975002524, 'bca_klikpay', 'settlement', '2021-10-10 14:11:46', ''),
+(976672268, 'echannel', 'expire', '2021-10-17 02:13:43', '150000.00'),
+(1008106967, 'gopay', 'pending', '2021-10-10 19:01:22', ''),
+(1041999966, 'gopay', 'pending', '2021-10-10 17:35:15', ''),
+(1057926156, 'gopay', 'pending', '2021-10-12 23:29:17', ''),
+(1067345947, 'bca_klikpay', 'expire', '2021-10-16 02:46:18', '150000.00'),
+(1104763844, 'bca_klikpay', 'settlement', '2021-10-10 11:11:09', ''),
+(1125104692, 'gopay', 'pending', '2021-10-13 08:47:55', ''),
+(1128316689, 'cstore', 'expire', '2021-10-17 21:27:12', '150000.00'),
+(1158130019, 'bca_klikpay', 'settlement', '2021-10-10 21:21:21', ''),
+(1180776251, 'bank_transfer', 'expire', '2021-10-16 02:55:11', '150000.00'),
+(1185710223, 'gopay', 'pending', '2021-10-12 22:09:49', ''),
+(1275069271, 'gopay', 'pending', '2021-10-12 22:10:56', ''),
+(1302447277, 'gopay', 'pending', '2021-10-10 18:04:19', ''),
+(1314179907, 'gopay', 'pending', '2021-10-13 08:50:46', ''),
+(1338118643, 'gopay', 'pending', '2021-10-10 17:18:10', ''),
+(1342382030, 'gopay', 'expire', '2021-10-13 21:55:38', '150000.00'),
+(1370411204, 'qris', 'pending', '2021-10-13 14:29:18', ''),
+(1408046902, 'gopay', 'pending', '2021-10-10 18:56:49', ''),
+(1423401061, 'gopay', 'pending', '2021-10-13 08:58:58', ''),
+(1456626608, 'qris', 'expire', '2021-10-16 02:56:43', '150000.00'),
+(1458984587, 'echannel', 'expire', '2021-10-17 18:29:39', '150000.00'),
+(1468979203, 'gopay', 'pending', '2021-10-10 14:13:54', ''),
+(1475387320, 'gopay', 'pending', '2021-10-10 19:48:54', ''),
+(1496348156, 'echannel', 'expire', '2021-10-17 21:26:29', '150000.00'),
+(1544244871, 'bank_transfer', 'expire', '2021-10-16 02:44:33', '150000.00'),
+(1633282998, 'gopay', 'pending', '2021-10-10 18:59:52', ''),
+(1644135323, 'gopay', 'pending', '2021-10-13 00:31:26', ''),
+(1656144137, 'gopay', 'pending', '2021-10-10 18:05:13', ''),
+(1672837429, 'cstore', 'settlement', '2021-10-13 21:01:15', '150000.00'),
+(1703226317, 'gopay', 'pending', '2021-10-10 19:14:42', ''),
+(1734038520, 'gopay', 'pending', '2021-10-13 08:48:31', ''),
+(1760980828, 'cstore', 'expire', '2021-10-17 02:16:35', '150000.00'),
+(1765499524, 'gopay', 'pending', '2021-10-10 17:33:11', ''),
+(1828925721, 'gopay', 'pending', '2021-10-12 23:36:41', ''),
+(1829965722, 'bca_klikpay', 'settlement', '2021-10-10 17:02:39', ''),
+(1832557087, 'gopay', 'pending', '2021-10-13 00:23:29', ''),
+(1866620324, 'gopay', 'pending', '2021-10-10 19:31:31', ''),
+(1898203582, 'gopay', 'expire', '2021-10-18 18:08:39', '150000.00'),
+(1912880839, 'gopay', 'pending', '2021-10-10 19:12:40', ''),
+(1925884430, 'gopay', 'pending', '2021-10-10 18:10:38', ''),
+(1989743077, 'gopay', 'pending', '2021-10-10 17:33:34', ''),
+(2010709521, 'gopay', 'pending', '2021-10-12 23:25:54', ''),
+(2087793858, 'gopay', 'expire', '2021-10-15 02:01:18', '150000.00'),
+(2113421721, 'gopay', 'pending', '2021-10-12 22:10:13', ''),
+(2138321511, 'gopay', 'pending', '2021-10-10 17:09:32', '');
 
 -- --------------------------------------------------------
 
@@ -661,6 +791,80 @@ CREATE TABLE `produk` (
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `gambar`, `deskripsi`, `harga_before`, `harga_after`, `judul_week1`, `detail_week1`, `judul_week2`, `detail_week2`, `judul_week3`, `detail_week3`, `judul_week4`, `detail_week4`, `judul_week5`, `detail_week5`, `judul_week6`, `detail_week6`, `judul_week7`, `detail_week7`, `judul_week8`, `detail_week8`) VALUES
 (1, 'a', 's', 'd', 4, 3, 'a', 's', 's', 'a', 's', 'a', 's', 'a', 's', 'a', 's', 'a', 's', 'a', 'a', 's');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testing`
+--
+
+CREATE TABLE `testing` (
+  `order_id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `transaction_status` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testing`
+--
+
+INSERT INTO `testing` (`order_id`, `id_user`, `nama`, `transaction_status`) VALUES
+(168202460, 348, 'aaa', ''),
+(691675133, 348, 'aaa', ''),
+(759629402, 348, 'aaa', ''),
+(919300782, 348, 'aaa', 'pending'),
+(1370411204, 348, 'aaa', ''),
+(1423401061, 348, 'aaa', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id_trs` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `nama_kelas` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_trs`, `order_id`, `id_user`, `nama_kelas`) VALUES
+(7, 916922660, 348, 'UI/UX'),
+(8, 1261009, 348, 'Web Developer'),
+(9, 2087793858, 364, 'UI/UX'),
+(10, 131308539, 364, 'Web Developer'),
+(11, 18198568, 348, 'UI/UX'),
+(12, 15864024, 16, 'UI/UX'),
+(13, 504729759, 365, 'UI/UX'),
+(14, 0, 365, 'UI/UX'),
+(15, 689688608, 364, 'UI/UX'),
+(16, 689688608, 364, 'UI/UX'),
+(17, 282687828, 364, 'UI/UX'),
+(18, 282687828, 364, 'UI/UX'),
+(19, 1544244871, 364, 'UI/UX'),
+(20, 1544244871, 364, 'UI/UX'),
+(21, 1180776251, 364, 'UI/UX'),
+(22, 1456626608, 364, 'UI/UX'),
+(23, 0, 364, 'UI/UX'),
+(24, 0, 364, 'UI/UX'),
+(25, 0, 364, 'UI/UX'),
+(26, 0, 364, 'UI/UX'),
+(27, 0, 364, 'UI/UX'),
+(28, 0, 364, 'UI/UX'),
+(29, 0, 348, 'Web Developer'),
+(30, 0, 348, 'UI/UX'),
+(31, 0, 366, 'UI/UX'),
+(32, 240190257, 366, 'UI/UX'),
+(33, 1496348156, 364, 'Web Developer'),
+(34, 1128316689, 364, 'Web Developer'),
+(35, 432031209, 364, 'UI/UX'),
+(36, 1898203582, 364, 'UI/UX');
+
 --
 -- Indexes for dumped tables
 --
@@ -696,10 +900,28 @@ ALTER TABLE `mentor`
   ADD PRIMARY KEY (`id_mentor`);
 
 --
+-- Indexes for table `order_list`
+--
+ALTER TABLE `order_list`
+  ADD PRIMARY KEY (`order_id`);
+
+--
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`);
+
+--
+-- Indexes for table `testing`
+--
+ALTER TABLE `testing`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id_trs`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -727,7 +949,7 @@ ALTER TABLE `kelas2`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=348;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=367;
 
 --
 -- AUTO_INCREMENT for table `mentor`
@@ -740,6 +962,12 @@ ALTER TABLE `mentor`
 --
 ALTER TABLE `produk`
   MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_trs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
