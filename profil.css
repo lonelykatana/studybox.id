@@ -124,12 +124,27 @@ body {
 
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .leftcolumn, .rightcolumn, .rightcolumn2, .rightcolumn3 {   
     width: 100%;
     padding: 0;
   }
+  .nav-item1.active{
+    background-color: #0aada785;
+    -webkit-transition: background-color 1000ms linear;
+      -ms-transition: background-color 1000ms linear;
+      transition: background-color 1000ms linear;
+      color:white !important;
+      border-radius: 6px;
+      width:70%
+      
+  }
+  .profile-title{
+    padding-top: 2vh;
+    padding-left: 3vh;
+  }
 }
+
 .avatar {
   width: 80px;
   height: 80px;
@@ -336,6 +351,7 @@ li.nav-item1{
   
 }
 li.nav-item1:hover{
+  
   color:#0AADA8 !important;
   
   
@@ -358,4 +374,9 @@ li.nav-item1:hover>.filter-white{
 }
 .filter-green{
   filter: invert(58%) sepia(30%) saturate(1078%) hue-rotate(129deg) brightness(88%) contrast(102%);
+}
+
+.profile-title{
+  
+  padding-left: 3vh;
 }

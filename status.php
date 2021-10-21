@@ -72,7 +72,7 @@ while($p=mysqli_fetch_array($brgs)){
       
   </div>
   <div class="rightcolumn3">
-      <h2 style="padding-left:20px;">Status</h2>
+      <h2 class="profile-title">Status</h2>
     <div class="cardright3">
        <div class="card-body" style="height:250px">
        <table class="table table-bordered">

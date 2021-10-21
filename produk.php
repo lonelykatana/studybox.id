@@ -56,10 +56,10 @@ if(isset($_POST['addpeserta']))
           
           if(!isset($_SESSION['log']))
             {	
-              echo "<a href='masuk.php'><input type='submit' value='Daftar Kelas'  class='btn_product'style='margin-top:7%' data-toggle='modal'  ></a>";
+              echo "<a href='masuk.php'><input type='submit' value='Daftar Kelas'  class='btn_product' style='margin-top:7%' data-toggle='modal'  ></a>";
             }
             else{
-              echo "<a href='checkout.php?id_kelas=$p[id_kelas]'><input type='submit' value='Daftar Kelas'  class='btn_product'style='margin-top:7%' data-toggle='modal'data-target='#myModal' name='addpeserta1'></a>";
+              echo "<a href='checkout.php?id_kelas=$p[id_kelas]'><input type='submit' value='Daftar Kelas'  class='btn_product' style='margin-top:7%' data-toggle='modal'data-target='#myModal' name='addpeserta1'></a>";
             }
                     ?>
                     <!--
