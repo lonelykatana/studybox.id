@@ -63,7 +63,7 @@ while($p=mysqli_fetch_array($brgs)){
       <ul class="profil navbar-nav">
       <a href="profil"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/bx_bxs-user.svg" class="filter-green"/> Profil</li></a>
         <a href="status" > <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/vector.svg" class="filter-white"/>Status Kelas</li></a>
-        <a href="sertifikat"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certificate.svg" class="filter-green"/>Sertifikat</li></a>
+        <a href="sertifikat1"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certificate.svg" class="filter-green"/>Sertifikat</li></a>
 
 
         </ul>

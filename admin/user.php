@@ -159,15 +159,15 @@
 											<tr>
 												<th>No.</th>
 												<th>Nama</th>
-												<th>Umur</th>
+												<th>Username</th>
 												<th>Email</th>
-                                                <th>Nama Kelas</th>
-                                                <th>No. Whatsapp</th>
-                                                <th>Motivation Letter</th>
-                                                <th>Motivation Letter</th>
-                                                <th>Motivation Letter</th>
-                                                <th>Motivation Letter</th>
-                                                <th>Motivation Letter</th>
+                                                <th>Password</th>
+                                                <th>No WA</th>
+                                                <th>Umur</th>
+                                                <th>Pekerjaan</th>
+                                                <th>Gambar</th>
+                                                <th>Role</th>
+                                                <th>Token</th>
 											</tr></thead><tbody>
 											<?php 
 											$brgs=mysqli_query($conn,"SELECT * from login LIMIT 0,200 ");

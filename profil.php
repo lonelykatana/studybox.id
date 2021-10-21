@@ -56,17 +56,7 @@ $cek=$cariuser['id_user'];
       where id_user=$cek  ");
 
 
-      if ($tambahuser){  
-      echo " <div class='alert alert-success'>
-      <script>alert('Berhasil')</script>	
-        </div> ";
-        header('profil');
-      } else { echo "<div class='alert alert-warning'>
-        Gagal mendaftar, silakan coba lagi.
-        </div>
-       <meta http-equiv='refresh' content='1; url= produk.php'/> ";
-      }
-      
+     
     };
    
   
@@ -112,7 +102,7 @@ while($p=mysqli_fetch_array($brgs)){
         <ul class="profil navbar-nav">
         <a href="profil" style="text-decoration:none;"> <li class="nav-item1 active"> <img style="width:8%; padding-bottom:4px;margin-right:10%;" src="Assets/bx_bxs-user.svg" class="filter-white"/> Profil</li></a>
         <a href="status" > <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%;" src="Assets/vector.svg" class="filter-green"/>Status Kelas</li></a>
-        <a href="sertifikat"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certificate.svg" class="filter-green"/>Sertifikat</li></a>
+        <a href="sertifikat1"> <li class="nav-item1 "> <img style="width:8%; padding-bottom:4px;margin-right:10%" src="Assets/certificate.svg" class="filter-green"/>Sertifikat</li></a>
 
         </ul>
 
