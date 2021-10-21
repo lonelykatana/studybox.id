@@ -58,6 +58,7 @@ session_start();
 							<li><a href="user.php"><span>Kelola user</span></a></li>
 							<li><a href="peserta.php"><span>Kelola pendaftar kelas</span></a></li>
                             <li><a href="mentor.php"><span>Kelola mentor</span></a></li>
+                            <li><a href="../transaksi.php"><span>Kelola Transaksi</span></a></li>
                             <li>
                                 <a href="../logout.php"><span>Logout</span></a>
                                 
