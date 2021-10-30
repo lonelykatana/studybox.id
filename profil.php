@@ -55,7 +55,16 @@ $cek=$cariuser['id_user'];
       $tambahuser = mysqli_query($conn,"UPDATE login SET nama='$nama', username='$username', email='$email', no_wa='$no_wa', umur='$umur', pekerjaan='$pekerjaan'
       where id_user=$cek  ");
 
-
+if ($tambahuser){
+  echo " <div class='alert alert-success'>
+    Berhasil mengubah profil, Terima Kasih.
+    </div>
+  <meta http-equiv='refresh' content='1; url= index.php'/>  ";
+  } else { echo "<div class='alert alert-warning'>
+    Gagal mengubah profil.
+    </div>
+   <meta http-equiv='refresh' content='1; url= produk.php'/> ";
+  }
      
     };
    
@@ -130,7 +139,7 @@ while($p=mysqli_fetch_array($brgs)){
                         $image=$p['gambar_user']; 
                         $image_src = "upload/".$image;
 												?>
-
+              
               <img src="<?php echo $image_src; ?>" alt="John Doe" class="avatar1">
               <?php 
 											}

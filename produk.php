@@ -31,15 +31,16 @@ if(isset($_POST['addpeserta']))
  
  <section id="product" class="product" >
 
-  <div class="container" data-aos="fade-up " style="margin-left:15%;padding-top:4vw;">
+  <div class=" product-container" data-aos="fade-up " style="padding-top:4vw;">
     <div class="row gx-0" >
     <?php 
 				$p = mysqli_fetch_array(mysqli_query($conn,"Select * from kelas where id_kelas='$idk'"));
 
 				?>
+          <img src="<?php echo $p['gambar']?>" class="img_content" style="border-radius:25px;" alt=""   >  
       <div class="produk-detail col-lg-6 d-flex flex-row justify-content-center" data-aos="fade-up" data-aos-delay="200">
      
-        <img src="<?php echo $p['gambar']?>" class="img_content" style="border-radius:25px;" alt=""   >  
+      
         <div class="product-content">
           <h2><?php echo $p['nama_kelas'] ?></h2>
           <p class="product-description">
@@ -59,7 +60,13 @@ if(isset($_POST['addpeserta']))
               echo "<a href='masuk.php'><input type='submit' value='Daftar Kelas'  class='btn_product' style='margin-top:7%' data-toggle='modal'  ></a>";
             }
             else{
-              echo "<a href='checkout.php?id_kelas=$p[id_kelas]'><input type='submit' value='Daftar Kelas'  class='btn_product' style='margin-top:7%' data-toggle='modal'data-target='#myModal' name='addpeserta1'></a>";
+              if($idk == '2'){
+                echo "<p>Kelas sudah habis</p>";
+              }
+              else{
+                echo "<a href='checkout.php?id_kelas=$p[id_kelas]'><input type='submit' value='Daftar Kelas'  class='btn_product' style='margin-top:7%' data-toggle='modal'data-target='#myModal' name='addpeserta1'></a>";
+              }
+             
             }
                     ?>
                     <!--

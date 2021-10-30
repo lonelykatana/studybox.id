@@ -13,17 +13,6 @@ $cek=$cariuser['id_user'];
 		{	
 			header('location:masuk');
 		}
-   
-
-        
-    
-
-
- 
-   
-  
-
-  
 ?>
 <?php include("partials/headerindex.php") ?>
 <?php include("partials/navbar.php") ?>
@@ -59,13 +48,6 @@ while($p=mysqli_fetch_array($brgs)){
 											}
 													
 											?>
-
-
-
-
-        
-
-        
 
       </div> 
 

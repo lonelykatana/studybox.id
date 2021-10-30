@@ -57,9 +57,9 @@ if(isset($_POST['addprod'])){
     </div>
       <div class="container" data-aos="fade-up">
         
-        <div class="row">
+        <div class="row gx-0">
 
-          <div class="col-lg-6 d-flex flex-column justify-content-center" style="margin-bottom:10%;" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content"style="margin-top:6%">
          
               <h3 >Study Box</h3>
@@ -94,14 +94,14 @@ if(isset($_POST['addprod'])){
         </div>
                 <div class="product-box">
                    
-                    <div class="product_section" style="margin-bottom:20%">
-                    <img class="img-fluid" src="uiux.png" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
+                    <div class="product_section">
+                    <img class="img-fluid" src="uiux2.jpg" alt="..." style="height:30vh;width:30vh; border-radius:25px;box-shadow: 2px 5px 10px #888888;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         UI/UX</div>
                          <a href="produk.php?id_kelas=1"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
                     </div> 
                     <div class="product_section">
-                    <img class="img-fluid" src="webdev.jpg" alt="..." style="height:30vh;width:30vh; border-radius:25px;" />
+                    <img class="img-fluid" src="web2.jpg" alt="..." style="height:30vh;width:30vh; border-radius:25px;box-shadow: 2px 5px 10px #888888;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         Web Developer</div>
                          <a href="produk.php?id_kelas=2"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
@@ -110,10 +110,27 @@ if(isset($_POST['addprod'])){
    
      
 </section>
- 
+ <section class="page-section" id="event" style="padding-top: 3vw;">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase" >Event</h2><br>
+           <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>--> 
+        </div>
+        
+    
+         <div class="col-md-12 text-center event-box">
+             
+             <img src ="Assets/event1.jpg" style="height:30vh;width:30vh; border-radius:25px;margin:0 auto;">
+             <div class="product-title1 product-caption" style="display:inline-block;font-size:25px;text-align:center;"> Webinar - Grace Ling</div>
+                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqUPlWGFhcgo86aJ1nasMywhxdwCQUpYpjsaSU8_a9g2d-ZQ/viewform?usp=sf_link"> <button type="submit" class="btn_product btn_product1" style="margin-top:18px;">Ikuti Webinar</button> </a>
+                    </div> 
+         
+        </div>
+    </div>
+  </section>
  
 <!-- Benefit-->
-<section class="page-section" id="benefit">
+<section class="bg-white" id="benefit">
   <div class="container">
       <div class="text-center">
           <h2 class="section-heading text-uppercase" >Benefit</h2><br>
@@ -139,46 +156,46 @@ if(isset($_POST['addprod'])){
 </section>
   
 
-<section class="bg-white " id="product">
+<section class="page-section " id="product">
    
    <div class="text-center">
        <h2 class="section-heading">Apa kata para Alumni Study Box</h2><br>      
    </div>
  
    <div class="blog-slider">
-  <div class="blog-slider__wrp swiper-wrapper" >
+  <div class="blog-slider__wrp swiper-wrapper">
     <div class="blog-slider__item swiper-slide">
       <div class="blog-slider__img">
         
-        <img src="foto1.JPG" alt="">
+        <img src="testi1.jpeg" alt="">
       </div>
-      <div class="blog-slider__content"style ="padding-right:30px">
-        <span class="blog-slider__code">Alumni angkatan 1</span>
-        <div class="blog-slider__title">Erick Gultom</div>
-        <div class="blog-slider__text">"Kurikulum kelas di Study Box ini sangat gampang dipahami dan cocok diterapkan di perusahaan"</div>
+      <div class="blog-slider__content" style="padding-right:4%; padding-left:1%">
+        <span class="blog-slider__code">UI/UX Design Batch 1</span>
+        <div class="blog-slider__title">Agnes Angela Stepanie Siregar</div>
+        <div class="blog-slider__text">“ Overall thank you banget udah ngadain bootcamp gratis ini. materi nya bener bener worth to be paid si menurut aku. So good job team Study Box! Aku merasa mendapatkan ilmu baru yg sangat valuable. “</div>
        
       </div>
     </div>
     <div class="blog-slider__item swiper-slide">
       <div class="blog-slider__img">
-        <img src="foto2.JPG" alt="">
+        <img src="testi2.jpeg" alt="">
       </div>
-      <div class="blog-slider__content">
-        <span class="blog-slider__code">Alumni angkatan 1</span>
-        <div class="blog-slider__title">Ricky</div>
-        <div class="blog-slider__text">"Sebelumnya saya tidak ada background IT tetapi saya bisa menjadi seorang developer"</div>
+      <div class="blog-slider__content"style="padding-right:4%; padding-left:1%">
+        <span class="blog-slider__code">Web Development Bacth 1</span>
+        <div class="blog-slider__title">Levi Jonatan</div>
+        <div class="blog-slider__text">“ Selama belajar di Mini Bootcamp Study Box, saya mendapat pengalaman belajar yang menyenangkan dan tentunya mendapat banyak ilmu baru, Pengajarnya seru, baik(suka bercanda<br> disela-sela belajar), dan kita diajari dari dasar jadi nanti misalnya ada yang bingung bisa langsung ditanya dan dibantu deh.“</div>
        
       </div>
     </div>
     
     <div class="blog-slider__item swiper-slide">
       <div class="blog-slider__img">
-        <img src="foto3.JPG" alt="">
+        <img src="testi3.jpeg" alt="">
       </div>
-      <div class="blog-slider__content">
-        <span class="blog-slider__code">Alumni angkatan 1</span>
-        <div class="blog-slider__title">Eric</div>
-        <div class="blog-slider__text">"Tidak hanya teori, didalam kelas juga banyak praktek sehingga bisa langsung dipahami"</div>
+      <div class="blog-slider__content"style="padding-right:4%; padding-left:1%">
+        <span class="blog-slider__code">UI/UX Design Batch 1</span>
+        <div class="blog-slider__title">Valentine Trihandayani</div>
+        <div class="blog-slider__text">“Selama mengikuti Mini Bootcamp di Study Box cukup produktif. Mentor memberi materi kemudian membagi kami kedalam room untuk latihan. Tiap minggu diberi challenge sehingga saya sendiri jadi semakin memahami UI/UX Design. Saya sangat senang dapat mengikuti Bootcamp ini, dimana mentor memberikan ilmunya secara gratis tanpa imbalan  dan ilmunya menjadi bekal bagi saya untuk bisa menghadapi dunia pekerjaan. Terimakasih studybox “</div>
         
       </div>
     </div>
@@ -187,9 +204,10 @@ if(isset($_POST['addprod'])){
   <div class="blog-slider__pagination"></div>
 </div>
 </section>
+
     <!-- Footer -->
     <?php include("partials/footer.php") ?>
-  <!-- End -->  
+  <!-- End -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script><script  src="./script_testimoni.js"></script>
 
