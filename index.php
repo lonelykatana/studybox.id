@@ -120,7 +120,7 @@ if(isset($_POST['addprod'])){
     
          <div class="col-md-12 text-center event-box">
              
-             <img src ="Assets/event1.jpg" style="height:30vh;width:30vh; border-radius:25px;margin:0 auto;">
+             <img id="myImg" src ="Assets/event1.jpg" style="height:30vh;width:30vh; border-radius:25px;margin:0 auto;box-shadow: 2px 5px 10px #888888;">
              <div class="product-title1 product-caption" style="display:inline-block;font-size:25px;text-align:center;"> Webinar - Grace Ling</div>
                          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqUPlWGFhcgo86aJ1nasMywhxdwCQUpYpjsaSU8_a9g2d-ZQ/viewform?usp=sf_link"> <button type="submit" class="btn_product btn_product1" style="margin-top:18px;">Ikuti Webinar</button> </a>
                     </div> 
@@ -204,6 +204,12 @@ if(isset($_POST['addprod'])){
   <div class="blog-slider__pagination"></div>
 </div>
 </section>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
     <!-- Footer -->
     <?php include("partials/footer.php") ?>
@@ -223,6 +229,29 @@ if(isset($_POST['addprod'])){
         $('.logo').toggleClass('scrolled', $(this).scrollTop() > 550);
       });   
     </script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
     <script src="script.js"></script>
 </body>
 </html>
