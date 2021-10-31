@@ -610,16 +610,16 @@ margin-bottom: 0 !important;
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
+  top: 25px;
   right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
+  color: black !important;
+  font-size: 60px !important; 
+  font-weight: 600 !important;
   transition: 0.3s;
 }
 .close:hover,
 .close:focus {
-  color: #bbb;
+  color: #17ffc6;
   text-decoration: none;
   cursor: pointer;
 }

@@ -67,7 +67,7 @@ if(isset($_POST['addprod'])){
                 Study box adalah sebuah startup yang bergerak dalam bidang online course, mengedepankan tingkatan materi yang mendasar dan 
 	dikemas secara...
               </p>
-              <div class="text-left text-lg-start">
+              <div class="text-left text-lg-start" style="margin-bottom:40px;">
                 <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                   <span><a href="about">Read More</a></span>
                  
@@ -94,13 +94,13 @@ if(isset($_POST['addprod'])){
         </div>
                 <div class="product-box">
                    
-                    <div class="product_section">
+                    <div class="product_section"style="margin-bottom:50px;">
                     <img class="img-fluid" src="uiux2.jpg" alt="..." style="height:30vh;width:30vh; border-radius:25px;box-shadow: 2px 5px 10px #888888;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         UI/UX</div>
                          <a href="produk.php?id_kelas=1"> <button type="submit" class="btn_product" >Cek Kelas</button> </a>
                     </div> 
-                    <div class="product_section">
+                    <div class="product_section" >
                     <img class="img-fluid" src="web2.jpg" alt="..." style="height:30vh;width:30vh; border-radius:25px;box-shadow: 2px 5px 10px #888888;" />
                         <div class="product-title1 product-caption" style="display:inline-block;width:30vh;text-align:center;"> 
                         Web Developer</div>
@@ -206,9 +206,10 @@ if(isset($_POST['addprod'])){
 </section>
 <!-- The Modal -->
 <div id="myModal" class="modal">
-  <span class="close">&times;</span>
+  
   <img class="modal-content" id="img01">
   <div id="caption"></div>
+  <span class="close">&times;</span>
 </div>
 
     <!-- Footer -->
