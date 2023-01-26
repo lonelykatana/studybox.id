@@ -1,8 +1,3 @@
-# StudyBox
+# StudyBoxWebite
 
-{
-test
-}
-bujas gausah ditest
-Skuy!
-test aja ky
+Website untuk startup studybox.id, sebuah startup learning
